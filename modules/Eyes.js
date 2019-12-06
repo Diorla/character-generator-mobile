@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from 'react-native';
-import { Card } from "react-native-paper";
+import { Card, Divider } from "react-native-paper";
 
 import oddCalculator from './../services/oddCalculator';
 import {
@@ -36,26 +36,34 @@ const Eyes = (props)=> {
   console.log()
   if(de) {
     return (
-      <Card style={{flexDirection: "row", padding: 8}}>
-        <Text>{colour} and {shape} <Text style={{fontWeight: "bold"}}>Eyes</Text></Text>
+      <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20}}>
+        <Text>{colour} and {shape}</Text>
+        <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
+        <Text style={{fontWeight: "bold"}}>Eyes</Text>
       </Card>
     )
   } else if(d) {
     return (
-      <Card style={{flexDirection: "row", padding: 8}}>
-        <Text>{colour}, {shape} and {elevation} <Text style={{fontWeight: "bold"}}>Eyes</Text></Text>
+      <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20}}>
+        <Text>{colour}, {shape} and {elevation}</Text>
+        <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
+        <Text style={{fontWeight: "bold"}}>Eyes</Text>
       </Card>
     )
   } else if(e) {
     return (
-      <Card style={{flexDirection: "row", padding: 8}}>
-        <Text>{colour}, {shape} and {distance} <Text style={{fontWeight: "bold"}}>Eyes</Text></Text>
+      <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20}}>
+        <Text>{colour}, {shape} and {distance}</Text>
+        <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
+        <Text style={{fontWeight: "bold"}}>Eyes</Text>
       </Card>
     )
   } else {
     return (
-      <Card style={{flexDirection: "row", padding: 8}}>
-        <Text>{colour}, {shape}, {elevation} and {distance} <Text style={{fontWeight: "bold"}}>Eyes</Text></Text>
+      <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20}}>
+        <Text>{colour}, {shape}, {elevation} and {distance}</Text>
+        <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
+        <Text style={{fontWeight: "bold"}}>Eyes</Text>
       </Card>
     )
   }

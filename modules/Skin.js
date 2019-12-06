@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from 'react-native';
+import { Card, Divider } from "react-native-paper";
 
 import oddCalculator from './../services/oddCalculator';
 
@@ -19,11 +20,14 @@ const Skin = (props)=> {
   const { isBlack, isWhite, isTanned, isBrown } = props;
   const skinColour = determineSkinColour({isBlack, isWhite, isTanned, isBrown});
   return (
-    <View>
-      <Text>Skin Colour: {skinColour}</Text>
-    </View>
+    <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20}}>
+      <Text>{skinColour}</Text>
+      <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
+      <Text>Complexion</Text>
+    </Card>
   )
 }
+
 
 const determineSkinColour=(obj)=>{
   const allArray = [];

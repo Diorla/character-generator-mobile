@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text } from 'react-native';
+import { Card, Divider } from "react-native-paper";
 
 import {oddCalculator, calculateWeight} from './../services';
 
@@ -31,10 +32,14 @@ const HWeight=(props)=>{
   const { age, gender } = props;
   const { weight, height, weightCategory, heightCategory } = determineSize(age, gender);
   return (
-    <View>
-      <Text>{heightCategory}, about {height} cm</Text>
-      <Text>{weightCategory}, about {weight} kg</Text>
-    </View>
+    <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20}}>
+      <View style={{padding: 8 }}>
+        <Text>{heightCategory}, about {height} cm</Text>
+        <Text>{weightCategory}, about {weight} kg</Text>
+      </View>
+      <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
+      <Text>Body Size</Text>
+    </Card>
   )
 }
 

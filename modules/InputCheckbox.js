@@ -12,7 +12,7 @@ const inputCheckbox =(props)=> {
       <View  style={{flexDirection: "row", alignItems: "center"}}>
         <Text>{label}</Text>
         <Checkbox
-          status={isActive ? "checked": "unchecked"} />
+          status={isActive ? "checked": "unchecked"} color="teal" />
       </View>
     </TouchableRipple>
   )

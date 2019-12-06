@@ -6,7 +6,7 @@ const weightTypes = {
   xxl: "Obese", 
   xl: "Overweight",
   l: "Big",
-  m: "Medium",
+  m: "Average weight",
   s: "Thin",
   xs: "Very thin",
   xxs: "Anorexic"

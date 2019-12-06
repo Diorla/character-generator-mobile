@@ -26,7 +26,7 @@ const heightTypes = {
   xxl: "Extremely tall", 
   xl: "Tall",
   l: "Slightly tall",
-  m: "Medium",
+  m: "Average height",
   s: "Slightly short",
   xs: "Short",
   xxs: "Extremely short"

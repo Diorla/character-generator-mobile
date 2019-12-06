@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from 'react-native';
-import { Card } from 'react-native-paper';
+import { Text, View } from 'react-native';
+import { Card, Divider } from 'react-native-paper';
 import {
   maleHairSize,
   maleHairSizeOdds,
@@ -25,15 +25,23 @@ const Hair =(props)=>{
   const { gender, colour } = props;
   const { size, hcolour, style, type } = determineHair(gender, colour);
   return (
-    <Card style={{flexDirection: "row", padding: 8}}>
-      <Text>Hair colour: {hcolour}</Text>
-      <Text>Hair size: {size}</Text>
-      <Text>Hairstyle: {style}</Text>
-      <Text>Hair type: {type}</Text>
-    </Card>  
+    <View>
+      <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20}}>
+        <Text>{hcolour}, {size} and {type}</Text>
+        <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
+        <Text style={{fontWeight: "bold"}}>Hair</Text>
+      </Card>
+      {
+        style=="Normal" ? null:
+        <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20}}>
+          <Text>{style}</Text>
+          <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
+          <Text style={{fontWeight: "bold"}}>Hairstyle</Text>
+        </Card>
+      }
+    </View>  
   )
 }
-
 
 const determineHair=(gender, colour)=> {
   let size, hcolour, style, type;

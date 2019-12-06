@@ -1,19 +1,19 @@
 
 const maleHairSize = [
-  "long", "medium", "short", "low/shaved", "bald"
+  "Long", "Medium", "Short", "Low/shaved", "Bald"
 ]
 
 const maleHairSizeOdds = [ 13.6, 47.7, 36.2, 2.1, 0.4]
 
 
 const femaleHairSize = [
-  "long", "medium", "short", "low/shaved"
+  "Long", "Medium", "Short", "Low/shaved"
 ]
 
 const femaleHairSizeOdds = [ 13.6, 47.7, 36.2, 2.3]
 
 const hairColour = [
-  "black", "brown", "blonde", "red", "others"
+  "Black", "Brown", "Blonde", "Red", "Artificial colour"
 ]
 
 const hairColourOdds = [
