@@ -33,7 +33,10 @@ black, white
 ### Male
 
 - Normal 81.8
-- Crew cut 13.6, 18
+- Crew cut 13.6
+- White people
+  - Cowlick 4.2
+  - Ponytail 0.4
 - Black people 
   - Flat top 2.1
   - Dreads 2.1
@@ -143,7 +146,7 @@ black, white
 
 - Obese 0.2
 - Overweight 2.1
-- Big(Muscular) 13.6: ()
+- Big(Muscular) 13.6:
 - Normal 68.2
 - Thin 13.6
 - Very thin 2.1
@@ -269,3 +272,54 @@ black, white
 - Dimpled and Toothy
 
 [More](https://en.wikipedia.org/wiki/Human_physical_appearance)
+
+
+
+# Eyebrow
+
+## Thickness
+
+- Thick
+- Medium
+- Thin
+
+
+
+## Shape
+
+> Note, not all of them have archs
+
+- Rounded
+  - Low, medium and high arch
+- Soft angled
+  - Low, medium and high arch
+- Hard angled
+- Flat
+- S-shaped
+- Straight
+
+
+
+# Breast Sizes
+
+- Flat chested: 2.3
+- Small: 13.6
+- Medium: 68.2
+- Big: 13.6
+- Very large: 2.3
+
+# Hip Sizes
+
+> I kinda figured using the world "big hips” for man is not so storybook like.
+
+| Sizes      | Male | Female |
+| ---------- | ---- | ------ |
+| Very small | 0.2  | 2.3    |
+| Small      | 4.2  | 13.6   |
+| Medium     | 81.8 | 68.2   |
+| Big        | 13.6 | 13.6   |
+| Very big   | 0.2  | 2.3    |
+
+# Waist sizes
+
+> Normal weight sizes correlates with weight or BMI. It will also work with hips and bust. So if a person has a low weight and big bust & hips, then I can say, thin waist.
