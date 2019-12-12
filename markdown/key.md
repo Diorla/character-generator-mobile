@@ -323,3 +323,10 @@ black, white
 # Waist sizes
 
 > Normal weight sizes correlates with weight or BMI. It will also work with hips and bust. So if a person has a low weight and big bust & hips, then I can say, thin waist.
+
+
+
+# Other Features
+
+- Forehead: big or normal
+- Smile: Toothy, Big or normal

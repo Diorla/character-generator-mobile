@@ -7,3 +7,6 @@
 - 2.1, 4.2
 - 0.2, 0.4
 
+
+
+black, brown, blonde, red

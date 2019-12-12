@@ -1,3 +1,46 @@
-1. First determine the gender
-2. Then the skin colour
-3. So that any one of the rest will then be determined.
+- [x]  Head
+  - [x] Hair
+    - [x]  Size, 
+    - [x]  type, 
+    - [x]  colour, 
+    - [x]  ==style==
+  - [x] Eyes
+    - [x]  Colour, 
+    - [x]  Shape, 
+    - [x]  Distance, 
+    - [x]  Elevation
+  - [x] Mouth
+    - [x]  ==Lip shape==
+  - [x] Eye brow
+    - [x] Shape
+    - [x] Size
+  - [x] Forehead: Size
+- [x] Face: Shape
+  - [x] Chin: Dimpled
+  - [x] Chin: Double
+  - [x] Ear: Size
+  - [x] Nose: Shape
+  - [ ] ==Beard: Type==
+  - [ ] ==Moustache: Type==
+- [x]  Neck: Size
+- [x]  Hand
+  - [x]  Length
+  - [x]  Size(Palms)
+- [x]  Chest
+  - [x]  Width(Male)
+  - [x]  Breast: Size
+- [x]  Stomach: Size
+- [x]  Buttocks: Size
+- [x]  Legs
+  - [x]  Length
+  - [x]  Feet: Size
+- [ ]  Body
+  - [x]  Height
+  - [x]  Weight
+  - [x]  Hip size
+- [ ]  Other
+  - [x]  Smile
+  - [ ]  Scar
+  - [ ]  Birthmark
+  - [ ]  Mole
+  - [x]  Freckles

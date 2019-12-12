@@ -134,3 +134,4 @@
 
 - **Atemporal**: They live in the here and now. They are not stressed over the future or inhibited by their past traumas or problems.
 - **Time bound**: Worries about the future and feels the weight of the past.
+

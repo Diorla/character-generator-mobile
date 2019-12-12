@@ -1,10 +1,5 @@
-import InputRadio from './InputRadio';
 import InputCheckbox from './InputCheckbox';
-import Hair from './Hair';
-import Face from './Face';
-import Eyes from './Eyes';
-import Skin from './Skin';
-import HWeight from './HWeight';
+import Row from './Row';
 
 
-export { InputRadio, InputCheckbox, Hair, Face, Eyes, Skin, HWeight };
+export { InputCheckbox, Row };
