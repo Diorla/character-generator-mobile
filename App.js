@@ -199,7 +199,7 @@ class App extends React.Component {
         </View>
         <Divider style={{ backgroundColor: 'white' }} />
         <View style={{ backgroundColor: '#A9DFBF' }}>
-          <Text>Colour range</Text>
+          <Text>Skin tone</Text>
           <View
             style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
             <InputCheckbox
@@ -242,10 +242,10 @@ class App extends React.Component {
         </View>
         <Divider />
         <View>
-          <ScrollView style={{ marginBottom: 215, marginTop: 10 }}>
-            <Row title="Body">
-              {this.state.heightType}
+          <ScrollView style={{ marginBottom: 215}}>
+            <Row title="Build">
               {this.state.weightType}
+              {this.state.heightType}
               {this.state.shoulder}
               {this.state.breast}
               {this.state.hipSize}
@@ -257,11 +257,9 @@ class App extends React.Component {
               {this.state.limbThickness}
               {this.state.handFeetSize}
             </Row>
-            <Row title="Weight" noFormat>
-              {this.state.weight} kg.
-            </Row>
-            <Row title="Height" noFormat>
-              {this.state.height} cm.
+            <Row title="Height and Weight" noFormat>
+              {this.state.height}cm and {}
+              {this.state.weight}kg
             </Row>
             <Row title="Eyes">
               {this.state.eyeColour} {this.state.eyeShape}
@@ -272,7 +270,7 @@ class App extends React.Component {
                 flexDirection: 'row',
                 padding: 8,
                 elevation: 4,
-                marginBottom: 20,
+                margin: 12,
                 backgroundColor: '#EBEDEF',
               }}>
               <Text>{this.state.skinColour}</Text>

@@ -3,15 +3,15 @@ import oddCalculator from "./oddCalculator";
 
 
 const shape = [
-  "Hooked shaped", 
+  "Hooked shaped nose", 
   "Droopy nose", 
   "Aquiline nose", 
   "Roman nose", 
   "Grecian nose", 
-  "Button shaped", 
+  "Button shaped nose", 
   "Upturned nose", 
   "Snub nose", 
-  "Funnel shaped", 
+  "Funnel shaped nose", 
   "Nubian nose"
 ]
 

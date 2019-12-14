@@ -20,7 +20,7 @@ const Row = (props)=> {
   if(!props.children) return null
   if(props.noFormat) {
     return (
-      <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20, backgroundColor: "#EBEDEF"}}>
+      <Card style={{flexDirection: "row", padding: 8, elevation: 2, margin: 12, backgroundColor: "#EBEDEF"}}>
         <Text>{props.children}</Text>
         <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
         <Text>{props.title}</Text>
@@ -28,7 +28,7 @@ const Row = (props)=> {
     )
   } else {
     return (
-      <Card style={{flexDirection: "row", padding: 8, elevation: 4, marginBottom: 20, backgroundColor: "#EBEDEF"}}>
+      <Card style={{flexDirection: "row", padding: 8, elevation: 2, margin: 12, backgroundColor: "#EBEDEF"}}>
         <Text>{next}</Text>
         <Divider style={{backgroundColor: "teal", height: 4, margin: 4}}/> 
         <Text>{props.title}</Text>

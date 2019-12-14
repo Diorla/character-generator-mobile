@@ -11,7 +11,7 @@ const shape = [
   "Ears sticking out", 
   "Round ears",
   "Round attached ears", 
-  "Round  ears with broad lobe"
+  "Round ears with broad lobe"
 ]
 
 const shapeOdds = [ 20, 20, 15, 15, 10, 10, 10 ]
