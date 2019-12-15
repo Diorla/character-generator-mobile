@@ -242,7 +242,7 @@ class App extends React.Component {
         </View>
         <Divider />
         <View>
-          <ScrollView style={{ marginBottom: 215}}>
+          <ScrollView style={{ marginBottom: 215}} bounces={true} bouncesZoom>
             <Row title="Build">
               {this.state.weightType}
               {this.state.heightType}

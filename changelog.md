@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# Version 1.1.2
+
+## Unreleased
+- Create three new screens in three tabs
+  - Move current app to **Appearance** screen
+  - First is about **Personality**, **Character** and **Traits**
+  - The second is images matching the physical description in Appearance screen
+  - This one is ambitious, so it may take time
+
+## Added
+
+## Changed
+- Restyle the Rows to have margins and lower elevations
+- Improved the grammar
+
+## Deprecated
+
+## Removed
+
+## Fixed
+
+## Security
+
+
 # Version 1.1.0
 
 ## Unreleased
@@ -24,19 +48,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Prevent automatic updates
 
-
 ## Deprecated
 
 ## Removed
-
 - Removed admob ads
 
 ## Fixed
-
 - Fixed orientation problem by setting it to portrait
 
 ## Security
-===
+
 
 # Version 1.0.1
 
