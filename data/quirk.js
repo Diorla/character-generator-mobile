@@ -82,6 +82,8 @@ const quirks = {
     "Super sarcastic",
     "Likes garlic, so always have garlic breath",
     "Has Synesthesia",
+    "Mispronouces words (e.g. sheriff=/she(like the pronoun) riff/",
+    "Use multiple negatives a lot",
   ]
 }
 

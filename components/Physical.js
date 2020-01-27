@@ -73,7 +73,7 @@ const Physical = props => {
               <MyText type="strong">Hair</MyText>
               <MyText>: Type and colour of hair is influenced by skin tone</MyText>
               <MyText type="strong">Health</MyText>
-              <MyText>: Influenced by age, especially, chronic diseases. Please, you may need to research the specified diseases for diganosis, causes, signs and symptoms, treatments and associated disease.</MyText>
+              <MyText>: Influenced by age, especially, chronic diseases. It does not include disease with vaccination or those that has been eradicated. Please, you may need to research the specified diseases for diganosis, causes, signs and symptoms, treatments and associated disease.</MyText>
               <MyText type="strong">Occupation</MyText>
               <MyText>: Influenced by education and social status</MyText>
               <MyText type="strong">Randomly generated</MyText>

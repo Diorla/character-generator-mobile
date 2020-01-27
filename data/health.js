@@ -1,8 +1,7 @@
-// Rheumatism
-// Cerebral palsy
+
 const health = {
-  congenital: [ 
-    //Condition that you can be born with or very early in life
+  congenital: [
+    //Condition that you can be born with or manifest very early in life
     "Dyslexia",
     "Dyspraxia",
     "Dyscalculia",
@@ -27,11 +26,19 @@ const health = {
     "Irritable Bowel Syndrome",
     "Anaemia",
     "Brittle bone disease",
-    "Lactose intolerant", //stop here
+    "Lactose intolerant",
     "Hypothyroid",
-    "Bruxism"
+    "Bruxism",
+    "Coeliac disease",
+    "Raynaud syndrome",
+    "Type 1 Diabetes",
+    "Vitiligo",
+    "Meniere's disease",
+    "Myasthenia gravis",
+    "Narcolepsy"
   ],
-  chronic: [ //usually genetic but manifest later in life
+  chronic: [
+    // usually genetic but manifest later in life
     "Major depressive disorder",
     "Alcohol-use disorder",
     "Schizophrenia",
@@ -46,24 +53,26 @@ const health = {
     "Cancer",
     "Crohn disease",
     "Ulcerative colitis",
-    "Diabetes",
+    "Type 2 Diabetes",
     "Cyclothymic disorder",
     "Multiple sclerosis",
-    "Hyperthyroid",
+    "Graves' disease",
     "Fibromyalgia",
+    "Lupus",
+    "Thyroiditis",
+    "Psoriasis",
+    "Haemophilia"
   ],
-  male: [
-    "Protstate something",
-  ],
-  female: [
-    "Uterine fibroid",
-    "Endometriosis",
-  ],
-  infectious: [ //due to person's action
+  male: ["Protstate disease"],
+  female: ["Uterine fibroid", "Endometriosis"],
+  infectious: [
+    // Avoidable chronic diseases
     "Hepatitis",
-    "HIV/AIDS"
+    "HIV/AIDS",
+    "Liver cirrhosis"
   ],
-  old: [ //Has increased correlation with old age.
+  old: [
+    //Has increased correlation with old age.
     "Parkinson's",
     "Alzheimer's",
     "Huntington's",
@@ -71,14 +80,13 @@ const health = {
     "Chronic kidney disease",
     "Chronic liver disease",
     "Chronic heart disease",
-    // due to smoking
     "COPD(chronic bronchitits & emphysema)",
     "Arthritis",
     "Gout",
     "Osteoporosis",
     "Cataract",
+    "Restless Leg Syndrome"
   ]
 };
-
 
 export default health;

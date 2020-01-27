@@ -385,13 +385,34 @@ class Character extends React.Component {
     const currentLocation =
       this.state.currentLocation || `${getCity(nationality, birthPlace)}`;
     const occupation = this.state.occupation || getJob(education, socialStatus);
-    const name = getNames(nationality, gender);
-    const health = this.state.health || getHealth(age);
+    const name = this.state.name || getNames(nationality, gender);
+    const health = this.state.health || print(getHealth(age, gender));
     // SetState
     this.setState({
       skinTone,
+      health,
+      name,
+      tic,
+      distinguishingFeatures,
+      education,
+      nationality,
+      grooming,
+      birthday,
+      handwriting,
+      gait,
+      posture,
+      bloodGroup,
+      speechStyle,
+      speechImpediment,
+      gesture,
+      socialStatus,
+      familyEconomicStatus,
+      speechPitch,
+      accessories,
+      birthPlace,
+      currentLocation,
+      occupation,
       age: this.state.age || String(age),
-      name: this.state.name || name,
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:
         this.state.build ||
@@ -436,34 +457,12 @@ class Character extends React.Component {
           doubleChin,
           `and ${print(ear.size, ear.shape)}`
         ),
-      distinguishingFeatures:
-        this.state.distinguishingFeatures || distinguishingFeatures,
-      education: this.state.education || education,
-      nationality: this.state.nationality || nationality,
-      grooming: this.state.grooming || grooming,
-      birthday: this.state.birthday || birthday,
-      tic: this.state.tic || tic,
-      health: this.state.health || health,
-      handwriting: this.state.handwriting || handwriting,
-      gait: this.state.gait || gait,
-      posture: this.state.posture || posture,
-      bloodGroup: this.state.bloodGroup || bloodGroup,
-      speechStyle: this.state.speechStyle || speechStyle,
-      speechImpediment: this.state.speechImpediment || speechImpediment,
-      gesture: this.state.gesture || gesture,
-      socialStatus: this.state.socialStatus || socialStatus,
-      familyEconomicStatus:
-        this.state.familyEconomicStatus || familyEconomicStatus,
-      speechPitch: this.state.speechPitch || speechPitch,
+      //---
       outfit:
         this.state.outfit ||
         `${print(", ", ...outfit.slice(0, outfit.length - 2))} and ${outfit[
           outfit.length - 1
-        ].toLocaleLowerCase()}`,
-      accessories: this.state.accessories || accessories,
-      birthPlace: this.state.birthPlace || birthPlace,
-      currentLocation: this.state.currentLocation || currentLocation,
-      occupation: this.state.occupation || occupation
+        ].toLocaleLowerCase()}`
     });
     //}
   };
