@@ -1,8 +1,0 @@
-- Create two new screens
-  - **Personality** and **Character**
-- Move current app to **Appearance** screen
-- Create drawer navigation to navigate between screens
-- Create correlations between different characters
-  - For example, someone with dark skin is less likely to have blue eyes.
-- Add albino to the skin colour list
-  - This will cut across all colour range

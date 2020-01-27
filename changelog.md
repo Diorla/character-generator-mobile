@@ -4,6 +4,72 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# Version 2.0.1
+
+## Unreleased
+
+- Complete the following screen
+  - **Story**
+  - **Help**
+  - **Settings**
+  - **Feedback**
+- Complete the randomisation of characters
+
+## Added
+
+
+## Changed
+- Change individual/family social status format
+- Change the label of some questions e.g. pitch to voice
+- Prevent randomising of non-empty fields
+
+## Deprecated
+
+
+## Removed
+
+
+## Fixed
+- Reformat the htmlGenerator with `Regret` row. 
+
+## Security
+
+
+
+
+# Version 2.0.0
+
+## Unreleased
+
+- Complete the following screen
+  - **Story**
+  - **Help**
+  - **Settings**
+  - **Feedback**
+- Complete the randomisation of characters
+
+## Added
+
+- Create a complete character screen
+  - Includes biodata
+- Adding option to save
+- Adding printing options
+- Add drawer navigation
+
+## Changed
+- The number of screens 
+- The number of information available 
+
+## Deprecated
+- Single screen (main screen)
+
+## Removed
+
+## Fixed
+
+## Security
+
+
 # Version 1.1.2
 
 ## Unreleased
@@ -103,3 +169,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Fixed
 
 ## Security
+

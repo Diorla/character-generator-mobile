@@ -1,0 +1,32 @@
+distinguishingFeatures = {
+  tattoo: [
+    "Tattoo on the forehead",
+    "Tattoo on the left cheek",
+    "Tattoo on the right cheek",
+    "Tattoo on the chin",
+    "Tattoo on the left nape",
+    "Tattoo on the right nape",
+    "Tattoo on the right dorsum",
+    "Tattoo on the left dorsum",
+    "Tattoo on the right wrist",
+    "Tattoo on the left wrist",
+    "Tattoo on the right forearm",
+    "Tattoo on the left forearm",
+  ],
+  tattooOdds: [2, 1.5, 1.5, 4, 2.5, 2.5, 8, 8, 2, 2, 4.5, 4.5],
+  birthmark: [
+    "Birthmark on the forehead",
+    "Mole on the left cheek",
+    "Mole on the right cheek",
+    "Birthmark on the chin",
+    "Birthmark on the left nape",
+    "Birthmark on the right nape",
+    "Birthmark on the right dorsum",
+    "Birthmark on the left dorsum",
+    "Birthmark on the right wrist",
+    "Birthmark on the left wrist",
+    "Birthmark on the right forearm",
+    "Birthmark on the left forearm",
+  ],
+  birthmarkOdds: [2, 1.5, 1.5, 4, 2.5, 2.5, 8, 8, 2, 2, 4.5, 4.5]
+}

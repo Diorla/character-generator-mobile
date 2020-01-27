@@ -1,0 +1,50 @@
+//string[]
+const phobia = {
+  main: [
+    "heights",
+    "flying",
+    "spiders",
+    "thunder and lightening",
+    "confinement/crowded spaces",
+    "blood",
+    "water",
+    "snakes",
+    "certain animals",
+    "being alone",
+    "birds",
+    "bees/wasps",
+    "darkness",
+    "pain",
+    "public space",
+    "needles",
+    "mirrors",
+    "chemicals",
+    "bats",
+    "cemeteries",
+    "clowns",
+    "dogs",
+    "insects",
+    "horses",
+    "bridges",
+    "balloons",
+    "being touched",
+    "reptiles",
+    "isolation",
+    "ants",
+    "germs",
+    "hospitals",
+    "ghost/phantoms",
+    "fire",
+    "driving",
+    "cats",
+    "worms",
+    "mice/rats",
+    "frogs",
+    ""
+  ],
+  odds: [
+    "",
+  ]
+}
+//rb, cm
+export default phobia;
