@@ -387,6 +387,7 @@ class Character extends React.Component {
     const occupation = this.state.occupation || getJob(education, socialStatus);
     const name = this.state.name || getNames(nationality, gender);
     const health = this.state.health || print(getHealth(age, gender));
+    const phobia = this.state.phobia || print(", ", getPhobia());
     // SetState
     this.setState({
       skinTone,
@@ -412,6 +413,7 @@ class Character extends React.Component {
       birthPlace,
       currentLocation,
       occupation,
+      phobia,
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:

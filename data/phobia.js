@@ -40,10 +40,6 @@ const phobia = {
     "worms",
     "mice/rats",
     "frogs",
-    ""
-  ],
-  odds: [
-    "",
   ]
 }
 //rb, cm

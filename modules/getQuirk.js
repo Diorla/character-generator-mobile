@@ -16,6 +16,7 @@ const getQuirk = () => {
       }
       quirkArr.push(temp)
     }
+    negative += Math.random() * 3;
     count -= negative;
   }
   if(quirkArr.length) return quirkArr;
