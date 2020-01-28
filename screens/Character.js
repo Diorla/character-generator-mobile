@@ -364,7 +364,7 @@ class Character extends React.Component {
     const nationality = this.state.nationality || getNationality();
     const grooming = this.state.grooming || getGrooming();
     const birthday = this.state.birthday || getBirthday();
-    const tic = this.state.tic || getQuirk();
+    const tic = this.state.tic || print(", ", getQuirk())
 
     const handwriting = this.state.handwriting || getHandwriting();
     const gait = this.state.gait || getGait();

@@ -1,4 +1,3 @@
-
 // Weird but not neccesarily dangerous or important
 const quirks = {
   main: [
@@ -20,8 +19,8 @@ const quirks = {
     "Does ventriloquy",
     "Likes to do magic",
     "Have very flexible body(contortionist)",
-    "High tolerance to pain",
-    "Likes to stare at reflection",
+    "Really high tolerance to pain",
+    "Always staring at his/her reflection",
     "Has beautiful singing voice",
     "Gets excited about everything",
     "Leaves little notes in library books for future readers",
@@ -31,7 +30,7 @@ const quirks = {
     "Likes booping nose",
     "Frequently cracks his/her neck",
     "Incessantly cracks his/her knuckles",
-    "Gassy",
+    "Quite gassy",
     "Likes to speak in third person",
     "Regularly mispronouces some words",
     "Frequent use of accronyms or abbreviation, real or invented",
@@ -53,13 +52,13 @@ const quirks = {
     "Always biting pen",
     "Skin picking",
     "Always interrupting people when speaking",
-    "Fiddling with hair",
+    "Fiddles with hair",
     "Cheek biting",
     "Chewing on hair",
     "Always chewing gum",
     "Can't keep a secret",
     "Lazy",
-    "Like to hog attention",
+    "Likes to hog attention",
     "A big suck up",
     "Always scratching an itch",
     "Hoarder",
@@ -83,8 +82,8 @@ const quirks = {
     "Likes garlic, so always have garlic breath",
     "Has Synesthesia",
     "Mispronouces words (e.g. sheriff=/she(like the pronoun) riff/",
-    "Use multiple negatives a lot",
+    "Use multiple negatives a lot"
   ]
-}
+};
 
 export default quirks;
