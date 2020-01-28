@@ -61,6 +61,7 @@ import getGesture from "./../modules/getGesture";
 import getCity from "../modules/getCity";
 import getNames from "../modules/getNames";
 import getHealth from "../modules/getHealth";
+import getRestingface from './../modules/getRestingface';
 
 const title = word => {
   const [start, end] = [
@@ -388,6 +389,8 @@ class Character extends React.Component {
     const name = this.state.name || getNames(nationality, gender);
     const health = this.state.health || print(getHealth(age, gender));
     const phobia = this.state.phobia || print(", ", getPhobia());
+    const restingFace = this.state.restingFace || getRestingface();
+
     // SetState
     this.setState({
       skinTone,
@@ -414,6 +417,7 @@ class Character extends React.Component {
       currentLocation,
       occupation,
       phobia,
+      restingFace,
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:
