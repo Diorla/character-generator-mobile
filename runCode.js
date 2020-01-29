@@ -1,14 +1,4 @@
 /**
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
-import oddCalculator from './modules/oddCalculator';
  * @function It's a subroutine of oddCalculator, each item has equal odds
  * @param {Array} arr - The items from which you want to select
  */
@@ -62,94 +52,29 @@ const _withOdds = (arr, odds) => {
 const oddCalculator = (arr, odds) =>
   odds ? _withOdds(arr, odds) : _withoutOdds(arr);
 
-
-const consonant = [
-  "b",
-  "c",
-  "d",
-  "f",
-  "g",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "p",
-  "qu",
-  "r",
-  "s",
-  "t",
-  "v",
-  "w",
-  "x",
-  "z"
+const main = [
+  "Indulgent", //6-2 Gave the child everything s/he wanted. There are no rules
+  "Negligent", //4-8 Hardly a parent. Child practically raised his/herself, usually due to incompetence or being too busy
+  "Sheltering", //2-32 Protect the child a lot from most of troubles in life. Helicopter parenting.
+  "Authoritative", //1-64 Parents are demanding but reasonable. They provide guidance and support.
+  "Affectionless", //3-16 Lacks warmth and care, and can be very controlling.
+  "Disciplined or Authoritarian", //5-4 Limited flexibility for the child, communication is one way and may include punishment
+  "Abusive" //7-1 Mistreatment of child
 ];
+const odds = [2, 8, 32, 64, 16, 4, 1];
 
-const vowel = ["a", "e", "i", "o", "u", "y"];
-
-const ash = ["ha", "he", "hi", "ho", "hu", "hy"];
-
-
-const first = () => oddCalculator(["c", "v", "a"], [12, 6, 1])
-const second = (option, odds) => oddCalculator(option, odds);
-const third = (option, odds) => oddCalculator(option, odds);
-
-const genWord = ()=> {
-  let str = "";
-  const ft = first();
-  if(ft=="c") {
-    str += oddCalculator(consonant);
-    if(oddCalculator(["v", "a"], [6, 1])=="v") {
-      str += oddCalculator(vowel)// + 
-      str += oddCalculator([true, false], [7, 3]) ? "" : oddCalculator(consonant)
-    } else {
-      //test letters that can be followed by "h", e.g. "wh", "th", not dh or fh.
-      //It also limits to those letter that will change their pronunciation e.g. s-sh, p, ph
-      str += ["c", "p", "s", "t"].includes(str) ? oddCalculator(ash) : oddCalculator(vowel)
-      str += oddCalculator([true, false], [7, 3]) ? "" : oddCalculator(consonant)
-    }
-  } else if(ft=="v") {
-    str += oddCalculator(vowel);
-    if(oddCalculator(["c", "a"], [6, 1])=="v") {
-      str += oddCalculator(consonant)// + 
-      //str += oddCalculator([true, false], [3, 7]) ? "" : oddCalculator(consonant)
-    } else {
-      str += oddCalculator(ash)// + 
-      str += oddCalculator([true, false], [3, 7]) ? "" : oddCalculator(consonant)
-    }
-  } else {
-    str += oddCalculator(ash);
-    if(oddCalculator(["c", "v"], [3, 1])=="v") {
-      str += oddCalculator(consonant)// + 
-      //str += oddCalculator([true, false], [3, 7]) ? "" : oddCalculator(consonant)
-    } else {
-      str += oddCalculator(vowel)// + 
-      str += oddCalculator([true, false], [3, 7]) ? "" : oddCalculator(consonant)
-    }
-  } 
-  return str
+const parenting = () => oddCalculator(main, odds);
+const title = word => {
+  const [start, end] = [
+    word.slice(0, 1).toUpperCase(),
+    word.slice(1).toLocaleLowerCase()
+  ];
+  return start + end;
+};
+const getChildhood=()=> {
+  const mother = parenting();
+  const father = parenting();
+  if(mother==father) return title(`${mother} parent`)
+  return title(`${mother} mother and ${father} father`)
 }
-
-//console.log(genWord())
-const catchphrase=()=> {
-  let probs = 10;
-  let n = 2;
-  let str = genWord();
-  while (probs > n) {
-    str += oddCalculator([true, false], [probs-n, n]) ? genWord() : "";
-    n += 2;
-    probs -= 2;
-  }
-  return str;
-}
-  
-for(var i = 0; i < 10; i++) {
-  console.log(catchphrase());
-}
-//first letter=> c, v, a
-//if first = c, second must be v or a, or acceptable c
-//if first = v, second must be c
-//if first = a, second must be c or v(exluding the index e.g. hi and i)
-// third is optional
-// if second is v or ash, third must be c
-// if second is c, then third must be acceptable c e.g. m=[b, p]
+console.log(getChildhood());

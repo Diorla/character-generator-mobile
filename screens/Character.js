@@ -61,18 +61,12 @@ import getGesture from "./../modules/getGesture";
 import getCity from "../modules/getCity";
 import getNames from "../modules/getNames";
 import getHealth from "../modules/getHealth";
-import getRestingface from './../modules/getRestingface';
+import getRestingface from "./../modules/getRestingface";
+import print from "../modules/print";
+import getChildhood from './../modules/getChildhood';
 
-const title = word => {
-  const [start, end] = [
-    word.slice(0, 1).toUpperCase(),
-    word.slice(1).toLocaleLowerCase()
-  ];
-  return start + end;
-};
 
-const print = (sep, ...words) =>
-  title(words.filter(word => word != "Normal").join(sep));
+
 
 class Character extends React.Component {
   state = {
@@ -365,7 +359,7 @@ class Character extends React.Component {
     const nationality = this.state.nationality || getNationality();
     const grooming = this.state.grooming || getGrooming();
     const birthday = this.state.birthday || getBirthday();
-    const tic = this.state.tic || print(", ", getQuirk())
+    const tic = this.state.tic || print(", ", getQuirk());
 
     const handwriting = this.state.handwriting || getHandwriting();
     const gait = this.state.gait || getGait();
@@ -385,11 +379,15 @@ class Character extends React.Component {
     const birthPlace = this.state.birthPlace || `${getCity(nationality)}`;
     const currentLocation =
       this.state.currentLocation || `${getCity(nationality, birthPlace)}`;
+    const hometown =
+      this.state.hometown || `${getCity(nationality, birthPlace)}`;
     const occupation = this.state.occupation || getJob(education, socialStatus);
     const name = this.state.name || getNames(nationality, gender);
     const health = this.state.health || print(getHealth(age, gender));
     const phobia = this.state.phobia || print(", ", getPhobia());
     const restingFace = this.state.restingFace || getRestingface();
+    const childhood = this.state.childhood || getChildhood();
+
 
     // SetState
     this.setState({
@@ -418,6 +416,8 @@ class Character extends React.Component {
       occupation,
       phobia,
       restingFace,
+      hometown,
+      childhood,
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:
@@ -501,7 +501,6 @@ class Character extends React.Component {
       modalVisible: false,
       bloodGroup: "",
       birthday: "",
-      //name: '',
       age: "",
       gender: "Male",
       others: "",

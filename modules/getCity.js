@@ -10,28 +10,26 @@ import getNationality from "./getNationality";
  * @param {string} hometown - If provided, it will return current location (state and country), otherwise, it will return a place of birth which will match the same country provided
  */
 const getCity = (country, hometown) => {
-  
   const id = countryId[country];
   const states = fetchStates(id);
 
   // Current location
   if (hometown) {
     //grew up in the same city
-    if(oddCalculator([false, true], [3, 7])) {
-      return `${hometown}, ${country}`
+    if (oddCalculator([false, true], [3, 7])) {
+      return `${hometown}, ${country}`;
     } else {
       // same country
-      if(oddCalculator([false, true], [3, 7])) {
-        const city = oddCalculator(states).name
-        return `${city}, ${country}`
-      }
-      else {
+      if (oddCalculator([false, true], [3, 7])) {
+        const city = oddCalculator(states).name;
+        return `${city}, ${country}`;
+      } else {
         //different country
         const newCountry = getNationality();
         const nid = countryId[newCountry];
         const nstates = fetchStates(nid);
-        const ncity = oddCalculator(nstates).name
-        return `${ncity}, ${newCountry}`
+        const ncity = oddCalculator(nstates).name;
+        return `${ncity}, ${newCountry}`;
       }
     }
   }
@@ -39,18 +37,5 @@ const getCity = (country, hometown) => {
   const currentCity = oddCalculator(states);
   return currentCity.name;
 };
-
-// const getCity = (country, hometown) => {
-//   const id = countryId[country];
-
-//   const states = fetchStates(id);
-
-//   const currentCity = oddCalculator(states);
-  
-//   if (hometown) {
-//     return oddCalculator([currentCity.name, hometown], [3, 7]);
-//   }
-//   return currentCity.name;
-// };
 
 export default getCity;
