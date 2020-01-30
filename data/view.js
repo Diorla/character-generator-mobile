@@ -1,0 +1,40 @@
+const view = {
+  annoying: [
+    "24 hour news",
+    "Celebrity gossip",
+    "Certain celebrity",
+    "Children",
+    "Chatterboxes",
+    "Politics",
+    "Certain politician",
+    "Gossips",
+    "Littering",
+    "Talking during movies",
+    "Eating with mouth open",
+    "Telemarketers",
+    "Movies",
+    "Certain movie",
+    "TV show",
+    "Certain tv show",
+    "Reality tv",
+    "Reality star",
+    "Jumping a queue",
+    "Driving slow in fast lane",
+    "Not using turn signals",
+    "Use of mobile phones during face to face conversation",
+    "Pets",
+  ],
+  boring: [
+    "Old movies",
+    "Movies with subtitles",
+    "Going to school",
+    "Reading",
+    "Social gathering",
+    "Certain movie",
+    "Arts",
+    "Science",
+    "Chatting",
+  ]
+}
+
+export default view;

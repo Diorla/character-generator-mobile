@@ -68,6 +68,7 @@ import getChildhood from "./../modules/getChildhood";
 import getPastime from "../modules/getPastime";
 import getFolly from "../modules/getFolly";
 import getMouth from "../modules/getMouth";
+import getView from "../modules/getView";
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -399,6 +400,9 @@ class Character extends React.Component {
     const mouth = getMouth();
     const smile = this.state.smile || mouth.smile;
     const laughter = this.state.laughter || mouth.laughter;
+    const view = getView();
+    const annoyingStuff = this.state.annoyingStuff || view.annoyingStuff;
+    const boringStuff = this.state.boringStuff || view.boringStuff;
 
     // SetState
     this.setState({
@@ -438,6 +442,8 @@ class Character extends React.Component {
       folly,
       smile,
       laughter,
+      annoyingStuff,
+      boringStuff,
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:
