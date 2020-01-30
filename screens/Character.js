@@ -66,6 +66,7 @@ import getRestingface from "./../modules/getRestingface";
 import print from "../modules/print";
 import getChildhood from "./../modules/getChildhood";
 import getPastime from "../modules/getPastime";
+import getFolly from "../modules/getFolly";
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -389,10 +390,11 @@ class Character extends React.Component {
     const speechTempo = this.state.speechTempo || speech.speechTempo;
     const speechPitch = this.state.speechPitch || getVoice(gender);
     const phobia = this.state.phobia || print(", ", getPhobia());
-    const pastime = getPastime();
+    const pastime = getPastime(this.state.sociability);
     const hobby = this.state.hobby || pastime.hobby;
     const favouriteActivity =
       this.state.favouriteActivity || pastime.favouriteActivity;
+    const folly = this.state.folly || getFolly();
 
     // SetState
     this.setState({
@@ -429,6 +431,7 @@ class Character extends React.Component {
       speechTempo,
       hobby,
       favouriteActivity,
+      folly,
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:
