@@ -4,7 +4,7 @@ const generateActvity = arr => {
   let count = Math.floor(Math.random() * 3) + 3; //3 to 6;
   const activity = [];
   while (count > 0) {
-    const index = Math.floor(Math.random() * arr.length - 1);
+    const index = Math.floor(Math.random() * arr.length);
     activity.push(...arr.splice(index, 1));
     count -= 1;
   }

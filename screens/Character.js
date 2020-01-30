@@ -69,6 +69,7 @@ import getPastime from "../modules/getPastime";
 import getFolly from "../modules/getFolly";
 import getMouth from "../modules/getMouth";
 import getView from "../modules/getView";
+import getTrait from "../modules/getTrait";
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -403,8 +404,19 @@ class Character extends React.Component {
     const view = getView();
     const annoyingStuff = this.state.annoyingStuff || view.annoyingStuff;
     const boringStuff = this.state.boringStuff || view.boringStuff;
+    const traitList = getTrait();
+    const generatedTraits = {},
+    
+    const keys = Object.keys(traitList);
+    const values = Object.values(traitList);
 
-    // SetState
+    for(let i=0; i<keys.length; i++) {
+      const k = keys[i];
+      const v = this.state[k] || values[i]
+      generatedTraits[k] = v;
+    }
+
+  
     this.setState({
       skinTone,
       health,
@@ -489,14 +501,13 @@ class Character extends React.Component {
           doubleChin,
           `and ${print(ear.size, ear.shape)}`
         ),
-      //---
       outfit:
         this.state.outfit ||
         `${print(", ", ...outfit.slice(0, outfit.length - 2))} and ${outfit[
           outfit.length - 1
-        ].toLocaleLowerCase()}`
+        ].toLocaleLowerCase()}`,
+        ...generatedTraits
     });
-    //}
   };
 
   printFile = () => {

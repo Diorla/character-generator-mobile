@@ -1,16 +1,16 @@
 // I removed the last letter to prevent clashing with
 // selectedValue in Trait.js
 const trait = {
-  moralit: [
+  morality: [
     "Ethical",
     "Honest",
     "Decent",
     "Dishonest",
     "Decadent",
     "Depraved",
-    "Evil",
+    "Evil"
   ],
-  truthfulnes: [
+  truthfulness: [
     "Blunt",
     "Candid",
     "Truthful/open",
@@ -19,9 +19,9 @@ const trait = {
     "Fibber",
     "Compulsive liar",
     "Deceptive",
-    "Devious",
+    "Devious"
   ],
-  sociabilit: [
+  sociability: [
     "Superficial",
     "Glamorous",
     "Sociable",
@@ -31,9 +31,9 @@ const trait = {
     "Evasive",
     "Taciturn",
     "Timid",
-    "Reclusive",
+    "Reclusive"
   ],
-  approachabilit: [
+  approachability: [
     "Talkative",
     "Friendly",
     "Approachable",
@@ -41,9 +41,9 @@ const trait = {
     "Loner",
     "Unfriendly",
     "Cold",
-    "Antisocial",
+    "Antisocial"
   ],
-  zea: [
+  zeal: [
     "Pitiless",
     "Ruthless",
     "Motivated",
@@ -52,9 +52,9 @@ const trait = {
     "Indifferent",
     "Content",
     "Lazy",
-    "Numb",
+    "Numb"
   ],
-  prid: [
+  pride: [
     "Arrogant",
     "Egotistic",
     "Brash",
@@ -64,9 +64,9 @@ const trait = {
     "Low key",
     "Modest",
     "Unassuming",
-    "Shy",
+    "Shy"
   ],
-  riskTakin: [
+  riskTaking: [
     "Daring",
     "Adventurous",
     "Restless",
@@ -76,9 +76,9 @@ const trait = {
     "Diffident",
     "Hesitant",
     "Cautious",
-    "Reserved",
+    "Reserved"
   ],
-  naivet: [
+  naivety: [
     "Stupid",
     "Naive",
     "Innocent",
@@ -87,9 +87,9 @@ const trait = {
     "Apprehensive/suspicious",
     "Wary",
     "Distrustful",
-    "Scornful",
+    "Scornful"
   ],
-  optimis: [
+  optimism: [
     "Utopian",
     "Idealistic",
     "Optimistic",
@@ -97,35 +97,35 @@ const trait = {
     "Realist",
     "Sceptic",
     "Cynic",
-    "Pessimist",
+    "Pessimist"
   ],
-  problemSolvingMetho: [
+  problemSolvingMethod: [
     "Intellectual",
     "Cerebral/academic",
     "Balanced",
     "Instinctive/intuitive",
     "Action-driven",
     "Brutish",
-    "Savage",
+    "Savage"
   ],
-  intelligenc: [
+  intelligence: [
     "Genius",
     "Intelligent/shrewd",
     "Average",
     "Simple/Below average",
     "Obtuse",
-    "Moron",
+    "Moron"
   ],
-  humanis: [
+  humanism: [
     "Altruistic",
     "Selfless",
     "Considerate",
     "Humane",
     "Selfish",
     "Inconsiderate",
-    "Self-centred",
+    "Self-centred"
   ],
-  sensitivit: [
+  sensitivity: [
     "Neurotic",
     "Irrational",
     "Emotional",
@@ -134,9 +134,9 @@ const trait = {
     "Rational and logical",
     "Lethargic",
     "Unsympathetic",
-    "Apathetic",
+    "Apathetic"
   ],
-  spontaneit: [
+  spontaneity: [
     "Rigid",
     "Methodical/organised",
     "Predictable",
@@ -144,9 +144,9 @@ const trait = {
     "Spontaneous",
     "Impulsive",
     "Irresponsible",
-    "Immature",
+    "Immature"
   ],
-  socialEngagemen: [
+  socialEngagement: [
     "Bigoted",
     "Prejudicial/chauvinistic",
     "Close-minded",
@@ -156,9 +156,9 @@ const trait = {
     "Open-minded",
     "Liberal",
     "Defiant/rebellious",
-    "Anarchist",
+    "Anarchist"
   ],
-  doctrin: [
+  doctrine: [
     "Loyal/faithful",
     "Steadfast",
     "Dedicated",
@@ -166,9 +166,9 @@ const trait = {
     "Marginal",
     "Fickle",
     "Disloyal",
-    "Nihilistic",
+    "Nihilistic"
   ],
-  preoccupatio: [
+  preoccupation: [
     "Shameless/unabashed",
     "Short-sighted",
     "Carefree",
@@ -176,9 +176,9 @@ const trait = {
     "Troubled",
     "Contrite/remorseful/apologetic",
     "Far-sighted",
-    "Visionary",
+    "Visionary"
   ],
-  complexit: [
+  complexiy: [
     "Self-contradictory",
     "Complicated",
     "Inconsistent",
@@ -186,9 +186,9 @@ const trait = {
     "Consistent",
     "Reliable",
     "Simple",
-    "Basic/plain",
+    "Basic/plain"
   ],
-  submissivenes: [
+  submissiveness: [
     "Subjugated",
     "Subservient",
     "Submissive",
@@ -202,16 +202,16 @@ const trait = {
     "Domineering",
     "Tyrannical"
   ],
-  braver: [
+  bravery: [
     "Reckless",
     "Heroic",
     "Courageous",
     "Measured",
     "Fearful/nervous",
     "Faint-hearted",
-    "Coward",
+    "Coward"
   ],
-  devotio: [
+  devotion: [
     "Extremist",
     "Fanatic",
     "Dogmatic",
@@ -222,9 +222,9 @@ const trait = {
     "Secular",
     "Agnostic",
     "Atheist",
-    "Impious",
+    "Impious"
   ],
-  irritabilit: [
+  irritability: [
     "Ill tempered",
     "Irritable",
     "Prickly",
@@ -232,9 +232,9 @@ const trait = {
     "Calm",
     "Easy going",
     "Docile",
-    "Impervious",
+    "Impervious"
   ],
-  resolutio: [
+  resolution: [
     "Obstinate",
     "Relentless",
     "Tenacious",
@@ -243,19 +243,8 @@ const trait = {
     "Procrastinating",
     "Weak-kneed",
     "Indecisive",
-    "Wishy-washy",
+    "Wishy-washy"
   ]
-}
+};
 
-/*
-Counter intelligence
---------------------
-High speed evasive driving techniques
-Weapons proficiency
-Cartography
-Sabotage
-Photography
-Film development
-Encryption & Cryptography
-Radio transmission
-*/
+export default trait;
