@@ -25,6 +25,12 @@ const folly = {
     "Binge watching movies",
     "Frequent shoplifting",
     "Likes to bully(physically, emotionally)",
+    "Swears a lot",
+    "Always on Social media",
+    "Extravagant spender",
+    "Always misses appointment",
+    "Always late",
+    "Gossips a lot",
   ]
 }
 

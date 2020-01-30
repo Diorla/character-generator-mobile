@@ -29,7 +29,8 @@ import {
   getEducation,
   getSocialStatus,
   manageData,
-  getNationality
+  getNationality,
+  getPhobia
 } from "./../modules";
 
 import {
@@ -63,11 +64,10 @@ import getNames from "../modules/getNames";
 import getHealth from "../modules/getHealth";
 import getRestingface from "./../modules/getRestingface";
 import print from "../modules/print";
-import getChildhood from './../modules/getChildhood';
+import getChildhood from "./../modules/getChildhood";
+import getPastime from "../modules/getPastime";
 
-
-
-
+// subversive, rebellious etc
 class Character extends React.Component {
   state = {
     birthday: "",
@@ -311,8 +311,6 @@ class Character extends React.Component {
 
   randomise = () => {
     const { gender } = this.state;
-    //if (!gender) this.feedback("Please select gender");
-    //else {
     const age =
       this.state.age ||
       Math.floor(Math.random() * 35) +
@@ -365,9 +363,6 @@ class Character extends React.Component {
     const gait = this.state.gait || getGait();
     const posture = this.state.posture || getPosture();
     const bloodGroup = this.state.bloodGroup || getBloodGroup();
-    const speechStyle = this.state.speechStyle || getSpeech.speechStyle();
-    const speechImpediment =
-      this.state.speechImpediment || getSpeech.speechImpediment();
     const gesture = this.state.gesture || getGesture();
     const socialStatus = this.state.socialStatus || getSocialStatus(education);
     const familyEconomicStatus =
@@ -387,7 +382,17 @@ class Character extends React.Component {
     const phobia = this.state.phobia || print(", ", getPhobia());
     const restingFace = this.state.restingFace || getRestingface();
     const childhood = this.state.childhood || getChildhood();
-
+    const speech = getSpeech();
+    const speechStyle = this.state.speechStyle || speech.speechStyle;
+    const speechImpediment =
+      this.state.speechImpediment || speech.speechImpediment;
+    const speechTempo = this.state.speechTempo || speech.speechTempo;
+    const speechPitch = this.state.speechPitch || getVoice(gender);
+    const phobia = this.state.phobia || print(", ", getPhobia());
+    const pastime = getPastime();
+    const hobby = this.state.hobby || pastime.hobby;
+    const favouriteActivity =
+      this.state.favouriteActivity || pastime.favouriteActivity;
 
     // SetState
     this.setState({
@@ -418,6 +423,12 @@ class Character extends React.Component {
       restingFace,
       hometown,
       childhood,
+      speechStyle,
+      speechImpediment,
+      speechPitch,
+      speechTempo,
+      hobby,
+      favouriteActivity,
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:

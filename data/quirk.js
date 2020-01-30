@@ -28,8 +28,7 @@ const quirks = {
     "Very supersticious",
     "Flicks people in the forehead when annoyed/frustrated",
     "Likes booping nose",
-    "Frequently cracks his/her neck",
-    "Incessantly cracks his/her knuckles",
+    "Frequently cracks his/her joints(neck, knuckles and back)",
     "Quite gassy",
     "Likes to speak in third person",
     "Regularly mispronouces some words",
@@ -82,7 +81,12 @@ const quirks = {
     "Likes garlic, so always have garlic breath",
     "Has Synesthesia",
     "Mispronouces words (e.g. sheriff=/she(like the pronoun) riff/",
-    "Use multiple negatives a lot"
+    "Use multiple negatives a lot",
+    "Talks with mouth full",
+    "Frequent talks to him/herself",
+    "Hardly remember names",
+    "Likes to eavesdrop",
+    "Always complaining about everything",
   ]
 };
 
