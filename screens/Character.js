@@ -371,7 +371,6 @@ class Character extends React.Component {
     const socialStatus = this.state.socialStatus || getSocialStatus(education);
     const familyEconomicStatus =
       this.state.familyEconomicStatus || getSocialStatus(socialStatus);
-    const speechPitch = this.state.speechPitch || getVoice(gender);
     const outfit = this.state.outfit || getOutfit(gender);
     const accessories = this.state.accessories || getAccessories(age);
     //cities would be in the same country of nationality
@@ -382,8 +381,7 @@ class Character extends React.Component {
       this.state.hometown || `${getCity(nationality, birthPlace)}`;
     const occupation = this.state.occupation || getJob(education, socialStatus);
     const name = this.state.name || getNames(nationality, gender);
-    const health = this.state.health || print(getHealth(age, gender));
-    const phobia = this.state.phobia || print(", ", getPhobia());
+    const health = this.state.health || print(", ", getHealth(age, gender));
     const restingFace = this.state.restingFace || getRestingface();
     const childhood = this.state.childhood || getChildhood();
     const speech = getSpeech();
@@ -405,7 +403,7 @@ class Character extends React.Component {
     const annoyingStuff = this.state.annoyingStuff || view.annoyingStuff;
     const boringStuff = this.state.boringStuff || view.boringStuff;
     const traitList = getTrait();
-    const generatedTraits = {},
+    const generatedTraits = {};
     
     const keys = Object.keys(traitList);
     const values = Object.values(traitList);

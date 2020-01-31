@@ -178,7 +178,7 @@ const trait = {
     "Far-sighted",
     "Visionary"
   ],
-  complexiy: [
+  complexity: [
     "Self-contradictory",
     "Complicated",
     "Inconsistent",

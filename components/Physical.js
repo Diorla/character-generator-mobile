@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { TextInput, Card, Colors, Button } from "react-native-paper";
+import { View } from "react-native";
 import Helper from "./Helper";
+import MyText from "./MyText";
 
 const Physical = props => {
   const [display, setDisplay] = useState(false);

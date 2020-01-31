@@ -156,12 +156,8 @@ const Story = props => {
             style={{ width: "100%" }}
             placeholder="Protagonist, Deuteragonist, antagonist, 
             Love interest, tertiary character, confidant, foil character"
+            multiline
           />
-          {/*<MyPicker
-            title="Role"
-            data={role.main}
-            selectedValue={role}
-            onValueChange={changeRole}/>*/}
           <TextInput
             label="Goal"
             value={goal}

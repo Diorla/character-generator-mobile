@@ -61,7 +61,8 @@ MyText.propTypes = {
     "ul",
     "li",
     "icons",
-    "em"
+    "em",
+    "quote"
   ])
 };
 
