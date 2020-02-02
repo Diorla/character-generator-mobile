@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Text, Picker, View } from "react-native";
 import { TextInput, Card, Colors, Button } from "react-native-paper";
 import MyPicker from "./MyPicker";
-import fetchNationality from "./../data/nationality";
+import sortedCountry from "./../data/nationality";
 import fetchSocialStatus from "./../data/socialStatus";
 import Helper from "./Helper";
 import MyText from "./MyText/MyText";
@@ -143,7 +143,7 @@ const Biodata = props => {
           />
           <MyPicker
             title="Nationality"
-            data={fetchNationality("country").sort()}
+            data={sortedCountry()}
             selectedValue={nationality}
             onValueChange={changeNationality}
           />

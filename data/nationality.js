@@ -325,4 +325,9 @@ const nationality = {
 export {
   nationality
 }
-export default (arg)=>nationality[arg]
+
+const sortedCountry=()=> {
+  const country = [...nationality["country"]]
+  return country.sort();
+}
+export default sortedCountry
