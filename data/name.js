@@ -781,7 +781,7 @@ const names = {
       "Kassaly"
     ]
   },
-  "Sri Lanka": { //=> India
+  "Sri Lanka": { //=> Paki
     Male: [],
     Female: [],
     Surname: []

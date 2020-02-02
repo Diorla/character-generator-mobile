@@ -2,15 +2,42 @@ import oddCalculator from "./oddCalculator";
 import names from "./../data/name";
 
 const getFullName = (country, gender) => {
-  //gender= !!gender || "Male";
-  const firstName = oddCalculator(country[gender]);
-  const lastName = oddCalculator(country["Surname"]);
+  const firstName =
+    oddCalculator(country[gender]) || oddCalculator(names.Nigeria[gender]);
+  const lastName =
+    oddCalculator(country["Surname"]) ||
+    oddCalculator(names.Nigeria["Surname"]);
   return `${firstName} ${lastName}`;
 };
 
 const getNames = (country, gender) => {
-  const anglophone = ["United Kingdom", "United States", "Australia"];
-  const hispanic = ["Spain", "Columbia", "Argentina", "Peru", "Venezuela"];
+  const anglophone = [
+    "Ireland",
+    "United Kingdom",
+    "United States",
+    "Australia",
+    "Canada",
+    "New Zealand"
+  ];
+  const hispanic = [
+    "Chile",
+    "Guatemala",
+    "Ecuador",
+    "Spain",
+    "Columbia",
+    "Argentina",
+    "Peru",
+    "Venezuela",
+    "Cuba",
+    "Dominican Republic",
+    "Honduras",
+    "El Salvador",
+    "Nicaragua",
+    "Costa Rica",
+    "Panama",
+    "Puerto Rico",
+    "Uruguay"
+  ];
   const middleEast = [
     "Iran",
     "Egypt",
@@ -21,12 +48,24 @@ const getNames = (country, gender) => {
     "Saudi Arabia",
     "Yemen",
     "Algeria",
+    "Syria",
+    "Tunisia",
+    "Jordan",
+    "United Arab Emirates",
+    "Libya",
+    "Lebanon",
+    "Palestine",
+    "Oman",
+    "Kuwait",
+    "Qatar",
+    "Bahrain"
   ];
-  const sinophone = ["Thailand"];
+  const sinophone = ["Thailand", "Taiwan"];
   const brazil = ["Portugal"];
-  const paki = ["Bangladesh"];
+  const paki = ["Bangladesh", "Sri Lanka"];
   const korea = ["South Korea", "North Korea"];
-  if (anglophone.includes(country)) return getFullName(names["United States"], gender);
+  if (anglophone.includes(country))
+    return getFullName(names["United States"], gender);
   else if (hispanic.includes(country)) return getFullName(names.Mexico, gender);
   else if (middleEast.includes(country))
     return getFullName(names.Egypt, gender);
