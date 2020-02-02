@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 import { Text, View, Modal, ScrollView } from "react-native";
 import { Colors, Button, IconButton } from "react-native-paper";
-import {  } from "react-native-gesture-handler";
 
 const Helper = props => (
   <>
@@ -14,13 +13,12 @@ const Helper = props => (
         visible={props.visible}
         onRequestClose={props.onRequestClose}
       >
-        <ScrollView
+        <ScrollView>
+          <View
           style={{
             justifyContent: "space-between",
             flex: 1
-          }}
-        >
-          <View>
+          }}>
             <Text
               style={{
                 textAlign: "center",
@@ -82,7 +80,6 @@ const Helper = props => (
 );
 
 Helper.propTypes = {
-  // bla: PropTypes.string,
   visible: PropTypes.bool,
   onRequestClose: PropTypes.func,
   helpHeader: PropTypes.string,
@@ -94,7 +91,6 @@ Helper.propTypes = {
 };
 
 Helper.defaultProps = {
-  // bla: 'test',
   visible: false,
   onRequestClose: null,
   helpHeader: "Header",

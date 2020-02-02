@@ -368,6 +368,7 @@ const Trait = props => {
                 label="Intelligent/shrewd"
                 value="Intelligent/shrewd"
               />
+              <Picker.Item label="Above average" value="Above average" />
               <Picker.Item label="Average" value="Average" />
               <Picker.Item
                 label="Simple/Below average"

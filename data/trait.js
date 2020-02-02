@@ -111,6 +111,7 @@ const trait = {
   intelligence: [
     "Genius",
     "Intelligent/shrewd",
+    "Above average",
     "Average",
     "Simple/Below average",
     "Obtuse",

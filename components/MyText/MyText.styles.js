@@ -1,42 +1,36 @@
-// import styled from 'styled-components';
 import { StyleSheet } from 'react-native';
-
-// export const Test = styled.div`
-//  display: flex;
-// `;
-//
 
 const styles = StyleSheet.create({
   h1: {
-    // fontSize: 32,
-    // marginTop: "0.67em",
-    // marginBottom: "0.67em",
-    // marginLeft: 0,
-    // marginRight: 0,
-    // fontWeight: "bold"
+    fontSize: 32,
+    marginTop: 10.72,
+    marginBottom: 10.72,
+    marginLeft: 0,
+    marginRight: 0,
+    fontWeight: "bold"
   },
   h2: {
-    // fontSize: "1.5em",
-    // marginTop: "0.83em",
-    // marginBottom: "0.83em",
-    // marginLeft: 0,
-    // marginRight: 0,
-    // fontWeight: "bold"
+    fontSize: 24,
+    marginTop: 13.28,
+    marginBottom: 13.28,
+    marginLeft: 0,
+    marginRight: 0,
+    fontWeight: "bold"
   },
   h3: {
-    // fontSize: "1.17em",
-    // marginTop: "1em",
-    // marginBottom: "1em",
-    // marginLeft: 0,
-    // marginRight: 0,
-    // fontWeight: "bold"
+    fontSize: 18.72,
+    marginTop: 16,
+    marginBottom: 16,
+    marginLeft: 0,
+    marginRight: 0,
+    fontWeight: "bold"
   },
   h4: {
-    // marginTop: "1.33em",
-    // marginBottom: "1.33em",
-    // marginLeft: 0,
-    // marginRight: 0,
-    // fontWeight: "bold"
+    marginTop: 21.28,
+    marginBottom: 21.28,
+    marginLeft: 0,
+    marginRight: 0,
+    fontWeight: "bold"
   },
   strong: {
     fontWeight: "bold",
@@ -52,9 +46,9 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(100, 120, 140, 0.1)",
   },
   ul: {
-    // marginTop: "1em",
-    // marginBottom: "1em",
-    // paddingLeft: 40,
+    marginTop: 16,
+    marginBottom: 16,
+    paddingLeft: 40,
   }
 })
 

@@ -744,37 +744,563 @@ const names = {
       "Lohoues", "Cisse", "Aby", "Essoh", "Tia", "Lagoali", "Elloh", "Agbo", "Kouassi",
     ]
   },
-  Nepal: {
+  Cameroon: {
+    Male: [
+      "Fabrice", "Kerrido", "Andre", "Ambroise", "Micheal", "Collins", "Allan", "Joyskim", "Jerome", 
+      "Jean-Charles", "Arnaud", "Andre-Frank", "Pierre", "Frank-Yves", "Vincent", "Eric", "Christian",
+      "Karl", "Moumi", "Ignatius", "Jean-Pierre", "Didier", "Lamkel",
+    ],
+    Female: [
+      "Carole", "Ange", "Claudia", "Voulania", "Catherine", "Alvine", "Estelle", "Falonne", "Colette",
+      "Raissa", "Grace", "Charlene", "BXrigitte", "Ajara", "Gabrielle", "Chanel", "Alexandra", "Flora",
+      "Michele"
+    ],
+    Surname: [
+      "Ze", "Nsame", "Ganago", "Ngameleu", "Bassogog", "Aboubakar", "Bambock", "Kunde", "Olinga", 
+      "Anguissa", "Djoum", "Castelletto", "Onguene", "Dawa", "Nyom", "Fai", "Ngadeu-Ngadjui", "Oyongo",
+      "Onana", "Haschou", "Ondoa", "Akaba", "Kameni", "Engolo", "Tchapchet", "Onguene", "Njoya", 
+      "Omboudou", "Menene", "Yango", "Feudjio", "Ndzana", "Meffometou", "Johnson", "NJolle", "Mbengono",
+      "Dabda", "Bawou", "Mimboe"
+    ]
+  },
+  Taiwan: { //=> China
     Male: [],
     Female: [],
     Surname: []
   },
-  Nepal: {
+  Niger: {
+    Male: [
+      "Daouda", "Mainassara", "Herve", "Yacouba", "Abdoul-Razak", "Zakariya", "Kourouma", "Mouhamadou",
+      "Ali", "Mahamane", "Yussif", "Djibo", "Daniel", "Kamilou", "Modibo", "Fabrice", "Victorien", "Amadou", 
+      "Seybou", "Moussa"
+    ],
+    Female: [],
+    Surname: [
+      "Maazou", "Koita", "Moutari", "Yao", "Sidibe", "Daouda", "Soungole", "Wonkoye", "Moussa", "Cisse", 
+      "Mohamed", "Hamidou", "Ali", "Fatoukouma", "Souleymane", "Seyni", "Diori", "Lybohy", "BXabari", 
+      "Kassaly"
+    ]
+  },
+  "Sri Lanka": { //=> India
     Male: [],
     Female: [],
     Surname: []
   },
-  Nepal: {
+  Romania: {
+    Male: [
+      "Ciprian", "Silviu", "Florin", "Romario", "Alin", "Nicusor", "Ionut", "Adrian", "Iulian", "Andrei",
+      "Vasile", "Nicolae", "Razvan", "Constantin", "Alexandru", "Ianis", "Tudor", "Dan", "Florinel",
+      "Claudiu", "George", "Denis",
+    ],
+    Female: [
+      "Andrea", "Linda", "Olivia", "Melinda", "Teodora", "BXrigitta", "Bianca", "Claudia", "Stefania",
+      "Florentina", "Erika", "Maria", "Beatrice", "Mihaela", "Cristina", "Mara", 
+    ],
+    Surname: [
+      "Alibec", "Puscas", "Keseru", "Coman", "Nistor", "Cicaldau", "Baluta", "Hagi", "Mitrita", "Budescu",
+      "Marin", "Deac", "Stanciu", "Mogos", "Burca", "Cristea", "Rus", "Nedelcearu", "Bancu", "Tosca",
+      "Benzar", "Nita", "Lung", "Tatarusanu", "Batea", "Carp", "Ciolacu", "Tarasila", "Neacsu", 
+      "Bistrian", "Herczeg", "Gered", "Olar-Spanu", "Vatafu", "Pana", "Sandu", "Goder", "Meluta", "Nagy",
+      "Oprea", "Kajtar", "Paraluta"
+    ]
+  },
+  "Burkina Faso": {
+    Male: [
+      "Babayoure", "Soufian", "Ben", "Steeve", "Issoufou", "Yacouba", "Edmond", "Issa", "Dylan", "Oula",
+      "Soumaila", "Charles", "Bertrand", "Cyrille", "Adama", "Bryan", "Zakaria", "Jonathan", "Aristide",
+      "Sibiri", "Lassina", "Eric", "Dramane", "Farid",
+    ],
+    Female: [
+      "Alima", "Corine", "Darifa", "Emerens", "Femke", "Idalina", "Jessica", "Kenisha", "Lan Anh", 
+      "Meiskina", "Nanci", "Puebla", "Samira", "Tugba", "Yahaira", "Zalika", "Asma", "Demetria", 
+      "Juvenal", "Krava", "Lenka", "Shadya", "Yanka"
+    ],
+    Surname: [
+      "Nikiema", "Traore", "Bance", "Pitroipa", "Zanogo", "Dabo", "Guira", "Bayala", "Kabore", "Ouattara",
+      "Ouedraogo", "Tapsoba", "Coulibaly", "Dayo", "Yago", "Sawadogo"
+    ]
+  },
+  Malawi: {
     Male: [],
     Female: [],
     Surname: []
   },
-  Nepal: {
+  Mali: {
     Male: [],
     Female: [],
     Surname: []
   },
-  Nepal: {
+  Syria: { // => Egypt
     Male: [],
     Female: [],
     Surname: []
   },
-  Nepal: {
+  Kazakhstan: {
     Male: [],
     Female: [],
     Surname: []
   },
-  Nepal: {
+  Chile: { //=> Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Zambia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Netherlands: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Guatemala: { //=> Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Ecuador: {  //=> Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Zimbabwe: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Cambodia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Senegal: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Chad: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Guinea: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "South Sudan": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Rwanda: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Tunisia: { // => Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Cuba: { //=> Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Belgium: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Benin: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Greece: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Bolivia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Haiti: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Burundi: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Dominican Republic": { //=> Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Czech Republic": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Portugal: { //=> Brazil
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Sweden: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Azerbaijan: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Hungary: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Jordan: { //=> Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Belarus: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "United Arab Emirates": { //=> Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Honduras: { //=> Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Tajistan: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Serbia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Austria: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Switzerland: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Israel: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Papua New Guinea": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Togo: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Sierra Leone": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Bulgaria: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Laos: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Paraguay: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "El Salvador": { //=> Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Libya: { // => Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Nicaragua: { //=> Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Lebanon: { //=> Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Kyrgyzstan: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Turkmenistan: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Denmark: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Singapore: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Finland: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Slovakia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Norway: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Republic Of The Congo": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Eritrea: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Palestine: { //=> Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Costa Rica": { // => Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Ireland: { //=> USA
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Liberia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "New Zealand": { //=> USA
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Central African Republic": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Oman: { //=> Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Mauritania: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Croatia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Kuwait: { //=> Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Panama: { // Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Moldova: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Georgia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Puerto Rico": { // Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Bosnia and Herzegovina": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Uruguay: { //Mexico
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Mongolia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Armenia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Albania: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Jamaica: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Lithuania: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Qatar: { // Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Namibia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Botswana: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Lesotho: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "The Gambia": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "North Macedonia": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Slovenia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Gabon: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Latvia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Guinea Bissau": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Bahrain: { // Egypt
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Trinidad & Tobago": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Swaziland: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Estonia: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "East Timor": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  "Equatorial Guinea": {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Mauritius: {
+    Male: [],
+    Female: [],
+    Surname: []
+  },
+  Cyprus: {
     Male: [],
     Female: [],
     Surname: []

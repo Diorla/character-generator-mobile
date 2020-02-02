@@ -64,10 +64,8 @@ const Biodata = props => {
           >
             <View>
               <MyText type="h3">Auto generated data</MyText>
-              <MyText type="strong">Name</MyText>
-              <MyText>: Based on the nationality</MyText>
-              <MyText type="strong">Place of birth</MyText>
-              <MyText>: Based on the nationality</MyText>
+              <MyText type="strong">Name</MyText><MyText>: Based on the nationality</MyText>
+              <MyText type="strong">Place of birth</MyText><MyText>: Based on the nationality</MyText>
               <MyText type="strong">Current location</MyText>
               <MyText>: Influenced by place of birth</MyText>
               <MyText type="strong">Occupation</MyText>

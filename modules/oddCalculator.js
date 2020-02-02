@@ -19,7 +19,7 @@ const _gaussian = arr => {
   let max = Math.ceil(arr.length / 2);
   let isEven = arr.length % 2 == 0;
   for (let i = 1; i <= max; i++) {
-    next++;
+    next +=5;
     prev += next;
     coeffArr.push(prev);
   }

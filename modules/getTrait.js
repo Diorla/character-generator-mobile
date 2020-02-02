@@ -1,19 +1,18 @@
-import trait from "../data/trait"
-import oddCalculator from './oddCalculator';
+import trait from "../data/trait";
+import oddCalculator from "./oddCalculator";
 
 const getTrait = () => {
-  const arr = {}
+  const obj = {};
   const keys = Object.keys(trait);
   const values = Object.values(trait);
 
-  for(let i=0; i<keys.length; i++) {
+  for (let i = 0; i < keys.length; i++) {
     const k = keys[i];
-    const v = oddCalculator(values[i])
-    arr[k] = v;
+    const v = oddCalculator(values[i], true);
+    obj[k] = v;
   }
 
-  return arr;
-}
-
+  return obj;
+};
 
 export default getTrait;

@@ -1,5 +1,7 @@
 const view = {
   annoying: [
+    // This includes what others may not consider annoying or may simply ignore
+    // This may be a no-no in relationship or get angry when someone does it.
     "24 hour news",
     "Celebrity gossip",
     "Certain celebrity",
@@ -23,6 +25,14 @@ const view = {
     "Not using turn signals",
     "Use of mobile phones during face to face conversation",
     "Pets",
+    "Swearing",
+    "Spitting in public",
+    "Burping in public",
+    "Ads",
+    "Eating with mouth open",
+    "False modesty",
+    "Losing(sore loser)",
+    "Talking with food in ones mouth",
   ],
   boring: [
     "Old movies",

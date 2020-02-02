@@ -3,7 +3,7 @@ const genDate = () => new Date(Math.random() * 126230400000)
 
 const months = [
   "January",
-  "Febuary",
+  "February",
   "March",
   "April",
   "May",
