@@ -12,6 +12,7 @@ const generateActvity = arr => {
 };
 
 const getPastime = trait => {
+  console.log(trait);
   const introvert = ["Evasive", "Taciturn", "Timid", "Reclusive", "Introvert"];
   // const extrovert = [
   //   "Superficial", "Glamorous", "Sociable", "Extrovert", "Charming",

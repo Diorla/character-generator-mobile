@@ -391,10 +391,6 @@ class Character extends React.Component {
     const speechTempo = this.state.speechTempo || speech.speechTempo;
     const speechPitch = this.state.speechPitch || getVoice(gender);
     const phobia = this.state.phobia || print(getPhobia(), ", ");
-    const pastime = getPastime(this.state.sociability);
-    const hobby = this.state.hobby || pastime.hobby;
-    const favouriteActivity =
-      this.state.favouriteActivity || pastime.favouriteActivity;
     const folly = this.state.folly || getFolly();
     const mouth = getMouth();
     const smile = this.state.smile || mouth.smile;
@@ -404,17 +400,21 @@ class Character extends React.Component {
     const boringStuff = this.state.boringStuff || view.boringStuff;
     const traitList = getTrait();
     const generatedTraits = {};
-    
+
     const keys = Object.keys(traitList);
     const values = Object.values(traitList);
 
-    for(let i=0; i<keys.length; i++) {
+    for (let i = 0; i < keys.length; i++) {
       const k = keys[i];
-      const v = this.state[k] || values[i]
+      const v = this.state[k] || values[i];
       generatedTraits[k] = v;
     }
 
-  
+    const pastime = getPastime(this.state.sociability||generatedTraits.sociability);
+    const hobby = this.state.hobby || print(pastime.hobby, ", ", " and ");
+    const favouriteActivity =
+      this.state.favouriteActivity || print(pastime.activity, ", ", " and ");
+
     this.setState({
       skinTone,
       health,
@@ -457,45 +457,62 @@ class Character extends React.Component {
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:
-        this.state.build || print([
-          weightType,
-          shoulderSize,
-          breastSize,
-          limbs.handFeetSize,
-          limbs.length,
-          limbs.thickness,
-          hips,
-          neck,
-          stomach,
-          buttock, `weighs about ${weight}kg`], ", ", " and "),
+        this.state.build ||
+        print(
+          [
+            weightType,
+            shoulderSize,
+            breastSize,
+            limbs.handFeetSize,
+            limbs.length,
+            limbs.thickness,
+            hips,
+            neck,
+            stomach,
+            buttock,
+            `weighs about ${weight}kg`
+          ],
+          ", ",
+          " and "
+        ),
       eye:
-        this.state.eye || print([
-          eyeElevation,
-          eyeDistance,
-          eyeShape,
-          eyeColour,
-          `eyes`,
-          print([eyeBrow.size, eyeBrow.shape])
-        ], ", ", " with "),
+        this.state.eye ||
+        print(
+          [
+            eyeElevation,
+            eyeDistance,
+            eyeShape,
+            eyeColour,
+            `eyes`,
+            print([eyeBrow.size, eyeBrow.shape])
+          ],
+          ", ",
+          " with "
+        ),
       hair:
         this.state.hair || `${print([hairSize, hairType, hairColour])} hair`,
       face:
         this.state.face ||
         print(
-          [freckles,
-          face,
-          forehead,
-          lips,
-          nose.size,
-          nose.shape,
-          beard,
-          moustache,
-          dimpledChin,
-          doubleChin, ear.size, ear.shape], ", ", " with "
+          [
+            freckles,
+            face,
+            forehead,
+            lips,
+            nose.size,
+            nose.shape,
+            beard,
+            moustache,
+            dimpledChin,
+            doubleChin,
+            ear.size,
+            ear.shape
+          ],
+          ", ",
+          " with "
         ),
-      outfit:
-        this.state.outfit || print(outfit, ", ", " and/or "),
-        ...generatedTraits
+      outfit: this.state.outfit || print(outfit, ", ", " and/or "),
+      ...generatedTraits
     });
   };
 

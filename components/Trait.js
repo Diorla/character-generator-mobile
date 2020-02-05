@@ -599,14 +599,10 @@ const Trait = props => {
               <Picker.Item label="Passive" value="Passive" />
               <Picker.Item label="Independent" value="Independent" />
               <Picker.Item label="Assertive" value="Assertive" />
-              <Picker.Item
-                label="Overbearing/bossy"
-                value="Overbearing/bossy"
-              />
-              <Picker.Item
-                label="Domineering/dictatorial"
-                value="Domineering/dictatorial"
-              />
+              <Picker.Item label="Bossy" value="Bossy" />
+              <Picker.Item label="Overbearing" value="Overbearing" />
+              <Picker.Item label="Domineering" value="Domineering" />
+              <Picker.Item label="Tyrannical" value="Tyrannical" />
             </Picker>
           </View>
           <View

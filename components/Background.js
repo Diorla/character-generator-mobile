@@ -8,8 +8,8 @@ import {
   IconButton
 } from "react-native-paper";
 import MyPicker from "./MyPicker";
-import biodata from "./../data/biodata";
 import Helper from "./Helper";
+import { socialStatus } from "../data/socialStatus";
 
 const Background = props => {
   const [display, setDisplay] = useState(false);
@@ -88,7 +88,7 @@ const Background = props => {
           </Helper>
           <MyPicker
             title="Family economic status"
-            data={biodata.socialStatus}
+            data={socialStatus.main}
             selectedValue={familyEconomicStatus}
             onValueChange={changeFamilyEconomicStatus}
           />

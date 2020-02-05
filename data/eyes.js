@@ -26,14 +26,15 @@ export default {
     "Rounded eyebrows with medium arch",
     "Rounded eyebrows with high arch",
     "Soft angled eyebrows with low arch",
-    "Soft angled eyebrows with low arch",
-    "Soft angled eyebrows with low arch",
+    "Soft angled eyebrows with medium arch",
+    "Soft angled eyebrows with high arch",
     "Hard angled eyebrows",
     "Flat eyebrows",
     "S-shaped eyebrows",
-    "Straight eyebrows"
+    "Straight eyebrows",
+    "Unibrow"
   ],
-  eyebrowShapeOdds: [6, 6, 6, 6, 6, 6, 15, 15, 15, 15],
+  eyebrowShapeOdds: [5.8, 5.8, 5.8, 5.8, 5.8, 5.8, 14.8, 14.8, 14.8, 14.8, 2],
   eyebrowSize: ["Bushy", "Thick", "Normal", "Thin"],
   eyebrowSizeOdds: [3.6, 10, 72.8, 13.6]
 };

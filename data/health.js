@@ -32,7 +32,6 @@ const health = {
     "Coeliac disease",
     "Raynaud syndrome",
     "Type 1 Diabetes",
-    "Vitiligo",
     "Meniere's disease",
     "Myasthenia gravis",
     "Narcolepsy"

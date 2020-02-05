@@ -1,6 +1,10 @@
 import oddCalculator from "./oddCalculator";
 import { socialStatus } from "../data/socialStatus";
 
+/**
+ * This function returns social status
+ * @param {String} education : The education or social status(to get family status)
+ */
 const getSocialStatus = education => {
   const { main, odds } = socialStatus;
   if (education == "Preschool" || education == "Underclass")

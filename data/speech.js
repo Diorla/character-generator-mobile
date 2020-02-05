@@ -3,7 +3,7 @@ const speech = {
     "Superfluous", //2
     "Elevator", //3
     "Educated", //6
-    "Normal", //11
+    "Ordinary", //11
     "Accentuated", //10
     "Peppered with slang", //5
     "Uses a lot of jargons", //4
@@ -13,7 +13,7 @@ const speech = {
   odds: [4, 9, 36, 121, 100, 25, 16, 64, 49],
   impediment: [
     "Stutters",
-    "Normal",
+    "Ordinary",
     "Verbal tic", //um, like, as in, and so, you know, understand, you think
     "Lisping",
     "Can't pronounce r (rabbit=>wabbit)",
@@ -27,8 +27,10 @@ const speech = {
 
 //c=>t, ch, g=>d
 
-//lisp=> s/z //sound alike
-//r=>w //pronouce r as w
-//l=>silent or y //lorry => yorry, blurry => byurry, fill=> fi/fee. It's rare since it's usually due to tied tongue(which can be fixed) or a language which doesn't distinguish e.g. Korean or Japanese.
+// lisp=> s/z //sound alike
+// r=>w //pronouce r as w
+// l=>silent or y //lorry => yorry, blurry => byurry, fill=> fi/fee. 
+// It's rare since it's usually due to tied tongue(which can be fixed) or 
+// a language which doesn't distinguish e.g. Korean or Japanese.
 
 export default speech;

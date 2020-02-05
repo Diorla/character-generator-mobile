@@ -41,12 +41,11 @@ const MyText = props => {
   else if (type == "li")
     return (
       <View>
-        <Text>⬛ {children}</Text>
+        <Text>🔘 {children}</Text>
       </View>
     );
   else if (type == "icons") return <Text>♦♦🔶🔶🔹🔹🔸🔸⚫🔴🔘◻▪◼🔳🔲⬛</Text>;
-  else if (type == "em")
-    return <Text style={styles.em}>{children}</Text>;
+  else if (type == "em") return <Text style={styles.em}>{children}</Text>;
   else return <Text>{children}</Text>;
 };
 
