@@ -94,42 +94,24 @@ const Trait = props => {
               onValueChange={changeMorality}
             >
               <Picker.Item label="N/A" value="" />
+              <Picker.Item label="Noble" value="Noble" />
+              <Picker.Item label="Righteous" value="Righteous" />
+              <Picker.Item label="Principled" value="Principled" />
+              <Picker.Item label="Honourable" value="Honourable" />
               <Picker.Item label="Ethical" value="Ethical" />
               <Picker.Item label="Honest" value="Honest" />
               <Picker.Item label="Decent" value="Decent" />
-              <Picker.Item label="Dishonest" value="Dishonest" />
-              <Picker.Item label="Decadent" value="Decadent" />
-              <Picker.Item label="Depraved" value="Depraved" />
-              <Picker.Item label="Evil" value="Evil" />
-            </Picker>
-          </View>
-          <View
-            style={{
-              backgroundColor: Colors.grey300,
-              borderBottomColor: Colors.grey500,
-              borderBottomWidth: 1,
-              padding: 4
-            }}
-          >
-            <Text>Truthfulness</Text>
-            <Picker
-              selectedValue={truthfulness}
-              style={{ height: 50, width: "100%" }}
-              onValueChange={changeTruthfulness}
-            >
-              <Picker.Item label="N/A" value="" />
-              <Picker.Item label="Blunt" value="Blunt" />
               <Picker.Item label="Candid" value="Candid" />
-              <Picker.Item label="Truthful/open" value="Truthful/open" />
-              <Picker.Item
-                label="Selectively truthful"
-                value="Selectively truthful"
-              />
+              <Picker.Item label="Blunt" value="Blunt" />
               <Picker.Item label="Oblique" value="Oblique" />
               <Picker.Item label="Fibber" value="Fibber" />
+              <Picker.Item label="Dishonest" value="Dishonest" />
               <Picker.Item label="Compulsive liar" value="Compulsive liar" />
+              <Picker.Item label="Decadent" value="Decadent" />
               <Picker.Item label="Deceptive" value="Deceptive" />
               <Picker.Item label="Devious" value="Devious" />
+              <Picker.Item label="Depraved" value="Depraved" />
+              <Picker.Item label="Evil" value="Evil" />
             </Picker>
           </View>
           <View
