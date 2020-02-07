@@ -70,6 +70,7 @@ import getFolly from "../modules/getFolly";
 import getMouth from "../modules/getMouth";
 import getView from "../modules/getView";
 import getTrait from "../modules/getTrait";
+import getCurseWord from "../modules/getCurseWord";
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -398,6 +399,7 @@ class Character extends React.Component {
     const view = getView();
     const annoyingStuff = this.state.annoyingStuff || view.annoyingStuff;
     const boringStuff = this.state.boringStuff || view.boringStuff;
+    const cursweWord = this.state.curseWord || getCurseWord();
     const traitList = getTrait();
     const generatedTraits = {};
 
@@ -454,6 +456,7 @@ class Character extends React.Component {
       laughter,
       annoyingStuff,
       boringStuff,
+      cursweWord,
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:

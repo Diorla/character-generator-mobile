@@ -81,3 +81,32 @@ const generateHometown=(placeOfBirth, nationality)=> {
 # Appearance
 - Resting face: refers to how the person always look e.g. enthusiastic, bored, angry etc.
   - So in htmlGenerator, it will go like this: Kehinde always looks _bored_
+- Physical
+  - Port bellied
+- Hair
+  - Hairstyles, types of moustaches, 
+
+# Habit
+- Eye contact: shifty, evasive, direct
+
+# Save
+> I don't know yet whether morality and truthfulness don't have to affect each other e.g. a decadent but candid person.
+
+1. **Morality**
+   1. Ethical
+   2. Honest
+   3. Decent
+   4. Dishonest
+   5. Decadent
+   6. Depraved
+   7. Evil
+1. **Truthfulness**:
+   1. Blunt
+   2. Candid
+   3. Truthful/open
+   4. Selectively truthful
+   5. Oblique
+   6. Fibber
+   7. Compulsive liar
+   8. Deceptive
+   9. Devious
