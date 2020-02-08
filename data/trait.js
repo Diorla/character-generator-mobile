@@ -2,24 +2,13 @@
 // selectedValue in Trait.js
 const trait = {
   morality: [
-    "Noble",
-    "Righteous",
-    "Principled",
-    "Honourable",
     "Ethical",
     "Honest",
     "Decent",
-    "Candid",
-    "Blunt",
-    "Oblique",
-    "Fibber",
     "Dishonest",
-    "Compulsive liar",
     "Decadent",
-    "Deceptive",
-    "Devious",
     "Depraved",
-    "Evil",
+    "Evil"
   ],
   // truthfulness: [
   //   "Blunt",

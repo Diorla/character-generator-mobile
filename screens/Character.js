@@ -71,6 +71,8 @@ import getMouth from "../modules/getMouth";
 import getView from "../modules/getView";
 import getTrait from "../modules/getTrait";
 import getCurseWord from "../modules/getCurseWord";
+import getMorality from "../modules/getMorality";
+import generateGender from './../modules/generateGender';
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -79,7 +81,7 @@ class Character extends React.Component {
     allData: {},
     name: "",
     age: "",
-    gender: "Male",
+    gender: "",
     others: "",
     birthPlace: "",
     currentLocation: "",
@@ -315,7 +317,8 @@ class Character extends React.Component {
   }
 
   randomise = () => {
-    const { gender } = this.state;
+    //const { gender } = this.state;
+    const gender = this.state.gender || generateGender();
     const age =
       this.state.age ||
       Math.floor(Math.random() * 35) +
@@ -411,13 +414,17 @@ class Character extends React.Component {
       const v = this.state[k] || values[i];
       generatedTraits[k] = v;
     }
-
-    const pastime = getPastime(this.state.sociability||generatedTraits.sociability);
+    generatedTraits["truthfulness"] =
+      this.state.morality || getMorality(generatedTraits["morality"]);
+    const pastime = getPastime(
+      this.state.sociability || generatedTraits.sociability
+    );
     const hobby = this.state.hobby || print(pastime.hobby, ", ", " and ");
     const favouriteActivity =
       this.state.favouriteActivity || print(pastime.activity, ", ", " and ");
 
     this.setState({
+      gender,
       skinTone,
       health,
       name,
@@ -548,7 +555,7 @@ class Character extends React.Component {
       bloodGroup: "",
       birthday: "",
       age: "",
-      gender: "Male",
+      gender: "",
       others: "",
       birthPlace: "",
       currentLocation: "",
@@ -980,7 +987,9 @@ class Character extends React.Component {
             }}
           />
           <Trait
-            changeMorality={morality => this.setState({ morality })}
+            changeMorality={morality => {
+              this.setState({ morality, truthfulness: getMorality(morality) });
+            }}
             changeTruthfulness={truthfulness => this.setState({ truthfulness })}
             changeSociability={sociability => this.setState({ sociability })}
             changeApproachability={approachability =>

@@ -12,7 +12,7 @@ import getNationality from "./getNationality";
 const getCity = (country, hometown) => {
   const id = countryId[country];
   const states = fetchStates(id);
-
+  console.log(`country: ${country}, hometown: ${hometown}`)
   // Current location
   if (hometown) {
     //grew up in the same city

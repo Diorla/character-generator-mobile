@@ -21,6 +21,6 @@ export default () => {
     if (oddCalculator([true, false], [10-n, n])) currentEducation = level;
     else break;
   }
-
+  console.log(currentEducation);
   return currentEducation;
 };
