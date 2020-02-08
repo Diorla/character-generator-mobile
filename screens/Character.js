@@ -72,7 +72,9 @@ import getView from "../modules/getView";
 import getTrait from "../modules/getTrait";
 import getCurseWord from "../modules/getCurseWord";
 import getMorality from "../modules/getMorality";
-import generateGender from './../modules/generateGender';
+import generateGender from "./../modules/generateGender";
+import getGroupDynamic from "./../modules/getGroupDynamic";
+import getDependent from "../modules/getDependent";
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -385,7 +387,6 @@ class Character extends React.Component {
       this.state.hometown || `${getCity(nationality, birthPlace)}`;
     const occupation = this.state.occupation || getJob(education, socialStatus);
     const name = this.state.name || getNames(nationality, gender);
-    const health = this.state.health || print(getHealth(age, gender), ", ");
     const restingFace = this.state.restingFace || getRestingface();
     const childhood = this.state.childhood || getChildhood();
     const speech = getSpeech();
@@ -394,7 +395,7 @@ class Character extends React.Component {
       this.state.speechImpediment || speech.speechImpediment;
     const speechTempo = this.state.speechTempo || speech.speechTempo;
     const speechPitch = this.state.speechPitch || getVoice(gender);
-    const phobia = this.state.phobia || print(getPhobia(), ", ");
+    const phobia = this.state.phobia || print(getPhobia(), ", ", " and ");
     const folly = this.state.folly || getFolly();
     const mouth = getMouth();
     const smile = this.state.smile || mouth.smile;
@@ -404,10 +405,15 @@ class Character extends React.Component {
     const boringStuff = this.state.boringStuff || view.boringStuff;
     const cursweWord = this.state.curseWord || getCurseWord();
     const traitList = getTrait();
+    const health = this.state.health || print(getHealth(age, gender), ", ");
     const generatedTraits = {};
 
     const keys = Object.keys(traitList);
     const values = Object.values(traitList);
+
+    const groupDynamic = this.state.groupDynamic || getGroupDynamic();
+
+    const dependent = this.state.dependent || getDependent();
 
     for (let i = 0; i < keys.length; i++) {
       const k = keys[i];
@@ -522,6 +528,8 @@ class Character extends React.Component {
           " with "
         ),
       outfit: this.state.outfit || print(outfit, ", ", " and/or "),
+      groupDynamic,
+      dependent,
       ...generatedTraits
     });
   };
@@ -548,6 +556,7 @@ class Character extends React.Component {
 
   reset = () => {
     this.setState({
+      name: "",
       disLikes: "",
       folly: "",
       hobby: "",
