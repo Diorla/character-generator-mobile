@@ -192,7 +192,7 @@ const names = {
     ],
     Female: [
       "Moeko", "Manami", "Saki", "Maki", "Rui", "Nako", "Mika", "Evelyn", "Haruno", "Yuki", "Tomomi", "Akane",
-      "Himawari", "Monica", "Ayami", "Yukari", "Risa", "Yui", "Nana", "Moemi", "Minami", "Ayumi", "Yukiko",
+      "Himawari", "Ayami", "Yukari", "Risa", "Yui", "Nana", "Moemi", "Minami", "Ayumi", "Yukiko",
       "Airi", "Ayako", "Ayaka", "Miki", "Akiko", "Iori"
       
     ],

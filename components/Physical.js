@@ -27,8 +27,6 @@ const Physical = props => {
     changeAccessories,
     grooming,
     changeGrooming,
-    tic,
-    changeTic,
     health,
     changeHealth,
     handwriting,
@@ -174,14 +172,6 @@ const Physical = props => {
             value={grooming}
             onChangeText={changeGrooming}
             style={{ width: "100%" }}
-          />
-          <TextInput
-            label="Quirks and mannerisms"
-            placeholder="Unique behaviour"
-            value={tic}
-            onChangeText={changeTic}
-            style={{ width: "100%" }}
-            multiline
           />
           <TextInput
             label="Health"

@@ -59,7 +59,11 @@ const Background = props => {
     regret,
     changeRegret,
     secret,
-    changeSecret
+    changeSecret,
+    hobby,
+    changeHobby,
+    phobia,
+    changePhobia,
   } = props;
 
   const mode = display ? "contained" : "text";
@@ -221,6 +225,13 @@ const Background = props => {
             style={{ width: "100%" }}
             multiline
             placeholder="favourite toys, sentimental objects or prized possession"
+          />
+          <TextInput
+            label="Phobias"
+            value={phobia}
+            multiline
+            onChangeText={changePhobia}
+            style={{ width: "100%" }}
           />
           <TextInput
             label="Role model"

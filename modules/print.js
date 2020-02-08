@@ -8,9 +8,10 @@ import title from "./title";
  */
 const print = (arr, sep, last) => {
   const filteredArr = arr.filter(n => n != "Normal");
+  if(arr.length==1) return arr[0]
   if (sep) {
     if (last) {
-      const first = filteredArr.slice(0, filteredArr.length - 2);
+      const first = filteredArr.slice(0, filteredArr.length - 1);
       return title(first.join(sep) + last + filteredArr[filteredArr.length - 1]);
     }
     return title(filteredArr.join(sep));

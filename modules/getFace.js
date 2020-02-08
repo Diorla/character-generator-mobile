@@ -53,7 +53,10 @@ const getFacialHair = (gender, age) => {
       moustache: oddCalculator(moustache, moustacheOdds),
       beard: oddCalculator(beard, beardOdds)
     };
-  } else return "Normal";
+  } else return {
+    moustache: "Normal",
+    beard: "Normal"
+  }
 };
 export default (skinColour, weightType, hairColour, gender, age) => {
   const { moustache, beard } = getFacialHair(gender, age);

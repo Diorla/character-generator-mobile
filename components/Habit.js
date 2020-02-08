@@ -13,8 +13,8 @@ const Habit = props => {
     changeSpeechTempo,
     speechPitch,
     changeSpeechPitch,
-    gesturing,
-    changeGesturing,
+    gesture,
+    changeGesture,
     eyeContact,
     changeEyeContact,
     speechImpediment,
@@ -40,7 +40,9 @@ const Habit = props => {
     folly,
     changeFolly,
     hobby,
-    changeHobby
+    changeHobby,
+    tic,
+    changeTic,
   } = props;
 
   const mode = display ? "contained" : "text";
@@ -52,7 +54,7 @@ const Habit = props => {
         color={Colors.blue700}
         style={{ elevation: 0 }}
       >
-        Habit/Mannerisms
+        Mannerisms
       </Button>
       {display ? (
         <Card style={{ elevation: 2, margin: 2 }}>
@@ -91,8 +93,8 @@ const Habit = props => {
           />
           <TextInput
             label="Gesturing"
-            value={gesturing}
-            onChangeText={changeGesturing}
+            value={gesture}
+            onChangeText={changeGesture}
             style={{ width: "100%" }}
             multiline
             placeholder="compulsive 'hand talker', controlled, when agitated"
@@ -172,6 +174,14 @@ const Habit = props => {
             style={{ width: "100%" }}
             multiline
             placeholder="e.g. smoking, alcholism, gambling"
+          />
+          <TextInput
+            label="Quirks and mannerisms"
+            placeholder="Unique behaviour"
+            value={tic}
+            onChangeText={changeTic}
+            style={{ width: "100%" }}
+            multiline
           />
           <TextInput
             label="Dislikes"

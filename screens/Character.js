@@ -160,7 +160,7 @@ class Character extends React.Component {
     speechTempo: "",
     speechAccent: "",
     speechPitch: "",
-    gesturing: "",
+    gesture: "",
     eyeContact: "",
     speechImpediment: "",
     curseWord: "",
@@ -556,7 +556,6 @@ class Character extends React.Component {
 
   reset = () => {
     this.setState({
-      name: "",
       disLikes: "",
       folly: "",
       hobby: "",
@@ -642,7 +641,7 @@ class Character extends React.Component {
       speechTempo: "",
       speechAccent: "",
       speechPitch: "",
-      gesturing: "",
+      gesture: "",
       eyeContact: "",
       speechImpediment: "",
       curseWord: "",
@@ -761,7 +760,6 @@ class Character extends React.Component {
             changeOutfit={outfit => this.setState({ outfit })}
             changeAccessories={accessories => this.setState({ accessories })}
             changeGrooming={grooming => this.setState({ grooming })}
-            changeTic={tic => this.setState({ tic })}
             changeHealth={health => this.setState({ health })}
             changeHandwriting={handwriting => this.setState({ handwriting })}
             changeGait={gait => this.setState({ gait })}
@@ -796,8 +794,6 @@ class Character extends React.Component {
             }
             changeStrength={strength => this.setState({ strength })}
             changeFlaw={flaw => this.setState({ flaw })}
-            changeHobby={hobby => this.setState({ hobby })}
-            changePhobia={phobia => this.setState({ phobia })}
             changeStory={story => this.setState({ story })}
             {...this.state}
           />
@@ -850,6 +846,7 @@ class Character extends React.Component {
             changeRoleModel={roleModel => this.setState({ roleModel })}
             changeRegret={regret => this.setState({ regret })}
             changeSecret={secret => this.setState({ secret })}
+            changePhobia={phobia => this.setState({ phobia })}
             {...this.state}
           />
           <Divider
@@ -861,11 +858,12 @@ class Character extends React.Component {
             }}
           />
           <Habit
+            changeTic={tic => this.setState({ tic })}
             changeSpeechStyle={speechStyle => this.setState({ speechStyle })}
             changeSpeechTempo={speechTempo => this.setState({ speechTempo })}
             changeSpeechAccent={speechAccent => this.setState({ speechAccent })}
             changeSpeechPitch={speechPitch => this.setState({ speechPitch })}
-            changeGesturing={gesturing => this.setState({ gesturing })}
+            changeGesture={gesture => this.setState({ gesture })}
             changeEyeContact={eyeContact => this.setState({ eyeContact })}
             changeSpeechImpediment={speechImpediment =>
               this.setState({ speechImpediment })

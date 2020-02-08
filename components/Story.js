@@ -36,10 +36,6 @@ const Story = props => {
     changeStrength,
     flaw,
     changeFlaw,
-    hobby,
-    changeHobby,
-    phobia,
-    changePhobia,
     story,
     changeStory
   } = props;
@@ -320,20 +316,6 @@ const Story = props => {
             value={flaw}
             multiline
             onChangeText={changeFlaw}
-            style={{ width: "100%" }}
-          />
-          <TextInput
-            label="Hobbies"
-            value={hobby}
-            multiline
-            onChangeText={changeHobby}
-            style={{ width: "100%" }}
-          />
-          <TextInput
-            label="Phobias"
-            value={phobia}
-            multiline
-            onChangeText={changePhobia}
             style={{ width: "100%" }}
           />
           <TextInput
