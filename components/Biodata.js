@@ -63,21 +63,40 @@ const Biodata = props => {
             quote="They are identifying data(excluding history), and makes the character unique."
           >
             <View>
-              <MyText type="h3">Auto generated data</MyText>
-              <MyText type="strong">Name</MyText><MyText>: Based on the nationality</MyText>
-              <MyText type="strong">Place of birth</MyText><MyText>: Based on the nationality</MyText>
-              <MyText type="strong">Current location</MyText>
-              <MyText>: Influenced by place of birth</MyText>
-              <MyText type="strong">Occupation</MyText>
-              <MyText>: Influenced by education and social status</MyText>
-              <MyText type="strong">Randomly generated</MyText>
+              <MyText type="h2">Auto generated data</MyText>
               <MyText>
-                : age, gender, nationality, education, social status
+                <MyText type="strong">Name</MyText>: Based on the nationality
               </MyText>
+              <MyText>
+                <MyText type="strong">Blood group</MyText>: Based on global
+                occurrence
+              </MyText>
+              <MyText>
+                <MyText type="strong">Place of birth</MyText>: Based on the
+                nationality
+              </MyText>
+              <MyText>
+                <MyText type="strong">Current location</MyText>: Influenced by
+                place of birth
+              </MyText>
+              <MyText>
+                <MyText type="strong">Nationality</MyText>: Based on global
+                occurrence
+              </MyText>
+              <MyText>
+                <MyText type="strong">Occupation</MyText>: Influenced by
+                education and social status
+              </MyText>
+              <MyText type="h2">Randomly generated</MyText>
+              <MyText>
+                Age, birthday, gender, education and social status
+              </MyText>
+              <MyText type=""/>
               <MyText>
                 If a person has more than one nationality, you can indicated it
                 under <MyText type="strong">More</MyText>
               </MyText>
+              <MyText type=""/>
               <MyText type="quote">
                 John Doe was born in Canada by a Nigerian mother to a German
                 father. His Paternal grandfather is half Chinese
