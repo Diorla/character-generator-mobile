@@ -59,41 +59,30 @@ const Physical = props => {
           <Helper
             visible={modalVisible}
             onRequestClose={() => displayModal(false)}
-            helpHeader="Bio-data"
+            helpHeader="Physical Attributes"
             closeModal={() => displayModal(false)}
             openModal={() => displayModal(true)}
             information="Physical description"
             quote="These are what you see when you look at the character"
           >
             <View>
-              <MyText type="h3">Auto generated data</MyText>
-              <MyText type="strong">Build</MyText>
+              <MyText type="h2">Auto generated data</MyText>
               <MyText>
-                : Body features are influenced by height and weight
+                <MyText type="strong">Build</MyText>: Features like
+                chest(breast) are influenced by gender.
               </MyText>
-              <MyText type="strong">Hair</MyText>
               <MyText>
-                : Type and colour of hair is influenced by skin tone
+                <MyText type="strong">Hair</MyText>: Hair type and colour is
+                influenced by skin tone.
               </MyText>
-              <MyText type="strong">Health</MyText>
               <MyText>
-                : Influenced by age, especially, chronic diseases. It does not
-                include disease with vaccination or those that has been
-                eradicated. Please, you may need to research the specified
-                diseases for diganosis, causes, signs and symptoms, treatments
-                and associated disease.
+                <MyText type="strong">Health</MyText>: The probability of
+                chronic diseases increases with age.
               </MyText>
-              <MyText type="strong">Occupation</MyText>
-              <MyText>: Influenced by education and social status</MyText>
-              <MyText type="strong">Randomly generated</MyText>
+              <MyText type="h2">Randomly generated</MyText>
               <MyText>
-                : height, weight, skin tone, face, eyes, distinguishing
-                features, preferred outfit, accessories, grooming, quirks,
+                Height, skin tone, face, eye, distinguishing features, grooming,
                 handwriting, gait and posture
-              </MyText>
-              <MyText>
-                You may add other physical attributes not mentioned here in{" "}
-                <MyText type="strong">More</MyText>
               </MyText>
             </View>
           </Helper>
@@ -113,7 +102,7 @@ const Physical = props => {
             multiline
           />
           <TextInput
-            label="Skin tone(or descent)"
+            label="Skin tone"
             value={skinTone}
             onChangeText={changeSkinTone}
             style={{ width: "100%" }}
