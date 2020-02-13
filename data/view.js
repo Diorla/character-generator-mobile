@@ -32,7 +32,7 @@ const view = {
     "Eating with mouth open",
     "False modesty",
     "Losing(sore loser)",
-    "Talking with food in ones mouth",
+    "Talking with food in ones mouth"
   ],
   boring: [
     "Old movies",
@@ -44,7 +44,8 @@ const view = {
     "Arts",
     "Science",
     "Chatting",
+    "Politics"
   ]
-}
+};
 
 export default view;

@@ -774,7 +774,12 @@ const names = {
       "Ali", "Mahamane", "Yussif", "Djibo", "Daniel", "Kamilou", "Modibo", "Fabrice", "Victorien", "Amadou", 
       "Seybou", "Moussa"
     ],
-    Female: [],
+    Female: [
+      "Cherifa", "Samia", "Haoua", "Aicha", "Isabelle", "Aichatou", "Najaah", "Chamsiya", "Rakiatou", 
+      "Fatouma", "Ramatou", "Oumou", "Anissah", "Mari-Ama", "Armelle", "Samira", "Rabibi", "Dioura", 
+      "Rachelle", "Faridatou", "Saymabelle", "Jihane", "Ami", "Nana Hadiza", "Chanze", "Halimatou", 
+      "Mariam", "Balkissa", "Mariama", "Celine", "Rahina", "Fati", "Yasmina" 
+    ],
     Surname: [
       "Maazou", "Koita", "Moutari", "Yao", "Sidibe", "Daouda", "Soungole", "Wonkoye", "Moussa", "Cisse", 
       "Mohamed", "Hamidou", "Ali", "Fatoukouma", "Souleymane", "Seyni", "Diori", "Lybohy", "BXabari", 
@@ -821,14 +826,39 @@ const names = {
     ]
   },
   Malawi: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Charles", "Brighton", "Denis", "Stanley", "Limbikani", "John", "Yamikani", "Gomezgani", "Precious",
+      "Jabulani", "Gerald", "Frank", "John", "Rafick", "Robin", "Richard", "Gabadinho", "Atusaye", 
+      "Chiukepo", "Patrick",
+    ],
+    Female: [
+      "Abikanile", "Buseje", "Chaonaine", "Dziko", "Kantayeni", "Liziuyanani", "Mabuufo", "Mesi",
+      "Ndachitanji", "Sigele", "Teleza", "Melina", "Alysha", "Fredah", "Charmaine", "Dorothy", "Natasha",
+      "Lynda", "Violet", "Tamanda"
+    ],
+    Surname: [
+      "Phiri", "Msowaya", "Nyondo", "Mhango", "Mbulu", "Ngalande", "Namwera", "Banda", "Linje", "Sambani",
+      "Chirwa", "Fodya", "Lanjesi", "Mzava", "Sanudi", "Chembezi", "Munthali", "Swini", "Kamwendo", 
+      "Mponda", "Msowoya", "Kanyenda"
+    ]
   },
   Mali: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Djigui", "Adama", "Ibrahim", "Molla", "Hamari", "Mamadou", "Youssouf", "Falaye", "Kiki", 
+      "Massadio", "Cheick", "Senou", "Diadie", "Amadou", "Rominigue", "Souleymane", "Mohamed", 
+      "Abdoulay", "Moussa", "Kalifa", "Sekou", "Hadi", "Ibrahima",
+    ],
+    Female: [
+      "Fatoumata", "Hawa", "Adoudou", "Aissatou", "Lala", "Salimata", "Aminata", "Coulouba", "Oumou", 
+      "Mainouna", "Farima", "Selikine", "Binta", "Sarantou", "Sebe", "Agueissa", "Bassira", "Aissata",
+      "Hawa", 
+    ],
+    Surname: [
+      "Sissoko", "Sacko", "Koita", "Djenepo", "Coulibaly", "Doumbia", "Diaby", "Traore", "Camara",
+      "Diarra", "Doucoure", "Kouame", "Haidara", "Samassekou", "Kouyate", "Kone", "Fofana", "Wague",
+      "Mounkoro", "Keita", "Roure", "Togola", "Tangara", "Kane", "Diadhiou", "Dembele", "Konate",
+      "Karentao"
+    ]
   },
   Syria: { // => Egypt
     Male: [],
@@ -836,9 +866,25 @@ const names = {
     Surname: []
   },
   Kazakhstan: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Stas", "Dmytro", "Igor", "Yuriy", "Dmitri", "Serhiy", "Gafurzhan", "Yan", "Temirian", "Aleksandr",
+      "Nuraly", "Olzhas", "Bauyrzhan", "Islambek", "Askhat", "Georgy", "Baktiyar", "Aybol", "Aleksey",
+      "Maxim", "Abat"
+    ],
+    Female: [
+      "Mariya", "Adil", "Madina", "Dinara", "Evgenia", "Yulia", "Veronika", "Begaim", "Saule", "Irina",
+      "Ekaterina", "Ulbolsyn", "Kristina", "Natalia", "Fatima", "Aigerim", "Nadezhda", "Oksana", 
+      "Aexandra"
+    ],
+    Surname: [
+      "Aimbetov", "Fedin", "Shchotkin", "Abiken", "Pertsukh", "Zaynutdinov", "Zhukov", "Tagybergen",
+      "Kuat", "Islamkhan", "Kerimzhanov", "Alip", "Marochkin", "Erlanov", "Miroshnickenko", 
+      "Vorogovskiy", "Suyumbayev", "Malyi", "Shomko", "Logvinenko", "Shatskiy", "Nepohodov", "Pokatilov",
+      "Grebenyuk", "Saratovtseva", "Schoykina", "Zheleznyak", "Alimbozova", "Alimkulova", "Alyakina",
+      "Aytymova", "Bisembayeva", "Idiatulina", "Ivanova", "Krasyukova", "Nikolayenko", "Stolpovskaya",
+      "Zholchieva", "Babshuk", "Birvagen", "Karibayeva", "Kirgizbaeva", "Maksimenko", "Myasnikova", 
+      "Samosledova", "Tampysheva", "Zhanatayeva", "Vyldanova", "Yalova"
+    ]
   },
   Chile: { //=> Mexico
     Male: [],
@@ -846,14 +892,41 @@ const names = {
     Surname: []
   },
   Zambia: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Toaster", "Sebastian", "Mwenya", "Stoppila", "Kabaso", "Isaac", "Lawrence", "Clement", "Tandi", 
+      "Nathan", "Donashano", "Salulani", "Augustine", "Clatous", "Bruce", "Kelvin", "Larry", "Evans", 
+      "Lazarous", "Mwape"
+    ],
+    Female: [
+      "Ng'ambo", "Hazel", "Annie", "Mary", "Lushomo", "Emelda", "Anita", "Margaret", "Martha", "Agness",
+      "Vast", "Judith", "Misozi", "Rhonda", "Mary", "Hellen", "Grace", "Barbra", "Racheal", 
+    ],
+    Surname: [
+      "Musonda", "Kambole", "Kangwa", "Shonga", "Bwayla", "Kampamba", "Musakanya", "Chama", "Mulenga",
+      "Phiri", "Malama", "Sinkala", "Mwape", "Chungu", "Shamujompa", "Chongo", "Sunzu", "Chibwe", "Mwange",
+      "Nsabata", "Nachula", "Kundananji", "Banda", "Chanda", "Mubanga", "Mwakapila", "Chileshe", "Zulu",
+      "Musase", "Tembo", "Belemu", "Mweemba", "Namonje", "Nali", "Musole"
+    ]
   },
   Netherlands: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Jasper", "Jeroen", "Marco", "Virgil", "Daley", "Stefan", "Matthijs", "Joel", "Nathan", "Patrick",
+      "Denzel", "Georginio", "Kevin", "Davy", "Frenkie", "Donny", "Memphis", "Quincy", "Luuk", "Steven",
+      "Wout", "Myron", "Calvin"
+    ],
+    Female: [
+      "Loes", "Sari", "Jennifer", "Dominique", "Anouk", "Merel", "Kika", "Danique", "Desiree", "Liza", 
+      "Aniek", "Danielle", "Jackie", "Inessa", "Victoria", "Jill", "Sherida", "Lineth", "Renate",
+      "Vivianne", "Shanice", "Katja", "Ashleigh"
+    ],
+    Surname: [
+      "Stengs", "Boadu", "Weghorst", "Berghuis", "de Jong", "Promes", "Depay", "van de Beek", "Propper",
+      "Strootman", "Wijnaldum", "Dumfries", "van Aanholt", "Veltman", "de Ligt", "de Vrij", "Blind", 
+      "van Dijk", "Bizot", "Zoet", "Cilessen", "Weerden", "Snoeijs", "van de Sanden", "Miedema", "Jansen",
+      "Beerensteyn", "Spitse", "Roord", "Pelova", "Kaagman", "Groenen", "van de Donk", "Nouwen", 
+      "van der Most", "van Lunteren", "Kerkdijk", "van Es", "van Dongen", "Dekker", "Bloodworth",
+      "Vreugdenhil", "Veenendaal", "Geurts"
+    ]
   },
   Guatemala: { //=> Mexico
     Male: [],
@@ -866,39 +939,119 @@ const names = {
     Surname: []
   },
   Zimbabwe: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Elvis", "Talbert", "Ian", "Peter", "Divine", "Alec", "Teenage", "MacClive", "Tichaona", "Phineas",
+      "Nyasha", "Ovidy", "Khama", "Sipho", "Thabani", "Kudakwashe", "Evans", "Clive", "Terrence", "Knox",
+      "Admiral", "Tino"
+    ],
+    Female: [
+      "Chido", "Lindiwe", "Lynett", "Shiela", "Nobuhle", "Eunice", "Msipa", "Talent", "Rejoice", "Mavis",
+      "Daisy", "Marjory", "Rudo", "Samkelisiwe", "Erina", "Rutendo", "Kudakwashe", "Felistas"
+    ],
+    Surname: [
+      "Kadewere", "Muskwe", "Mutizwa", "Dzvukamanja", "Augusto", "Rusike", "Mahachi", "Kamusoko", "Ndlovu",
+      "Billiat", "Karuru", "Munetsi", "Bamusi", "Chipunza", "Phiri", "Hadebe", "Mudimu", "Lunga", "Muduhwa",
+      "Nekati", "Shumba", "Chipezeze", "Muzongondi", "Bhasopo", "Makore", "Jeke", "Zulu", "Neshamba", 
+      "Nyaumwe", "Kaitano", "Chirandu", "Kapfumvuti", "Mandaza", "Emmaculate", "Chibanda", "Majika",
+      "Makoto", "Mutokuto", "Magwede", "Dringirai"
+    ]
   },
   Cambodia: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Sou", "Hul", "Keo", "Ken", "Sath", "Sareth", "Soeuy", "Tes", "Ly", "Yue", "Cheng", "Orn", "Kouch",
+      "Sin", "Sos", "Yeu", "Thierry", "Chantha", "Prak", "Mony", "Reung", "Keo", "Sieng", "Kan"
+    ],
+    Female: [
+      "Channary", "Chantrea", "Kalliyan", "Kiri", "Mliss", "Sovann", "Tevy", "Vanna", "Veata", "Achariya",
+      "Bopha", "Champey", "Daevy", "Jorani", "Kalianne", "Leakena", "Makra", "Narin", "Peou", "Rachana",
+      "Soboen", "Thom"
+    ],
+    Surname: [
+      "Pisal", "Chanthea", "Sokpheng", "Bunheing", "Udom", "Bin", "Muslim", "Dani", "Suhana", "Kakada", 
+      "Sokumpheak", "Chanpolin", "Meng", "Safy", "Vahed", "Sambath", "Visal", "Krya", "Rosib", "Yaty",
+      "Kimhuy", "Soksela", "Chansopheak", "Rosib"
+    ]
   },
   Senegal: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Abdoulaye", "Alfred", "Edouard", "Lamine", "Kalidou", "Saliou", "Moussa", "Racine", "Mouhamadou",
+      "Ousseynou", "Idrissa", "Gana", "Cheikhou", "Badou", "Krepin", "Sidy", "Mamadou", "Sadio", 
+      "Ismaila", "M'Baye", "Famara", "Sada", "Habib", "Meme", "Baba"
+    ],
+    Female: [
+      "Mariane", "Ouleye", "Arame", "Bineta", "Absa", "Mbayang", "Mame", "Ngouye", "Fatou", "Aminata", 
+      "Mereme", "Khady", "Safietou", "Maty", "Korka", "Fatou", "Mamy", "Fanta", "Mariama", 
+    ],
+    Surname: [
+      "Thiam", "Diallo", "Thioub", "Diedhiou", "Niang", "Sarr", "Mane", "Loum", "Diatta", "Ndiaye", 
+      "Kouyata", "Gueye", "Thioune", "N'Diaye", "Coly", "Wague", "Ciss", "Koulibaly", "Gassama",
+      "Mendy", "Gomis", "Diehiou", "Thiaw", "Sy", "Ndiaye", "Faye", "Fall", "Diop", "Sagna", 
+      "Sall", "Yally", "Diadhiou", "Sene", "Sow", "Diagne", "Fall", "Sylla", "Thiandoum", "Dieye",
+    ]
   },
   Chad: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Serge", "Mathieu", "Dillah", "Cesar", "Bechir", "Seid", "Morgan", "Constant", "Collyns", "Ninga",
+      "Ahmat", "Nassar", "Eric", "Azrack", "Romeo", "Brahim", "Bakhit", "Marius", "Karl", "Casimir",
+      "Ezechiel", "Edgar"
+    ],
+    Female: [
+      "Arafa", "Prudence", "Luiza", "Sylviane", "Fadoul", "Nya", "Angela", "Jodie",
+    ],
+    Surname: [
+      "Minganodji", "N'Douassel", "Ninga", "Barthelemy", "Mouandilmadji", "Djibrine", "Ngaroudal", 
+      "Otodjibaye", "Mahamat", "Mbangossoum", "Koulelengar", "Abderamane", "Ndonane", "Ambassa", 
+      "Madtoingue", "Betorangal", "Djimet", "Abaya", "Mbairamadji", "Adoassou", "Diguel" 
+    ]
   },
   Guinea: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Aly", "Moussa", "Sekouba", "Issiaga", "Sory", "Sekou", "Simon", "Mikael", "Julian", "Pa", 
+      "Ibrahima", "Sadio", "Naby", "Mady", "Kamso", "Mohamed", "Francois", "Seydouba", "Demba",
+      "Jose", "Morlaye", "Momo"
+    ],
+    Female: [
+      "Binta", "Mariama", "Mariame", "Fanta", "Fatoumata", "Simone", "Assiatou", "Samira", "Mariam",
+      "Linda", "Oumou", "Lune", "Jacqueline", "Fidel", "Djenabou", "Aminata", "Zenab", "Adama", "Saraf",
+      "Rabiatou", "Madeleine", "Julienne", "Gamey", "Famata", "Catherine", "Anne-Marie"
+    ],
+    Surname: [
+      "Yansane", "Sylla", "Kante", "Camara", "Soumah", "Kamano", "Yattara", "Mara", "Keita", "Diallo",
+      "Conte", "Konate", "Jeanvier", "Dyrestam", "Falette", "Conde", "Sankhon", "Sylla",
+    ]
   },
   "South Sudan": {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Ramadan", "John", "Khamis", "Majak", "Peter", "Hassan", "James", "Leon", "Maker", "Mathiang",
+      "Dominic", "Angelo", "Santino", "Friday", "Mutwakil", "Timothy", "Jose", "Kutch", "Koang", "Thok",
+      "Jackson", "Emmanuel", "Thomas", "David", "Uso", "Dominic", "Abui", "Jimmy", "Michael", "Denis",
+      "Kenny", "Yagoub", "Daniel", 
+    ],
+    Female: [
+      "Abi", "Dabor", "Favor", "Grace", "Hiba", "Joyce", "Lee", "Matida", "Nadia", "Onnab", "Rachael",
+      "Uduru", "Yaya", "Abrar", "Rayan", "Alima", "Anita"
+    ],
+    Surname: [
+      "Mayik", "Dak", "Mawith", "Deng", "Martin", "Manyang", "Mathiang", "Kornelis", "Deng", "Zico",
+      "Abdulkarim", "Dusman", "Nyuar", "Kerjok", "Morgan", "Chol", "Lumeri", "Majak", "Khamis", 
+      "Pretino", "Omer", "Yongule", "Athiu", "Mustafa"
+    ]
   },
   Rwanda: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Bakame", "Yves", "Omar", "Emmanuel", "Eric", "Fitina", "Emery", "Thierry", "Abdul", "Salomon",
+      "Kevin", "Djihad", "Jean-Claude", "Yannick", "Olivier", "Haruna", "Andrew", "Meddie", "Patrick",
+      "Jacques", "Muhadjiri", "Ernest", "Justin", "Djabel"
+    ],
+    Female: [
+      "Judith", "Helena", "Jeanne", "Djamila", "Clementine", "Chadia", "Alice", "Maria", "Gloria", 
+      "Sophie", "Louise", "Saida", "Agathe", "Claudine", "Edith", "Marie", "Claire", "Janviere"
+    ],
+    Surname: [
+      "Manishimwe", "Mico", "Sugira", "Hakizimana", "Tuyisenge", "Sibomana", "Kagere", "Buteera", 
+      "Niyonzima", "Mukunzi", "Iranzi", "Muhire", "Bizimana", "Iradukunda", "Nirisarike", "Rwatubyaye",
+      "Manzi", "Bayisenge", "Omborenga", "Rutanga", "Imanishimwe", "Rwabugiri", "Kimenyi", "Ndayishimiye", "Mukadusenge", "Uwamahoro", "Umulisa", "Murorunkwere", "Iririkumutimana", "Ntagisanimana", "Kalimba", "Maniraguha", "Niyomugaba", "Nibagwire", "Ibangaryeanne", "Niyotyita", "Uwamahirwe", "Mukamana", "Abimana", "Nyirahatashima", "Uwizeyimana", "Ingabire",
+    ]
   },
   Tunisia: { // => Egypt
     Male: [],
@@ -911,9 +1064,15 @@ const names = {
     Surname: []
   },
   Belgium: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Thibaut", "Simon", "Matz", "Hendrik", "Toby", "Thomas", "Dedryck", "Jason", "Timothy", "Elias", "Brandon", "Axel", "Kevin", "Nacer", "Yannick", "Youri", "Leander", "Dennis", "Hans", "Yari", "Maxime", "Eden", "Dries", "Romelu", "Christian", "MIchy", "Divock", "Thorgan", "Leandro",
+    ],
+    Female: [
+      "Nicky", "Diede", "Justien", "Julie", "Maud", "Laura", "Heleen", "Davina", "Charlotte", "Shari", "Tine", "Marie", "Kassandra", "Justine", "Janice", "Elena", "Davinia", "Elke", "Ella", "Chloe", "Lola", "Sarah", "Tessa"
+    ],
+    Surname: [
+      "Trossard", "Hazard", "Origi", "Batshuayi", "Benteke", "Lukaku", "Mertens", "Lestienne", "Verschaeren", "Vanaken", "Praet", "Dendoncker", "Tielemans", "Carrasco", "Chadli", "De Bruyne", "Witsel", "Mechele", "Cobbaut", "Castagne", "Denayer", "Boyata", "Vermaelen", "Alderweireld", "Van Crombrugge", "Sels", "Mignolet", "Courtois", 'Wullaert', 'Wijnants', 'Wajnblum', 'Velde', 'Van Kerkhoven', 'Van Gorp', 'Vanmechelen', 'Dhont', 'Cayman', 'Vanhaevermaet', 'Missipo', 'Minnaert', "De Caigny", "Van Belle", "Tison", "Philtjens", "Jaques", "Deloose", "De Neve", "Coutereels", "Biesmans", "Odeurs", "Lemey", "Evrard"
+    ]
   },
   Benin: {
     Male: [],

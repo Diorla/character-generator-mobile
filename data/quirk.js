@@ -87,6 +87,12 @@ const quirks = {
     "Hardly remember names",
     "Likes to eavesdrop",
     "Always complaining about everything",
+    "Sloppy eater",
+    "Does inappropriate jokes",
+    "Doesn't like urban life",
+    "Doesn't like rural life",
+    "Has no sense of joke",
+    "Has very odd sense of joke"
   ]
 };
 

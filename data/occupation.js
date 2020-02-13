@@ -32,7 +32,7 @@ const occupation = {
     "Taxi driver",
     "Maid",
     "Mechanic",
-    "Jeweler",
+    "Jeweller",
     "Driver/Chauffeur",
     "Plumber",
     "Clergy",
@@ -126,6 +126,7 @@ const occupation = {
     "Biologist",
     "Mathematician",
     "Meteorologist",
+    "Parole Officer",
   ],
   Masters: [
     "Judge",
@@ -172,7 +173,7 @@ const occupation = {
     "Taxi driver",
     "Maid",
     "Mechanic",
-    "Jeweler",
+    "Jeweller",
     "Driver/Chauffeur",
     "Plumber",
     "Clergy",
@@ -200,6 +201,7 @@ const occupation = {
     "Tour guide",
     "Real estate agent",
     "Police",
+    "Parole Officer",
     "Flight Attendant",
     "Cameraman",
     "Soldier",
@@ -265,7 +267,8 @@ const occupation = {
     "Endocrinologist",
     "OBGYN",
     "Professor",
-    "Lecturer"
+    "Lecturer",
+    "Athlete",
   ],
   "Working class": [
     "Photographer",
@@ -294,7 +297,7 @@ const occupation = {
     "Taxi driver",
     "Maid",
     "Mechanic",
-    "Jeweler",
+    "Jeweller",
     "Driver/Chauffeur",
     "Plumber",
     "Clergy",
@@ -312,6 +315,7 @@ const occupation = {
     "Waiter",
     "Sales rep",
     "Police",
+    "Parole Officer",
     "Flight Attendant",
     "Cameraman",
     "Soldier",
@@ -331,7 +335,8 @@ const occupation = {
     "Air traffic controller",
     "Referee",
     "Midwife",
-    "Dental Hygienist"
+    "Dental Hygienist",
+    "Athlete",
   ],
   "Lower middle class": [
     "Business owner",
@@ -405,7 +410,8 @@ const occupation = {
     "Endocrinologist",
     "OBGYN",
     "Professor",
-    "Lecturer"
+    "Lecturer",
+    "Athlete",
   ],
   "Upper middle class": [
     "Photographer",
@@ -473,7 +479,8 @@ const occupation = {
     "Endocrinologist",
     "OBGYN",
     "Professor",
-    "Lecturer"
+    "Lecturer",
+    "Athlete",
   ],
   "Upper class": [
     "Musician",
@@ -506,7 +513,8 @@ const occupation = {
     "Oncologist",
     "Endocrinologist",
     "OBGYN",
-    "Professor"
+    "Professor",
+    "Athlete",
   ],
   all: [
     "Teacher",
@@ -536,6 +544,7 @@ const occupation = {
     "Nurse",
     "Tour guide",
     "Police",
+    "Parole Officer",
     "Fashion designer",
     "Farmer",
     "Flight Attendant",
@@ -583,7 +592,7 @@ const occupation = {
     "Air traffic controller",
     "Chemist",
     "Referee",
-    "Jeweler",
+    "Jeweller",
     "Driver/Chauffeur",
     "Botanist",
     "Banker",
