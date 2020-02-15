@@ -253,9 +253,9 @@ const Trait = props => {
             >
               <Picker.Item label="N/A" value="" />
               <Picker.Item label="Daring" value="Daring" />
-              <Picker.Item label="Adventurous" value="Adventurous" />
-              <Picker.Item label="Restless" value="Restless" />
               <Picker.Item label="Audacious" value="Audacious" />
+              <Picker.Item label="Restless" value="Restless" />
+              <Picker.Item label="Adventurous" value="Adventurous" />
               <Picker.Item label="Curious" value="Curious" />
               <Picker.Item label="Open" value="Open" />
               <Picker.Item label="Diffident" value="Diffident" />

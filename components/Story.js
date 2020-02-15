@@ -208,7 +208,7 @@ const Story = props => {
             </View>
           </Helper>
           <TextInput
-            label="Role"
+            label="Role(Plot involvement)"
             value={role}
             onChangeText={changeRole}
             style={{ width: "100%" }}

@@ -68,9 +68,9 @@ const trait = {
   ],
   riskTaking: [
     "Daring",
-    "Adventurous",
-    "Restless",
     "Audacious",
+    "Restless",
+    "Adventurous",
     "Curious",
     "Open",
     "Diffident",

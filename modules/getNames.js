@@ -36,7 +36,8 @@ const getNames = (country, gender) => {
     "Costa Rica",
     "Panama",
     "Puerto Rico",
-    "Uruguay"
+    "Uruguay",
+    "Bolivia"
   ];
   const middleEast = [
     "Iran",
@@ -74,6 +75,8 @@ const getNames = (country, gender) => {
   else if (paki.includes(country)) return getFullName(names.Pakistan, gender);
   else if (korea.includes(country)) return getFullName(names.Korea, gender);
   else if (names[country]) return getFullName(names[country], gender);
+  else if (country == "Burundi" && gender == "Female")
+    return getFullName(names.Rwanda, gender);
   else return getFullName(names.Nigeria, gender);
 };
 

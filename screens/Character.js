@@ -161,7 +161,6 @@ class Character extends React.Component {
     speechAccent: "",
     speechPitch: "",
     gesture: "",
-    eyeContact: "",
     speechImpediment: "",
     curseWord: "",
     catchPhrase: "",
@@ -403,6 +402,7 @@ class Character extends React.Component {
     const view = getView();
     const annoyingStuff = this.state.annoyingStuff || view.annoyingStuff;
     const boringStuff = this.state.boringStuff || view.boringStuff;
+    const dislikes = this.state.dislikes || view.dislikes;
     const cursweWord = this.state.curseWord || getCurseWord();
     const traitList = getTrait();
     const health = this.state.health || print(getHealth(age, gender), ", ");
@@ -470,6 +470,7 @@ class Character extends React.Component {
       annoyingStuff,
       boringStuff,
       cursweWord,
+      dislikes,
       age: this.state.age || String(age),
       height: this.state.height || `${heightType}, about ${height}cm`,
       build:
@@ -556,7 +557,7 @@ class Character extends React.Component {
 
   reset = () => {
     this.setState({
-      disLikes: "",
+      dislikes: "",
       folly: "",
       hobby: "",
       modalVisible: false,
@@ -642,7 +643,6 @@ class Character extends React.Component {
       speechAccent: "",
       speechPitch: "",
       gesture: "",
-      eyeContact: "",
       speechImpediment: "",
       curseWord: "",
       catchPhrase: "",
@@ -864,7 +864,6 @@ class Character extends React.Component {
             changeSpeechAccent={speechAccent => this.setState({ speechAccent })}
             changeSpeechPitch={speechPitch => this.setState({ speechPitch })}
             changeGesture={gesture => this.setState({ gesture })}
-            changeEyeContact={eyeContact => this.setState({ eyeContact })}
             changeSpeechImpediment={speechImpediment =>
               this.setState({ speechImpediment })
             }
@@ -878,6 +877,7 @@ class Character extends React.Component {
             changeAnnoyingStuff={annoyingStuff =>
               this.setState({ annoyingStuff })
             }
+            changeDisLikes={dislikes => this.setState({ dislikes })}
             {...this.state}
           />
           <Divider
@@ -983,6 +983,7 @@ class Character extends React.Component {
             changeOppositeSex={oppositeSex => this.setState({ oppositeSex })}
             changeGroupDynamic={groupDynamic => this.setState({ groupDynamic })}
             changeDependent={dependent => this.setState({ dependent })}
+            changeAdversary={adversary => this.setState({ adversary })}
             {...this.state}
           />
           <Divider

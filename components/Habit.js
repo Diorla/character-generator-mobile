@@ -15,8 +15,6 @@ const Habit = props => {
     changeSpeechPitch,
     gesture,
     changeGesture,
-    eyeContact,
-    changeEyeContact,
     speechImpediment,
     changeSpeechImpediment,
     curseWord,
@@ -35,7 +33,7 @@ const Habit = props => {
     changeBoringStuff,
     annoyingStuff,
     changeAnnoyingStuff,
-    disLikes,
+    dislikes,
     changeDisLikes,
     folly,
     changeFolly,
@@ -92,20 +90,12 @@ const Habit = props => {
             placeholder="deep, melodious, velvety, gravelly"
           />
           <TextInput
-            label="Gesturing"
+            label="Non verbal communication"
             value={gesture}
             onChangeText={changeGesture}
             style={{ width: "100%" }}
             multiline
-            placeholder="compulsive 'hand talker', controlled, when agitated"
-          />
-          <TextInput
-            label="Eye contact"
-            value={eyeContact}
-            onChangeText={changeEyeContact}
-            style={{ width: "100%" }}
-            multiline
-            placeholder="direct, shifty, evasive"
+            placeholder="Gestures, eye contact etc."
           />
           <TextInput
             label="Speech impediments"
@@ -160,6 +150,14 @@ const Habit = props => {
             placeholder="e.g. chocolate, old movies, sleeping"
           />
           <TextInput
+            label="Dislikes"
+            value={dislikes}
+            onChangeText={changeDisLikes}
+            style={{ width: "100%" }}
+            multiline
+            placeholder="e.g. chocolate, old movies, sleeping"
+          />
+          <TextInput
             label="Hobbies"
             value={hobby}
             onChangeText={changeHobby}
@@ -176,20 +174,12 @@ const Habit = props => {
             placeholder="e.g. smoking, alcholism, gambling"
           />
           <TextInput
-            label="Quirks and mannerisms"
+            label="Quirks"
             placeholder="Unique behaviour"
             value={tic}
             onChangeText={changeTic}
             style={{ width: "100%" }}
             multiline
-          />
-          <TextInput
-            label="Dislikes"
-            value={disLikes}
-            onChangeText={changeDisLikes}
-            style={{ width: "100%" }}
-            multiline
-            placeholder="e.g. chocolate, old movies, sleeping"
           />
           <TextInput
             label="Things they find boring"
