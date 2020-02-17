@@ -1,37 +1,72 @@
-import React from 'react';
-import { View, Picker, Text } from "react-native";
-import PropTypes from 'prop-types';
-import Styles from './MyPicker.styles';
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import { IconButton, Colors } from "react-native-paper";
+import { Text, Picker, View, Alert } from "react-native";
+//import { Test } from './Input.styles';
 
-const MyPicker = (props) => (
-  <View className="MyPickerWrapper"
-    style={Styles.view}>
-    <Text>{props.title}</Text>
-    <Picker
-      selectedValue={props.selectedValue}
-      style={{ height: 50, width: '100%' }}
-      onValueChange={props.onValueChange}>
-      <Picker.Item label="N/A" value="" />
+class MyPicker extends PureComponent {
+
+  openHelp = () => {
+    Alert.alert(this.props.label, this.props.help, [
       {
-        props.data.map((item, index)=> 
-          <Picker.Item label={item} value= {item} key={index}/>)
+        text: "OK"
       }
-    </Picker>
-  </View>
-);
+    ]);
+  };
+
+  render() {
+    const width = this.props.help ? "90%" : "100%";
+    return (
+      <View
+        style={{
+          backgroundColor: Colors.grey300,
+          borderBottomColor: Colors.grey500,
+          borderBottomWidth: 1,
+          padding: 4,
+          flexDirection: "row"
+        }}>
+        <View
+          style={{
+            width,
+            height: 70,
+          }}
+        >
+        <Text>{this.props.label}</Text>
+        <Picker
+          {...this.props}
+        >
+          <Picker.Item label="N/A" value="" />
+          {this.props.data.map((item, index) => (
+            <Picker.Item label={item} value={item} key={index} />
+          ))}
+        </Picker>
+        </View>
+        {this.props.help ? (
+          <IconButton
+            icon="help"
+            color={Colors.red500}
+            size={24}
+            onPress={this.openHelp}
+            style={{
+              alignSelf: "center"
+            }}
+          />
+        ) : null}
+      </View>
+    );
+  }
+}
 
 MyPicker.propTypes = {
-  title: PropTypes.string,
-  selectedValue: PropTypes.string,
-  onValueChange: PropTypes.func,
   data: PropTypes.array,
+  help:PropTypes.string,
+  label: PropTypes.string
 };
 
 MyPicker.defaultProps = {
-  title: "Untitled",
-  selectedValue: "",
-  onValueChange: null,
-  data: []
+  data: [],
+  label: "label",
+  help:"",
 };
 
 export default MyPicker;

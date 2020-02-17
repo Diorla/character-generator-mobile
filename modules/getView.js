@@ -1,4 +1,4 @@
-import views from "../data/viewss";
+import views from "../data/views";
 import oddCalculator from "./oddCalculator";
 
 const getView = () => {
