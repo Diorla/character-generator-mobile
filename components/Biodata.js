@@ -161,7 +161,7 @@ const Biodata = props => {
             style={{ width: "100%" }}
           />
           <MyPicker
-            title="Nationality"
+            label="Nationality"
             data={sortedCountry()}
             selectedValue={nationality}
             onValueChange={changeNationality}

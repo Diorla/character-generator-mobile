@@ -1,8 +1,9 @@
 const activities = {
-  indoors: [ // Introverts do whenever they are free
+  indoors: [
+    // Introverts do whenever they are free
     "Reading",
     "Watching TV",
-    "Board games", // Chess, scrabble, 
+    "Board games", // Chess, scrabble,
     "Listening to music", // Always carrying headset
     "Cooking",
     "Solving puzzles",
@@ -28,9 +29,10 @@ const activities = {
     "Bird watching",
     "Baking",
     "Collecting seashells",
-    "Meteorology",
+    "Meteorology"
   ],
-  outdoors: [ // Extroverts
+  outdoors: [
+    // Extroverts
     "Bowling",
     "Taking a stroll",
     "Clubbing",
@@ -69,12 +71,13 @@ const activities = {
     "Hockey",
     "Hurdles",
     "Taekwando",
-    "Skateboarding", 
+    "Skateboarding",
     "Improv",
-    "Couponing",
+    "Couponing"
   ],
   //===
-  main: [ // Something you do once a while
+  main: [
+    // Something you do once a while
     "Eating out at a restaurant",
     "Road trip",
     "Helicopter ride",
@@ -119,13 +122,13 @@ const activities = {
     "Bungee jumping",
     "Sledding",
     "Bumper car",
-    "Partying", 
-    "Rollercasting ride", 
-    "Parks", 
+    "Partying",
+    "Rollercasting ride",
+    "Parks",
     "Cinema",
-    "BBQ", 
-    "Surfing", 
-    "Paintballing", 
+    "BBQ",
+    "Surfing",
+    "Paintballing",
     "Picnic",
     "Playing an instrument(e.g. pianon, violin etc)",
     "Participating in marathon",
@@ -136,8 +139,8 @@ const activities = {
     "Graffiti",
     "Tubing",
     "Parasailing",
+    "Camping"
   ]
-}
-
+};
 
 export default activities;

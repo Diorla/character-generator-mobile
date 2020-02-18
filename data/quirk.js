@@ -92,7 +92,8 @@ const quirks = {
     "Doesn't like urban life",
     "Doesn't like rural life",
     "Has no sense of joke",
-    "Has very odd sense of joke"
+    "Has very odd sense of joke",
+    "Very superstitious"
   ]
 };
 
