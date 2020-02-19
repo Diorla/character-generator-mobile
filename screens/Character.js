@@ -217,20 +217,26 @@ class Character extends React.Component {
       return 0;
     }
 
-    Promise.resolve(manageData.deleteData("character", allData, id))
-      .then(value => {
-        this.setState({
-          allData: value
-        });
-      })
-      .then(() => this.feedback(`${this.state.name} is deleted`))
-      //.then(()=>this.reset())
-      .then(() => {
-        this.reset(),
-          this.setState({
-            name: ""
+    this.confirm(
+      "Reset",
+      "⚠ Are you sure you want to delete character?",
+      () => {
+        Promise.resolve(manageData.deleteData("character", allData, id))
+          .then(value => {
+            this.setState({
+              allData: value
+            });
+          })
+          .then(() => this.feedback(`${this.state.name} is deleted`))
+          //.then(()=>this.reset())
+          .then(() => {
+            this.reset(),
+              this.setState({
+                name: ""
+              });
           });
-      });
+      }
+    );
   };
 
   feedback = message => {
@@ -533,6 +539,8 @@ class Character extends React.Component {
       dependent,
       ...generatedTraits
     });
+
+    this.feedback("Certain attributes generated");
   };
 
   printFile = () => {
@@ -689,19 +697,14 @@ class Character extends React.Component {
           this.confirm(
             "Reset",
             "⚠ Are you sure you want to clear all fields",
-            this.reset
+            () => {
+              this.reset();
+              this.feedback("Fields cleared");
+            }
           )
         }
       >
-        <FAButton
-          refresh={() =>
-            this.confirm(
-              "Randomise",
-              "⚠ This will change the values of some fields",
-              this.randomise
-            )
-          }
-        />
+        <FAButton refresh={this.randomise} />
         <View>
           <Chip>{this.state.name || ""}</Chip>
         </View>

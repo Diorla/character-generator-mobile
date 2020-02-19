@@ -47,7 +47,7 @@ const Biodata = props => {
         color={Colors.blue400}
         style={{ elevation: 0 }}
       >
-        Biodata
+        Basic information
       </Button>
 
       {display ? (
