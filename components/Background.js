@@ -5,11 +5,11 @@ import {
   Card,
   Colors,
   Button,
-  IconButton
 } from "react-native-paper";
 import MyPicker from "./MyPicker";
 import Helper from "./Helper";
-import { socialStatus } from "../data/socialStatus";
+import  socialStatus  from "./../data/socialStatus";
+import Input from "./Input";
 
 const Background = props => {
   const [display, setDisplay] = useState(false);
@@ -60,8 +60,6 @@ const Background = props => {
     changeRegret,
     secret,
     changeSecret,
-    hobby,
-    changeHobby,
     phobia,
     changePhobia,
   } = props;
@@ -79,73 +77,78 @@ const Background = props => {
       </Button>
       {display ? (
         <Card style={{ elevation: 2, margin: 2 }}>
-          <Helper
-            visible={modalVisible}
-            onRequestClose={() => displayModal(false)}
-            helpHeader="Background"
-            closeModal={() => displayModal(false)}
-            openModal={() => displayModal(true)}
-            information="History of the character"
-            quote="Nature vs nurture at its best"
-          >
-            <Text>School club or organisation </Text>
-          </Helper>
           <MyPicker
-            title="Family economic status"
+            label="Family economic status"
             data={socialStatus.main}
             selectedValue={familyEconomicStatus}
             onValueChange={changeFamilyEconomicStatus}
+            help="When generated, it has high correlation with the character's social status."
           />
-          <TextInput
+          <Input
             label="Hometown"
             value={hometown}
             onChangeText={changeHometown}
             style={{ width: "100%" }}
+            help="Where the character grew up. When generated, there is a high chance that it will be in the same city as place of birth."
           />
-          <TextInput
+          <Input
             label="Childhood"
             value={childhood}
             onChangeText={changeChildhood}
             style={{ width: "100%" }}
             multiline
             placeholder="Sheltered, neglected, abused etc."
+            help="The conditions under which the character grew up."
           />
-          <TextInput
-            label="Education history"
-            value={educationHistory}
-            onChangeText={changeEducationHistory}
-            style={{ width: "100%" }}
-            multiline
-          />
-          <TextInput
-            label="School club or organisation"
-            value={schoolClub}
-            onChangeText={changeSchoolClub}
-            style={{ width: "100%" }}
-            multiline
-            placeholder="sport, debate, drama etc"
-          />
-          <TextInput
+          <Input
             label="Favourite activities"
             value={favouriteActivity}
             onChangeText={changeFavouriteActivity}
             style={{ width: "100%" }}
             multiline
             placeholder="Going to the park, museum"
+            help="These are activities the character likes to do from time to time, or whenever they're free."
           />
-          <TextInput
+          <Input
+            label="Phobias"
+            value={phobia}
+            multiline
+            onChangeText={changePhobia}
+            style={{ width: "100%" }}
+            help="These refer to strong fear, and the object of their fear doesn't pose imminent threat."
+          />
+          <Input
+            label="Education history"
+            value={educationHistory}
+            onChangeText={changeEducationHistory}
+            style={{ width: "100%" }}
+            multiline
+            help="Complete list of all educational training."
+          />
+          <Input
+            label="School club or organisation"
+            value={schoolClub}
+            onChangeText={changeSchoolClub}
+            style={{ width: "100%" }}
+            multiline
+            placeholder="sport, debate, drama etc"
+            help="Usually reflects the characters attributes."
+          />
+          <Input
             label="Job history"
             value={jobHistory}
             onChangeText={changeJobHistory}
             style={{ width: "100%" }}
             multiline
+            help="Complete list of jobs"
           />
-          <TextInput
+          <Input
             label="Favourite place as a kid"
             value={favouritePlace}
             onChangeText={changeFavouritePlace}
             style={{ width: "100%" }}
             multiline
+            help="A place the characters has a fond memory of visiting"
           />
           <View
             style={{
@@ -156,112 +159,119 @@ const Background = props => {
             }}
           >
             <Text>If they could change one thing in their past</Text>
-            <TextInput
+            <Input
               label="What will they change"
               value={whatThing}
               onChangeText={changeWhatThing}
               style={{ width: "100%" }}
+              help="The events they will like to change"
             />
-            <TextInput
+            <Input
               label="Why"
               value={whyThatThing}
               onChangeText={changeWhyThatThing}
               style={{ width: "100%" }}
               multiline
+              help="What is the reason for this."
             />
           </View>
-          <TextInput
+          <Input
             label="Turning point in their life"
             value={turningPoint}
             onChangeText={changeTurningPoint}
             style={{ width: "100%" }}
             multiline
+            help="Important events that completely change the trajectory of their life or affects the character irrevocably."
           />
-          <TextInput
+          <Input
             label="Earliest memory"
             value={earliestMemory}
             onChangeText={changeEarliestMemory}
             style={{ width: "100%" }}
             multiline
+            help="What is the first thing they remember about themselves."
           />
-          <TextInput
-            label="Saddest memory"
-            value={saddestMemory}
-            onChangeText={changeSaddestMemory}
-            style={{ width: "100%" }}
-            multiline
-          />
-          <TextInput
+          <Input
             label="Happiest memory"
             value={happiestMemory}
             onChangeText={changeHappiestMemory}
             style={{ width: "100%" }}
             multiline
+            help="Happiest day of the character's life, sometime or somewhere they wouldn't mind living forever."
           />
-          <TextInput
+          <Input
+            label="Saddest memory"
+            value={saddestMemory}
+            onChangeText={changeSaddestMemory}
+            style={{ width: "100%" }}
+            multiline
+            help="The most depressing event in the character's life."
+          />
+          <Input
             label="Clearest memory"
             value={clearestMemory}
             onChangeText={changeClearestMemory}
             style={{ width: "100%" }}
             multiline
+            help="An event the character could described in full details, like it just happened"
           />
-          <TextInput
+          <Input
             label="Criminal record"
             value={criminalRecord}
             onChangeText={changeCriminalRecord}
             style={{ width: "100%" }}
             multiline
+            help="Any crime in their past? Misdemeanour, felony or those they got away with."
           />
-          <TextInput
+          <Input
             label="Dream job"
             value={dreamJob}
             onChangeText={changeDreamJob}
             style={{ width: "100%" }}
+            help="Ideal job"
           />
-          <TextInput
+          <Input
             label="Favourite object"
             value={favObject}
             onChangeText={changeFavObject}
             style={{ width: "100%" }}
             multiline
             placeholder="favourite toys, sentimental objects or prized possession"
+            help="This is an object that means alot to the character, perhaps because of the financial value, or the emotions tied to that object"
           />
-          <TextInput
-            label="Phobias"
-            value={phobia}
-            multiline
-            onChangeText={changePhobia}
-            style={{ width: "100%" }}
-          />
-          <TextInput
+          <Input
             label="Role model"
             value={roleModel}
             onChangeText={changeRoleModel}
             style={{ width: "100%" }}
             multiline
-            placeholder="type of people they admire or emulate"
+            placeholder="Someone they look up to"
+            help="The type of people the character admires or wishes to emulate"
           />
-          <TextInput
+          <Input
             label="Regret"
             value={regret}
             onChangeText={changeRegret}
             style={{ width: "100%" }}
             multiline
             placeholder="especially, their greatest"
+            help="An action or events that haunts the character and fills them with guilt and sadness"
           />
-          <TextInput
+          <Input
             label="Big secret"
             value={secret}
             onChangeText={changeSecret}
             style={{ width: "100%" }}
             multiline
+            help="Something the character wouldn't want the public or certain people from knowing."
           />
-          <TextInput
+          <Input
             label="More"
             multiline
             value={background}
             onChangeText={changeBackground}
             style={{ width: "100%" }}
+            help="Any additional activity regarding their background, childhood or history."
           />
         </Card>
       ) : null}
