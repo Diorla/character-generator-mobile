@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { Text, Picker, View } from "react-native";
-import { TextInput, Card, Colors, Button } from "react-native-paper";
+import { Card, Colors, Button } from "react-native-paper";
 import MyPicker from "./MyPicker";
 import sortedCountry from "./../data/nationality";
-import fetchSocialStatus from "./../data/socialStatus";
-import Helper from "./Helper";
-import MyText from "./MyText/MyText";
+import  * as income  from "./../data/socialStatus";
+import Input from "./Input";
+import { educationLevel } from "../modules/getEducation";
+
 
 const Biodata = props => {
   const [display, setDisplay] = useState(false);
-  const [modalVisible, displayModal] = useState(false);
 
   const {
     name,
@@ -39,7 +38,7 @@ const Biodata = props => {
   } = props;
 
   const mode = display ? "contained" : "text";
-  //console.log(country);
+
   return (
     <>
       <Button
@@ -53,175 +52,93 @@ const Biodata = props => {
 
       {display ? (
         <Card style={{ elevation: 2, margin: 2 }}>
-          <Helper
-            visible={modalVisible}
-            onRequestClose={() => displayModal(false)}
-            helpHeader="Bio-data"
-            closeModal={() => displayModal(false)}
-            openModal={() => displayModal(true)}
-            information="These are personal information"
-            quote="They are identifying data(excluding history), and makes the character unique."
-          >
-            <View>
-              <MyText type="h2">Auto generated data</MyText>
-              <MyText>
-                <MyText type="strong">Name</MyText>: Based on the nationality
-              </MyText>
-              <MyText>
-                <MyText type="strong">Blood group</MyText>: Based on global
-                occurrence
-              </MyText>
-              <MyText>
-                <MyText type="strong">Place of birth</MyText>: Based on the
-                nationality
-              </MyText>
-              <MyText>
-                <MyText type="strong">Current location</MyText>: Influenced by
-                place of birth
-              </MyText>
-              <MyText>
-                <MyText type="strong">Nationality</MyText>: Based on global
-                occurrence
-              </MyText>
-              <MyText>
-                <MyText type="strong">Occupation</MyText>: Influenced by
-                education and social status
-              </MyText>
-              <MyText type="h2">Randomly generated</MyText>
-              <MyText>
-                Age, birthday, gender, education and social status
-              </MyText>
-              <MyText type=""/>
-              <MyText>
-                If a person has more than one nationality, you can indicated it
-                under <MyText type="strong">More</MyText>
-              </MyText>
-              <MyText type=""/>
-              <MyText type="quote">
-                John Doe was born in Canada by a Nigerian mother to a German
-                father. His Paternal grandfather is half Chinese
-              </MyText>
-            </View>
-          </Helper>
-          <TextInput
+          <Input
             label="Name"
             value={name}
             onChangeText={changeName}
             style={{ width: "100%" }}
+            help="It is usually generated based on the character's nationality"
           />
-          <TextInput
+          <Input
             label="Age"
             value={age}
             onChangeText={changeAge}
             style={{ width: "100%" }}
             keyboardType="numeric"
+            help="Randomly generated"
           />
-          <TextInput
+          <Input
             label="Birthday"
             value={birthday}
             onChangeText={changeBirthday}
             style={{ width: "100%" }}
             placeholder="Sept 23, at 5 o'clock in the evening"
+            help="The month, day and time may be randomly generated."
           />
-          <View
-            style={{
-              backgroundColor: Colors.grey300,
-              borderBottomColor: Colors.grey500,
-              borderBottomWidth: 1,
-              padding: 4
-            }}
-          >
-            <Text>Gender</Text>
-            <Picker
-              selectedValue={gender}
-              style={{ height: 50, width: "100%" }}
-              onValueChange={changeGender}
-            >
-              <Picker.Item label="Male" value="Male" />
-              <Picker.Item label="Female" value="Female" />
-              <Picker.Item label="Non binary" value="" />
-            </Picker>
-          </View>
-          <TextInput
+          <MyPicker
+            label="Gender"
+            selectedValue={gender}
+            onValueChange={changeGender}
+            data={["Male", "Female"]}
+            nullValue="Non binary"
+            help="Randomly generated. Influences certain bodily features like breast."
+          />
+          <Input
             label="Blood group"
             value={bloodGroup}
             onChangeText={changeBloodGroup}
             style={{ width: "100%" }}
+            help="This includes A, B & O, rhesus positive or negative. It's randomly generated based on the global percentage."
           />
-          <TextInput
+          <Input
             label="Place of birth"
             value={birthPlace}
             onChangeText={changeBirthPlace}
             style={{ width: "100%" }}
+            help="When auto-generated, it's limited to the nationality of the person."
           />
-          <TextInput
+          <Input
             label="Current location"
             value={currentLocation}
             onChangeText={changeCurrentLocation}
-            style={{ width: "100%" }}
+            help="When auto-generated, there is a high chance that it will be in the same country as the nationality, higher chance that it will be the place of birth."
           />
           <MyPicker
             label="Nationality"
             data={sortedCountry()}
             selectedValue={nationality}
             onValueChange={changeNationality}
+            help="When auto-generated, it takes account the population of the world, hence there is higher chance that it will be China than Senegal."
           />
-          <View
-            style={{
-              backgroundColor: Colors.grey300,
-              borderBottomColor: Colors.grey500,
-              borderBottomWidth: 1,
-              padding: 4
-            }}
-          >
-            <Text>Education</Text>
-            <Picker
-              selectedValue={education}
-              style={{ height: 50, width: "100%" }}
-              onValueChange={changeEducation}
-            >
-              <Picker.Item label="N/A" value="" />
-              <Picker.Item label="Preschool" value="Preschool" />
-              <Picker.Item
-                label="Primary/Elementary school"
-                value="Primary/Elementary school"
-              />
-              <Picker.Item
-                label="Junior secondary/Middle school"
-                value="Junior secondary/Middle school"
-              />
-              <Picker.Item
-                label="Senior secondary/High school"
-                value="Senior secondary/High school"
-              />
-              <Picker.Item
-                label="Diploma/Associate degrees"
-                value="Diploma/Associate degrees"
-              />
-              <Picker.Item label="Degree" value="Degree" />
-              <Picker.Item label="Masters" value="Masters" />
-              <Picker.Item label="Doctorate" value="Doctorate" />
-            </Picker>
-          </View>
-          <TextInput
+          <MyPicker
+            label="Education"
+            data={educationLevel}
+            selectedValue={education}
+            onValueChange={changeEducation}
+            help="The highest level of education that has been completed."
+          />
+          <Input
             label="Occupation"
             value={occupation}
             onChangeText={changeOccupation}
             style={{ width: "100%" }}
+            help="When auto-generated, it will be influenced by education and social status."
           />
           <MyPicker
-            title="Social status"
-            data={fetchSocialStatus("main")}
+            label="Social status"
+            data={income["default"]["main"]}
             selectedValue={socialStatus}
             onValueChange={changeSocialStatus}
+            help="When randomly generated, it's influenced by education. Underclass refers to people like beggars or hobos, who have no interest in climbing the financial ladder. Working poor refers to those who don't have a stable source of income and lives below poverty line. Working class and lower middle class earns around the same, but working class are usually blue collared while lower middle class tends to work in offices. Upper middle class are rich while Upper class are the super rich."
           />
-          <TextInput
+          <Input
             label="More"
             placeholder="Additional information"
             value={moreBiodata}
             onChangeText={changeMoreBiodata}
             style={{ width: "100%" }}
             multiline
+            help="If you have extra information e.g. John Doe was born in Canada by a Nigerian mother to a German father. His Paternal grandfather is half Chinese"
           />
         </Card>
       ) : null}

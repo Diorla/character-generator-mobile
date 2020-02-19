@@ -1,16 +1,19 @@
 import oddCalculator from "./oddCalculator";
 
+const educationLevel = [
+  "Preschool", //1
+  "Primary/Elementary school", //1
+  "Junior secondary/Middle school", //2
+  "Senior secondary/High school", //2
+  "Diploma/Associate degrees", //3
+  "Degree", //3
+  "Masters", //4
+  "Doctorate" //4
+];
+
+export {educationLevel};
+
 export default () => {
-  const educationLevel = [
-    "Preschool", //1
-    "Primary/Elementary school", //1
-    "Junior secondary/Middle school", //2
-    "Senior secondary/High school", //2
-    "Diploma/Associate degrees", //3
-    "Degree", //3
-    "Masters", //4
-    "Doctorate" //4
-  ];
 
   let currentEducation = "";
   let n = 1;

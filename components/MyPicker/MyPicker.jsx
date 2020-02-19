@@ -5,7 +5,6 @@ import { Text, Picker, View, Alert } from "react-native";
 //import { Test } from './Input.styles';
 
 class MyPicker extends PureComponent {
-
   openHelp = () => {
     Alert.alert(this.props.label, this.props.help, [
       {
@@ -15,7 +14,8 @@ class MyPicker extends PureComponent {
   };
 
   render() {
-    const width = this.props.help ? "90%" : "100%";
+    const width = this.props.help ? "92%" : "100%";
+    const nullValue = this.props.nullValue || "N/A"
     return (
       <View
         style={{
@@ -24,28 +24,27 @@ class MyPicker extends PureComponent {
           borderBottomWidth: 1,
           padding: 4,
           flexDirection: "row"
-        }}>
+        }}
+      >
         <View
           style={{
             width,
-            height: 70,
+            height: 70
           }}
         >
-        <Text>{this.props.label}</Text>
-        <Picker
-          {...this.props}
-        >
-          <Picker.Item label="N/A" value="" />
-          {this.props.data.map((item, index) => (
-            <Picker.Item label={item} value={item} key={index} />
-          ))}
-        </Picker>
+          <Text>{this.props.label}</Text>
+          <Picker {...this.props}>
+            <Picker.Item label={nullValue} value="" />
+            {this.props.data.map((item, index) => (
+              <Picker.Item label={item} value={item} key={index} />
+            ))}
+          </Picker>
         </View>
         {this.props.help ? (
           <IconButton
             icon="help"
             color={Colors.red500}
-            size={24}
+            size={16}
             onPress={this.openHelp}
             style={{
               alignSelf: "center"
@@ -59,14 +58,16 @@ class MyPicker extends PureComponent {
 
 MyPicker.propTypes = {
   data: PropTypes.array,
-  help:PropTypes.string,
-  label: PropTypes.string
+  help: PropTypes.string,
+  label: PropTypes.string,
+  nullValue: PropTypes.string
 };
 
 MyPicker.defaultProps = {
   data: [],
   label: "label",
-  help:"",
+  help: "",
+  nullValue: ""
 };
 
 export default MyPicker;

@@ -40,7 +40,4 @@ const socialStatus = {
   }
 }
 
-export {
-  socialStatus
-}
-export default (arg) => socialStatus[arg];
+export default socialStatus;

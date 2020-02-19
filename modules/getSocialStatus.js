@@ -1,5 +1,5 @@
 import oddCalculator from "./oddCalculator";
-import { socialStatus } from "../data/socialStatus";
+import socialStatus from "../data/socialStatus";
 
 /**
  * This function returns social status
