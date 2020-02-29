@@ -52,29 +52,23 @@ const _withOdds = (arr, odds) => {
 const oddCalculator = (arr, odds) =>
   odds ? _withOdds(arr, odds) : _withoutOdds(arr);
 
-const main = [
-  "Indulgent", //6-2 Gave the child everything s/he wanted. There are no rules
-  "Negligent", //4-8 Hardly a parent. Child practically raised his/herself, usually due to incompetence or being too busy
-  "Sheltering", //2-32 Protect the child a lot from most of troubles in life. Helicopter parenting.
-  "Authoritative", //1-64 Parents are demanding but reasonable. They provide guidance and support.
-  "Affectionless", //3-16 Lacks warmth and care, and can be very controlling.
-  "Disciplined or Authoritarian", //5-4 Limited flexibility for the child, communication is one way and may include punishment
-  "Abusive" //7-1 Mistreatment of child
-];
-const odds = [2, 8, 32, 64, 16, 4, 1];
-
-const parenting = () => oddCalculator(main, odds);
-const title = word => {
-  const [start, end] = [
-    word.slice(0, 1).toUpperCase(),
-    word.slice(1).toLocaleLowerCase()
-  ];
-  return start + end;
-};
-const getChildhood=()=> {
-  const mother = parenting();
-  const father = parenting();
-  if(mother==father) return title(`${mother} parent`)
-  return title(`${mother} mother and ${father} father`)
+let fifteen = 0;
+let sixtyfive = 0;
+let hundred = 0;
+for (let i = 0; i < 1000; i++) {
+  let age;
+  const ageRange = oddCalculator([15, 65, 100], [26.3, 65.9, 7.9]);
+  if(ageRange===15) fifteen++;
+  if(ageRange===65) sixtyfive++;
+  if(ageRange===100) hundred++;
+  // if (ageRange === 15) {
+  //   age = Math.floor(Math.random() * 15);
+  // } else if (ageRange === 65) {
+  //   age = 15 + Math.floor(Math.random() * 41);
+  // } else {
+  //   age = 65 + Math.floor(Math.random() * 60);
+  // }
+  // console.log(ageRange, age);
 }
-console.log(getChildhood());
+
+console.log(fifteen, sixtyfive, hundred)

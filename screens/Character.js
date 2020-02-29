@@ -75,6 +75,7 @@ import generateGender from "./../modules/generateGender";
 import getGroupDynamic from "./../modules/getGroupDynamic";
 import getDependent from "../modules/getDependent";
 import getClothing from './../data/clothing';
+import oddCalculator from './../modules/oddCalculator';
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -326,11 +327,16 @@ class Character extends React.Component {
   randomise = () => {
     //const { gender } = this.state;
     const gender = this.state.gender || generateGender();
-    const age =
-      this.state.age ||
-      Math.floor(Math.random() * 35) +
-        Math.floor(Math.random() * 35) +
-        Math.floor(Math.random() * 35);
+    const ageRange = oddCalculator([15, 65, 100], [26.3, 65.9, 7.9]);
+    let age = this.state.age;
+    if(ageRange === 15) {
+      age = age || Math.floor(Math.random() * 15)
+    } else if(ageRange===65) {
+      age = age || 15 + Math.floor(Math.random() * 41)
+    } else {
+      age = age || 65 + Math.floor(Math.random() * 60) 
+    }
+    
 
     const {
       weight,
