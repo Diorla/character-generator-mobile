@@ -6,23 +6,22 @@ const outfits = {
     "Tank top",
     "Halter top",
     "Crop top",
-    "Off the shoulder top",
-    "Long Sleeves",
+    "Off the shoulder top",//
+    "Long Sleeves",//
     "Polo",
     "Blouse",
     "Oxford",
-    "Turtleneck",
-    "Twin-set"
+    "Turtleneck",//
+    "Twin-set"//
   ],
   over: [
     "Vest",
     "Sweater",
     "Hoodie",
     "Cloak",
-    "Cardigan",
     "Jacket",
     "Coat",
-    "Blazer"
+    "Blazer" //
   ],
   maleBottom: [
     "Shorts",
@@ -30,14 +29,14 @@ const outfits = {
     "Jeans",
     "Ripped jeans",
     "Trouser",
-    "Sweats"
+    "Sweats"//
   ],
   femaleBottom: [
     "Shorts",
     "Knee shorts",
     "Jeans",
     "Ripped jeans",
-    "Bell bottoms",
+    "Bell bottoms",//
     "Trouser",
     "Sweats",
     "Leggings",
@@ -70,7 +69,7 @@ const outfits = {
     "Beanie",
     "Scarf"
   ],
-  maleFoot: [
+  maleFoot: [//stop here
     "Slippers",
     "Scandals",
     "Loafer",

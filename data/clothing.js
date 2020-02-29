@@ -1,3 +1,4 @@
+import oddCalculator from "./../modules/oddCalculator";
 /**
  * Contains different style with description and demographic.
  * @property {Array} desc - description of the types of clothes
@@ -6,11 +7,10 @@
  */
 const outfit = {
   streetwear: {
-    desc: [
-      "T-shirts, Hoodies, Baseball caps, Sneakers, Bomber jacket, Track pants or Jeans"
-    ],
+    desc:
+      "T-shirts, Hoodies, Baseball caps, Sneakers, Bomber jacket, Track pants or Jeans",
     demo: {
-      age: [15, 24],
+      age: [15, 30],
       gender: "Male",
       social: "",
       education: "",
@@ -18,11 +18,10 @@ const outfit = {
     }
   },
   streetwearF: {
-    desc: [
-      "T-shirts, Crop tops, Baseball caps, Sneakers, Hoodies, Bomber jackets, Track pants, Tennis style skirts, Gym shorts, Leggings or Jeans"
-    ],
+    desc:
+      "T-shirts, Crop/halter tops, Baseball caps, Sneakers, Hoodies, Bomber jackets, Track pants, Tennis style skirts, Gym shorts, Leggings or Jeans",
     demo: {
-      age: [15, 24],
+      age: [15, 30],
       gender: "Female",
       social: "",
       education: "",
@@ -30,9 +29,8 @@ const outfit = {
     }
   },
   ethnic: {
-    desc: [
-      "Ethnic wears e.g. Afghan coats, Japanese Kimonos or West African Buba"
-    ],
+    desc:
+      "Ethnic wears e.g. Afghan coats, Japanese Kimonos or West African Buba",
     demo: {
       age: [0, 100],
       gender: "Male",
@@ -42,9 +40,8 @@ const outfit = {
     }
   },
   office: {
-    desc: [
-      "Dark coloured suits, Dress pants, Collared shirts, Jackets, Black or brown loafers/oxford and Tie"
-    ],
+    desc:
+      "Dark coloured suits, Dress pants, Collared shirts, Jackets, Black or brown loafers/oxford and Tie",
     demo: {
       age: [18, 100],
       gender: "Male",
@@ -54,9 +51,8 @@ const outfit = {
     }
   },
   officeF: {
-    desc: [
-      "Blouse or Shirt with Pullover sweater or jacket, Dress Skirt or Slacks, Close-toe pumps, Flats, Pantsuit with Stocking or Pantyhose"
-    ],
+    desc:
+      "Blouse or Shirt with Pullover sweater or jacket, Dress Skirt or Slacks, Close-toe pumps, Flats, Pantsuit with Stocking or Pantyhose",
     demo: {
       age: [18, 100],
       gender: "Female",
@@ -68,16 +64,10 @@ const outfit = {
   // Business Casual
   // Evening black tie: I think this is specific
   sportsWear: {
-    desc: [
-      "Outerwear",
-      "Polo shirt",
-      "Yoga pants",
-      "Tracksuits",
-      "T-shirt",
-      "Trainers"
-    ],
+    desc:
+      "Outerwear, Polo shirt or T-shirts, Yoga pants, Tracksuits and Trainers",
     demo: {
-      age: [0, 34],
+      age: [15, 65],
       gender: "Male",
       social: "",
       education: "",
@@ -85,19 +75,10 @@ const outfit = {
     }
   },
   sportsWearF: {
-    desc: [
-      "Leggings",
-      "Tank tops",
-      "Sports bras",
-      "Outerwear",
-      "Polo shirt",
-      "Yoga pants",
-      "Tracksuits",
-      "T-shirt",
-      "Trainers"
-    ],
+    desc:
+      "Tank tops, Sports bras, T-shirt or Polo shirt, Outerwear, Yoga pants or leggings, tracksuits, outerwear and trainers",
     demo: {
-      age: [0, 34],
+      age: [15, 65],
       gender: "Female",
       social: "",
       education: "",
@@ -105,9 +86,8 @@ const outfit = {
     }
   },
   girl: {
-    desc: [
-      "Skirts, Dresses, Blouses with Cute details like bows, laces or ruffles"
-    ],
+    desc:
+      "Skirts, Dresses, Blouses with Cute details like bows, laces or ruffles with sandals, slippers or comfortable shoes.",
     demo: {
       age: [0, 100],
       gender: "Female",
@@ -117,11 +97,10 @@ const outfit = {
     }
   },
   rockerChic: {
-    desc: [
-      "Skinny leather pants/jeans, Boots, Spiky heals, Vintage t-shirts with patches, Bomber or motocycle jackers. Most are in dark colours."
-    ],
+    desc:
+      "Skinny leather pants/jeans, Boots, Spiky heals, Vintage t-shirts with patches, Bomber or motocycle jackers. Most are in dark colours.",
     demo: {
-      age: [0, 24],
+      age: [0, 30],
       gender: "Female",
       social: "",
       education: "",
@@ -129,11 +108,10 @@ const outfit = {
     }
   },
   skateboard: {
-    desc: [
-      "Oversized graphic t-shirt with open over shirt, sneakers, skater shoes, skater pants/shorts and hoodies"
-    ],
+    desc:
+      "Oversized graphic t-shirt with open over shirt, sneakers, skater shoes, skater pants/shorts and hoodies",
     demo: {
-      age: [0, 24],
+      age: [0, 30],
       gender: "",
       social: "",
       education: "",
@@ -141,11 +119,10 @@ const outfit = {
     }
   },
   goth: {
-    desc: [
-      "Gothic fashion ie. Dark clothings(velvet, laces, fishnets and leather) tinged with purple, Dark make-up, Dark eyeliner and Dark nails"
-    ],
+    desc:
+      "Gothic fashion ie. Dark clothings(velvet, laces, fishnets and leather) tinged with purple, Dark make-up, Dark eyeliner and Dark nails",
     demo: {
-      age: [15, 24],
+      age: [15, 30],
       gender: "",
       social: "",
       education: "",
@@ -154,11 +131,10 @@ const outfit = {
   },
   // Maternity
   lolita: {
-    desc: [
-      "Frily petticoats, dresses with puffy sleeves, cute headwears, printed socks, light jackets, cute collars, cuffs and gloves."
-    ],
+    desc:
+      "Frily petticoats, dresses with puffy sleeves, cute headwears, printed socks, light jackets, cute collars, cuffs and gloves.",
     demo: {
-      age: [15, 24],
+      age: [15, 30],
       gender: "Female",
       social: "",
       education: "",
@@ -166,11 +142,10 @@ const outfit = {
     }
   },
   hiphop: {
-    desc: [
-      "Bomber or leather jacket, Chain, baseball jersey, jeans, sneakers, sunglasses and hoodies"
-    ],
+    desc:
+      "Bomber or leather jacket, Chain, baseball jersey, jeans, sneakers, sunglasses and hoodies",
     demo: {
-      age: [15, 24],
+      age: [15, 30],
       gender: "Male",
       social: "",
       education: "",
@@ -178,11 +153,10 @@ const outfit = {
     }
   },
   hiphopF: {
-    desc: [
-      "Bomber or leather jacket, Chain, bikini tops, crop tops, tube tops, tank tops, jeans, baggy trousers, sneakers, sunglasses and hoodies"
-    ],
+    desc:
+      "Bomber or leather jacket, Chain, bikini tops, crop/halter tops, tube tops, tank tops, jeans, baggy trousers, sneakers, sunglasses and hoodies",
     demo: {
-      age: [15, 24],
+      age: [15, 30],
       gender: "Female",
       social: "",
       education: "",
@@ -190,9 +164,8 @@ const outfit = {
     }
   },
   Chave: {
-    desc: [
-      "Football t-shirt, anoraks and loafers. May wear flashy(gold) jewellery(bling)."
-    ],
+    desc:
+      "Football t-shirt, anoraks and loafers. May wear flashy(gold) jewellery(bling).",
     demo: {
       age: [0, 18],
       gender: "",
@@ -202,9 +175,8 @@ const outfit = {
     }
   },
   Kawaii: {
-    desc: [
-      "Short skirts and t-shirt or dress with cute cartoon emblazoned on them."
-    ],
+    desc:
+      "Short skirts and t-shirt or dress with cute cartoon emblazoned on them.",
     demo: {
       age: [0, 18],
       gender: "Female",
@@ -214,9 +186,8 @@ const outfit = {
     }
   },
   Preppy: {
-    desc: [
-      "Chino or Khaki trousers. Polo shirts or button-down oxfords. Henley shirts paired with sports jackets or crew neck sweaters"
-    ],
+    desc:
+      "Chino or Khaki trousers. Polo shirts or button-down oxfords. Henley shirts paired with sports jackets or crew neck sweaters",
     demo: {
       age: [0, 100],
       gender: "Male",
@@ -226,9 +197,8 @@ const outfit = {
     }
   },
   PreppyF: {
-    desc: [
-      "Chino or Khaki trousers with polo shirts or button-down oxfords. Henley shirts paired with sports jackets, crew neck sweaters and plaid short skirts"
-    ],
+    desc:
+      "Chino or Khaki trousers with polo shirts or button-down oxfords. Henley shirts paired with sports jackets, crew neck sweaters and plaid short skirts",
     demo: {
       age: [0, 100],
       gender: "Female",
@@ -238,17 +208,40 @@ const outfit = {
     }
   },
   Cowboy: {
-    desc: ["Button down shirt, cow boy boots, wide brimmed hats and jeans"],
+    desc: "Button down shirt, cow boy boots, wide brimmed hats and jeans",
     demo: {
       age: [0, 100],
       gender: "Male",
+      social: "",
+      education: "Diploma/Associate degrees",
+      specific: []
+    }
+  },
+  CowboyF: {
+    desc:
+      "Button down shirt, cow boy boots, wide brimmed hats and denim skirts",
+    demo: {
+      age: [0, 100],
+      gender: "Female",
+      social: "",
+      education: "Diploma/Associate degrees",
+      specific: []
+    }
+  },
+  girlNextDoor: {
+    desc:
+      "Graphic tees, simple sundress, comfortable skirts, shorts or trousers and flat footwear",
+    demo: {
+      age: [0, 100],
+      gender: "",
       social: "",
       education: "",
       specific: []
     }
   },
-  CowboyF: {
-    desc: ["Button down shirt, cow boy boots, wide brimmed hats and denim skirts"],
+  casualChic: {
+    desc:
+      "Blouse or embellished scoo neck t-shirt with tailored slacks, pair of jeans, leather jackets and ballet flats.",
     demo: {
       age: [0, 100],
       gender: "Female",
@@ -257,211 +250,131 @@ const outfit = {
       specific: []
     }
   },
-  guyNextDoor: {
-    desc: ["Graphic tees and comfortable trousers or shorts"],
+  geekyChic: {
+    desc:
+      "Loose fitting like slouchy pants, t-shirt or simple dress and loafers",
     demo: {
-      age: [0, 100],
+      age: [0, 34],
+      gender: "Female",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  military: {
+    desc: "Everything in khaki or chinos and sometimes jeans.",
+    demo: {
+      age: [0, 34],
       gender: "",
       social: "",
       education: "",
       specific: []
     }
   },
-  girlNextDoor: {
-    desc: ["Graphic tees, simple sundress, comfortable skirts, shorts or trousers and flat footwear"],
+  flapper: {
+    desc:
+      "Loose dropped waistline calf length dress with plunging necklines and flat chest.",
+    demo: {
+      age: [0, 30],
+      gender: "Female",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  tomboy: {
+    desc: "Nondescript t-shirts with shorts or jeans and sneakers",
+    demo: {
+      age: [0, 34],
+      gender: "Female",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  garconne: {
+    desc:
+      "Loose-fit blouse and jeans, leather or tailored jackets with shiny loafers or pumps.",
     demo: {
       age: [0, 100],
+      gender: "Female",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  artsy: {
+    desc:
+      "Bright and bold coloured clothes with exaggerated print and unusual outline with handcrafted accessories, handmade fabrics and sandals, slippers or flats.",
+    demo: {
+      age: [12, 100],
+      gender: "Female",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  grunge: {
+    desc:
+      "Leather or metallic jackets, flannel shirts, cool slogan t-shirt or crop/halter tops with ripped denim or mom jeans, combat boots, fishnet stockings, beanies and slouchy sweaters.",
+    demo: {
+      age: [0, 34],
+      gender: "Female",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  punk: {
+    desc:
+      "Black coloured clothings. T-shirts with provocative wordings, leather jackets, studded black boots, tight black pants.",
+    demo: {
+      age: [0, 24],
+      gender: "Male",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  punkF: {
+    desc:
+      "Black coloured clothings. T-shirts with provocative wordings, fishnet stockings, leather jackets, studded black boots, tight black pants, skater skirt.",
+    demo: {
+      age: [0, 24],
+      gender: "Female",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  boho: {
+    desc:
+      "Embroidered jackets/coat, wide-brim hats, long/midi sundresses, usually with loose silhouttes, beaded blouses and faux fur vest over skinny jeans or short floaty skirts.",
+    demo: {
+      age: [0, 54],
+      gender: "Female",
+      social: "",
+      education: "",
+      specific: []
+    }
+  },
+  biker: {
+    desc:
+      "Leather jackets, motocycle vest, skin tight pants or leather pants, exposed zippers and boots.",
+    demo: {
+      age: [0, 34],
       gender: "",
       social: "",
       education: "",
       specific: []
     }
   },
-  Gothic: {
-    desc: [],
+  prairie: {
+    desc:
+      "Button down or plaid top with long flowy skirts or flared skirts. Denim overalls or high-waisted jeans with strappy sandals, stillettos or heeled boots. A bandana as a top, neckpiece or headpiece.",
     demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
-      social: "",
-      education: "",
-      specific: []
-    }
-  },
-  Gothic: {
-    desc: [],
-    demo: {
-      age: [0, 100],
-      gender: "",
+      age: [0, 34],
+      gender: "Female",
       social: "",
       education: "",
       specific: []
@@ -508,7 +421,7 @@ const getsocialStatus = (social, outfitSocial) => {
   return true;
 };
 
-const getOutfit = (age, gender, education, social, specific = []) => {
+const getOdds = (age, gender, education, social, specific = []) => {
   const outfitType = [];
   const outfitOdds = [];
   let tempOdds = 1;
@@ -517,8 +430,6 @@ const getOutfit = (age, gender, education, social, specific = []) => {
     const obj = outfit[key];
     if (getEducationLevel(education, obj["demo"]["education"])) tempOdds += 5;
     if (getsocialStatus(social, obj["demo"]["social"])) tempOdds += 5;
-    //if (specific == obj["demo"]["specific"]) tempOdds += 10;
-    //if (specific.includes(obj["demo"]["specific"])) tempOdds += 10;
     for (let i of specific) {
       if (obj["demo"]["specific"].includes(i)) tempOdds += 5;
     }
@@ -541,12 +452,15 @@ const getOutfit = (age, gender, education, social, specific = []) => {
   };
 };
 
-const allOutfit = getOutfit(22, "Male", "Preschool", "Working class", [
-  "Les",
-  "Gay",
-  "Way"
-]);
+const getClothing = (age, gender, education, social, specific) => {
+  const { outfitOdds, outfitType } = getOdds(
+    age,
+    gender,
+    education,
+    social,
+    specific
+  );
+  return outfit[oddCalculator(outfitType, outfitOdds)]["desc"];
+};
 
-const { outfitOdds, outfitType } = allOutfit;
-
-console.log(outfitType, outfitOdds);
+export default getClothing;

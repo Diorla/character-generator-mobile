@@ -47,7 +47,6 @@ import {
 } from "./../components";
 import * as Print from "expo-print";
 import getAccessories from "./../modules/getAccessories";
-import getOutfit from "./../modules/getOutfit";
 import getGrooming from "./../modules/getGrooming";
 import getBirthday from "../modules/getBirthday";
 import getQuirk from "./../modules/getQuirk";
@@ -75,6 +74,7 @@ import getMorality from "../modules/getMorality";
 import generateGender from "./../modules/generateGender";
 import getGroupDynamic from "./../modules/getGroupDynamic";
 import getDependent from "../modules/getDependent";
+import getClothing from './../data/clothing';
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -366,6 +366,8 @@ class Character extends React.Component {
       ear
     } = getFace(skinTone, weightType, hairColour, gender, age);
 
+    
+
     const distinguishingFeatures =
       this.state.distinguishingFeatures || getDistFeat();
     const education = this.state.education || getEducation();
@@ -382,7 +384,7 @@ class Character extends React.Component {
     const socialStatus = this.state.socialStatus || getSocialStatus(education);
     const familyEconomicStatus =
       this.state.familyEconomicStatus || getSocialStatus(socialStatus);
-    const outfit = this.state.outfit || getOutfit(gender);
+    const outfit = this.state.outfit || getClothing(age, gender, education, socialStatus);
     const accessories = this.state.accessories || getAccessories(age);
     //cities would be in the same country of nationality
     const birthPlace = this.state.birthPlace || `${getCity(nationality)}`;
@@ -420,6 +422,8 @@ class Character extends React.Component {
     const groupDynamic = this.state.groupDynamic || getGroupDynamic();
 
     const dependent = this.state.dependent || getDependent();
+
+    
 
     for (let i = 0; i < keys.length; i++) {
       const k = keys[i];
@@ -534,7 +538,7 @@ class Character extends React.Component {
           ", ",
           " with "
         ),
-      outfit: this.state.outfit || print(outfit, ", ", " and/or "),
+      outfit,
       groupDynamic,
       dependent,
       ...generatedTraits

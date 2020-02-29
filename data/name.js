@@ -1132,14 +1132,26 @@ const names = {
     Surname: ["Islamovic", "Soder", "Larsson", "Hedlund", "Erlingmark", "Irandust", "Saletros", "Karlsson", "Kacaniklic", "Tankovic", "Berggren", "Bojanic", "Sandberg", "De Graca", "Ahmedhodzic", "Andersson", "Larsson", "Danielson", "Dahlberg", "Pettersson", "Abrahamsson", "Kullashi", "Janogy", "Olme", "Anvegard", "Hammarlund", "Hurtig", "Blackstenius", "Jakobsson", "De Jongh", "Bennison", "Karlernas", "Asllani", "Serger", "Kullberg", "Bjorn", "Glas", "Samuelsson", "Eriksson", "Sembrant", "Falk", "Musovic", "Lindahl"]
   },
   Azerbaijan: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Salahat", "Emil", "Mehdi", "Badavi", "Pavel", "Tamkin", "Shahriyar", "Anton", "Bahlul", "Abbas", "Javid", "Gara", "Dimitrij", "Araz", "Richard", "Aghabala", "Emin", "Eddi", "Elvin", "Vusal", "Ramil", "Renat"
+    ],
+    Female: [
+      "Farida", "Lyubov", "Nigar", "Svetlana", "Olga", "Elena", "Anastasia", "Natalya", "Narmina", "Masha", "Tamara", "Ekaterina", "Inna", "Lyudmila", "Raisa", "Marina", "Galina", "Nargiz"
+    ],
+    Surname: [, 
+      "Dadashov", "Sheydayev", "Isgandarli", "Jamalov", "Israfilov", "Mahmudov", "Ramazanov", "Almeida", "Abdullayev", "Nazarov", "Garayev", "Huseynov", "Aliyev", "Mustafazade", "Krivotsyuk", "Rahimov", "Khalilzade", "Pashayev", "Jannatov", "Baleyev", "Aghayev", "Babayeva", "Tirina", "Ismayilova", "Famenko", "Gaziyeva", "Nabiyeva", "Rahmanova", "Safarova", "Saratovtseva", "Rzayeva", "Makarova", "Starovoytova", "Kamasheva", "Komarova", "Akayeva", "Zhidkova", "Davidok", "Kuzniatsova", "Alakbarova", "Boyko", "Nosova", "Shevtsova",
+    ]
   },
   Hungary: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Peter", "Denes", "Adam", "Gergo", "Mihaly", "Barnabas", "Botond", "Zsolt", "Attila", "Bence", "Balazs", "Mate", "Istvan", "Dominik", "David", "Daniel", "Roland", "Robert", "Filip", "Donat"
+    ],
+    Female: [
+      "Reka", "Barbara", "Anna", "Anita", "Viktoria", "Dora", "Evelin", "Laura", "Lilla", "Boglarka", "Henrietta", "Sara", "Zsofia", "Diana", "Petra", "Dora", "Loretta", "Fanny", "Zsanett", "Bernadett"
+    ],
+    Surname: [
+      "Zsoter", "Holender", "Feczesin", "Sallai", "Varga", "Szalai", "Gazdag", "Holman", "Vida", "Szoboszlai", "Nagy", "Kovacs", "Patkai", "Dzsudzsak", "Pavkovics", "Szalai", "Barath", "Bese", "Korhut", "Lang", "Lovrencsics", "Kovacsik", "Dibusz", "Gulacsi", "Zagor", "Jakabfi", "Vago", "Sule", "Nemeth", "Zeller", "Kocsan", "Csanyi", "Racz", "Fenyvesi", "Pusztai", "Csiszar", "Horti", "Turanyi", "Mosdoczi", "Papp", "Szabo", "Csiki", "Pinczi", "Samu", "Biro", "Szocs"
+    ]
   },
   Jordan: { //=> Egypt
     Male: [],
@@ -1147,9 +1159,15 @@ const names = {
     Surname: []
   },
   Belarus: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Pavel", "Yahor", "Syarhey", "Aleksandr", "Ihar", "Kiryl", "Maksim", "Sergey", "Nikita", "Yury", "Yevgeniy", "Ivan", "Vladislav", "Roman", "Dzyanis", "Maksim", "Vitaly", "Dmitry", "Vsevolod"
+    ],
+    Female: [
+      "Natalya", "Ekaterina", "Zaryna", "Valeriya", "Anna", "Ksenia", "Anastasiya", "Polina", "Elvira", "Margarita", "Lyubov", "Tatiana", "Vita", "Yulia", "Viktoriya", "Karina", 
+    ],
+    Surname: [
+      "Sadovsky", "Podstrelov", "Shevchenko", "Lisakovich", "Skavysh", "Laptsew", "Volkaw", "Yuzepchuk", "Klimovich", "Bakhar", "Yablonskiy", "Kendysh", "Korzun", "Nyakhaychyk", "Stasevich", "Drahun", "Stephanov", "Poznyak", "Karpovich", "Shvyatsow", "Pyachenin", "Burko", "Pavlovets", "Matsveychyk", "Palitsevich", "Hatkevich", "Pavlyuchenko", "Shuppo", "Olkhovik", "Lutskevich", "Linnik", "Kazakevich", "Slesarchik", "Shlapakova", "Shcherbachenia", "Nikolaenko", "Markushevskaya", "Kharlanova", "Gudchenko", "Yushko", "Urazaeva", "Shatsilenia", "Novikava", "Kubichnaya", "Kozyupa", "Karachun", "Kapustsina", "Kovalchuk", "Voskobovich"
+    ]
   },
   "United Arab Emirates": { //=> Egypt
     Male: [],
@@ -1162,54 +1180,108 @@ const names = {
     Surname: []
   },
   Tajistan: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Rustam", "Fathulo", "Shokhrukh", "Manuchehr", "Tabrezi", "Khurshed", "Iskandar", "Davron", "Farkhod", "Akhtam", "Parvizdzhon", "Nuriddin", "Alisher", "Muhammadjon", "Ehson", "Fatkhullo", "Amirbek", "Karomatullo", "Jahongir", "Komron", "Sheeriddin", "Shahrom", "Manuchekhr"
+    ],
+    Female: [
+      "Afareen", "Bahar", "Darya", "Farahnak", "Gawhar", "Hangahma", "Jahan", "Katayoun", "Lala", "Mahasti", "Nahal", "Padidah", "Rasa", "Saaman", "Tahminah", "Yagana", "Zarrin", "Zheela", "Yasaman", "Taranum", "Souzan", "Roudabeh", "Poran", "Noushin", 
+    ],
+    Surname: [
+      "Dzhalilov", "Samiyev", "Boboev", "Tursunov", "Ergashev", "Saidov", "Juraboev", "Fatkhuloev", "Panjshanbe", "Rakhimov", "Dzhalilov", "Davronov", "Umarbayev", "Nazarov", "Vosiyev", "Beknazarov", "Davlatmir", "Safarov", "Kirgizboev", 
+    ]
   },
   Serbia: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Marko", "Predrag", "Emil", "Aleksandar", "Nikola", "Uros", "Filip", "Milan", "Nemanja", "Marko", "Dusan", "Adem", "Luka", "Filip", "Mijat", "Sergej", "Sasa", "Andrija", "Dorde"
+    ],
+    Female: [
+      "Adrijana", "Biljana", "Jovana", "Vesna", "Marija", "Mirela", "Allegra", 'Milica', 'Jelena', 'Aleksandra', 'Kristina', 'Aida', "Dina", "Tijana", "Marijana", "Nevena", "Tiana", "Nikoleta", "Violeta", "Orsoja", "Milena", "Ana", "Tanja", 
+    ],
+    Surname: [
+      "Despotovic", "Pavlovic", "Mitrovic", "Lukic", "Savic", "Milinkovic", "Radonjic", "Gacinovic", "Maksimovic", "Gudelj", "Duricic", "Milivojevic", "Ljajic", "Tadic", "Gobeljic", "Miletic", "Milunovic", "Rodic", "Mladenovic", "Spajic", "Milenkovic", "Maksimovic", "Kolarov", "Rockov", "Rajkovic", "Dmitrovic", "Kostic", "Dapic", "Ivanov", "Vukovic", "Vajda", "Duricek", "Jankovic", "Slovic", "Nikolic", "Krstic", "Damnjanovic", "Stevanovic", "Stojanovic", "Jankov", "Filipovic", "Blagojevic", "Kardovic", "Pantelic", "Savanovic", "Cubrilo", "Ilic", "Cankovic", "Mijatovic", "Poljak", "Tenkov", "Vukovic", "Radojicic", "Smiljkovic", "Bradic", "Delic"
+    ]
   },
   Austria: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Jorg", "Pavao", "Alexander", "Christopher", "Maximilian", "Stefan", "Valentino", "Florian", "Philipp", "Julian", "Louis", "Thomas", "Reinhold", "Michael", "Lukas", "Alexandar"
+    ],
+    Female: [
+      "Melissa", "Isabella", "Manuela", "Verena", "Marina", "Virginia", "Katharina", "Viktoria", "Yvonne", "Carina", "Laura", "Barbara", "Jasmin", "Julia", "Marie-Therese", "Nadine", "Sarah", "Nicole", "Lisa", "Elisabeth"
+    ],
+    Surname: [
+      "Pinther", "Mayr", "Makas", "Billa", "Zadrazil", "Puntigam", "Prohaska", "Hobinger", "Hickelsberger-Fuller", "Feiersinger", "Eder", "Dunst", "Wienroither", "Wenninger", "Weilharter", "Schnaderbeck", "Schiechtl", "Kirchberger", "Georgieva", "Aschauer", "Zinsberger", "Kresche", "Abiral", "Siebenhandl", "Pervan", "Schlager", "Dragovic", "Trimmel", "Wober", "Posch", "Lienhart", "Ullmann", "Baumgartlinger", "Ilsanker", "Lazaro", "Grillitsch", "Schaub", "Goiginger", "Ranftl"
+    ]
   },
   Switzerland: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Yann", "Yvon", "Jonas", "Stephan", "Ricardo", "Michael", "Manuel", "Francois", "Nico", "Kevin", "Loris", "Eray", "Granit", "Denis", "Edimilson", "Renato", "Djibril", "Michel", "Haris", "Albian", "Christian", "Ruben", "Cedric"
+    ],
+    Female: [
+      "Gaelle", "Seraina", "Elvira", "Noelle", "Rachel", "Jana", "Luana", "Naomi", "Julia", "Svenja", "Vanessa", "Lia", "Sandy", "Viola", "Coumba", "Malin", "Ana-Maria", "Ramona", "Fabienne", "Alisha", "Irina"
+    ],
+    Surname: [
+      "Itten", "Vargas", "Fassnacht", "Ajeti", "Seferovic", "Aebischer", "Sow", "Steffen", "Fernandes", "Zakaria", "Xhaka", "Comert", "Benito", "Mbabu", "Elvedi", "Moubandje", "Lang", "Rodriguez", "Lichsteiner", "Omlin", "Mvogo", "Sommer", "Pando", "Lehmann", "Reuteler", "Humm", "Bachmann", "Crnogorcevic", "Gut", "Sow", "Calligaris", "Maendly", "Walti", "Bernauer", "Folmli", "Stierli", "Megroz", "Buhler", "Brunner", "Rinast", "Maritz", "Herzog", "Thalmann", "Friedli"
+    ]
   },
   Israel: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Ariel", "Ofir", "Yoav", "Eitan", "Omri", "Eli", "Loai", "Orel", "Hatem", "Sun", "Bibras", "Beram", "Nir", "Dan", "Gaetan", "Ilay", "Dolev", "Neta", "Eran", "Munas", "Dia", "Shon"
+    ],
+    Female: [
+      "Hanit", "Mairav", "Maya", "Shani", "Moran", "Shahar", "Shai", "Michal", "Shay", "Daniel", "Shir", "Alina", "Diana", "Karin", "Arava", "Opal", "Adva", "Eden", "Mor", "Roni"
+    ],
+    Surname: [
+      "Weissman", "Saba", "Dabbur", "Zahavi", "Lavi", "Haziza", "Elmkies", "Varenne", "Glazer", "Bitton", "Kayal", "Natkho", "Menachem", "Abd Elhamed", "Dgani", "Elhamed", "Taha", "Dasa", "Harush", "Ben Harush", "Tibi", "Gerafi", "Marciano", "Shimrich", "Efraim", "Avital", "Twil", "Sofer", "Shahaf", "Sendel", "Redman", "Metkalov", "Levo", "Falkon", "Schwartz", "Sade", "Ravitz", "Peal", "Nakav", "Fridman", "David", "Barqui", "Shamir"
+    ]
   },
   "Papua New Guinea": {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Ishmael", "Ronald", "Daniel", "Joshua", "Alwin", "Felix", "Shane", "Dinniget", "Koriak", "Langarap", "Patrick", "Michael", "Emmanuel", "Jacob", "Gregory", "Koku", "Raymond", "Nigel", "David", "Atti", "Tommy", "Jonathan", "Alex"
+    ],
+    Female: [
+      "Asaiso", "Gloria", "Selina", "Meagen", "Shalom", "Ramona", "Marie", "Deslyn", "Serah", "Yvonne", "Rayleen", "Sandra", "Margret", "Georgina", "Michaella", "Lydia", "Joelyne", "Lucy", "Dorcas", "Faith", "Betty", "Fidelma"
+    ],
+    Surname: [
+      "Kamen", "Allen", "Semmy", "Kepo", "Browne", "Dabinyaba", "Gunemba", "Kepo", "Togubai", "Sabua", "Simon", "Foster", "Aisa", "Samol", "Upaiga", "Luaine", "Sakael", "Komolong", "Talau", "Joe", "Warisan", "Pole", "Watpore", "Sam", "Kasiray", "Sesevo", "Maino", "Aimi", "Kose", "Kurabi", "Bakani", "Joseph", "Birum", "Bauelua", "Gabong", "Tamgol", "Siniu", "Kaipu", "Padio", "Waida", "Balamus", "Gunemba", "Unamba", "Laeli", "Gossie"
+    ]
   },
   Togo: {
-    Male: [],
+    Male: [
+      "Malcolm", "Abdoul Moubarak", "Dove", "Djene", "Hakim", "Steve", "Simon", "Adewale", "Wilson", "Abdoul", "Kangnivi", "Lalawele", "Floyd", "Mathieu", "Koffi", "Ihlas", "Gilles", "Marouf", "Yendoutie", "Kodjo", "Peniel", "Ahoueke", "David"
+    ],
     Female: [],
-    Surname: []
+    Surname: [
+      "Henen", "Denkey", "Laba", "Nane", "Tchakei", "Sunu", "Bebou", "Atchou", "Dossevi", "Ayite", "Atakora", "Amatchoutchoui", "Bode", "Akakpo", "Olufade", "Gbegnon", "Ouro-Sama", "Lawson", "Abotchi", "Aigba", "Barcola"
+    ]
   },
   "Sierra Leone": {
-    Male: [],
+    Male: ["Solomon", "Mohamed", "Alhaji", "Umaru", "David", "Mila", "Abu", "Alie", "Osman", "Yeami", "Julius", "Medo", "Alfred", "John", "Michael", "Kei", "Alhassan", "Kwame", "Sheka", "Christian", "Buya", "Amadou", "Ibrahim"],
     Female: [],
-    Surname: []
+    Surname: [
+      "Conteh", "Bakayoko", "Turay", "Moses", "Fofanah", "Quee", "Kamara", "Lahoud", "Sankoh", "Wobay", "Dunia", "Kakay", "Sesay", "Suma", "Simbo", "Bangura", "Morris"
+    ]
   },
   Bulgaria: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Georgi", "Martin", "Daniel", "Petar", "Ivan", "Viktor", "Angel", "Ivan", "Andrea", "Stefan", "Aleksandar", "Todor", "Kristiyan", "Galin", "Valentin", "Dimitar", "Spas", "Ismail", "Bircent", "Svetoslav"
+    ],
+    Female: [
+      "Liliana", "Velina", "Borislava", "Nina", "Valentina", "Stanislava", "Denitsa", "Silvia", "Lydia", "Tsvetana", "Ivanka", "Nikoleta", "Todora", "Radoslava", "Kristina", "Petya", "Veselina", "Zlatka", "Roksana", "Korneliya"
+    ],
+    Surname: [
+      "Kovachev", "Karagaren", "Minchev", "Isa", "Delev", "Iliev", "Antov", "Tsvetkov", "Ivanov", "Malinov", "Nedelev", "Tonev", "Velkov", "Hristov", "Turistov", "Lyaskov", "Popov", "Goranov", "Zanev", "Naumov", "Lukov", "Georgiev", "Naydenova", "Shahanska", "Gaberova", "Ivanova", "Mahlelieva", "Petkova", "Petrunova", "Slavcheva", "Todorova", "Voyskova", "Koleva", "Mancheva", "Nacheva", "Radoyska", "Semkova", "Tsekova", "Gospodinova", "Hristova", "Kireva", "Koshuleva", "Kostova"
+    ],
   },
   Laos: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Songphu", "Vangchay", "Outhensackda", "Soutsakhone", "Saythong", "Bounlap", "Saysana", "Saysana", "Valakone"
+    ],
+    Female: [
+      "Boonyong", "Soudaoloung", "Sengthid", "Noum", "Souchitta", "Nok", "Sysuvan", "Phanykone", "Anouluck", "Bouasy", "Phetphachan", "Vannida", "Minivanh", "Borneo", "Viengkhone", "Keota", "Hongthong", "Vongdeuan"
+    ],
+    Surname: [
+      "Phomphakdy", "Khenkitisack", "Savatdy", "Syphasay", "Oudomphet", "Vatthana", "Muangmany", "Phongsa", "Chanthanivong", "Choulapanh", "Phongoudom", "Chantamala", "Louangamard", "Bounthan", "Soukpanhya", "Phommachack", "Chanphong", "Keosinthavone", "Vannalath", "Phomsuvan", "Douangmala", "Phonhalath", "Anmahongsa", "Khamla", "Phasiri", "Akkhavong"
+    ]
   },
   Paraguay: {
     Male: [],

@@ -15,7 +15,6 @@ import manageData from "./manageData";
 import getPhobia from "./getPhobia";
 import getNationality from "./getNationality";
 import getAccessories from "./getAccessories";
-import getOutfit from "./getOutfit";
 
 export {
   styles,
@@ -34,6 +33,5 @@ export {
   manageData,
   getPhobia,
   getNationality,
-  getAccessories,
-  getOutfit
+  getAccessories
 };

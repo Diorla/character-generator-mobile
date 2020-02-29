@@ -14,7 +14,7 @@ class MyPicker extends PureComponent {
   };
 
   render() {
-    const width = this.props.help ? "92%" : "100%";
+    const width = this.props.help ? "91%" : "100%";
     const nullValue = this.props.nullValue || "N/A"
     return (
       <View
@@ -42,9 +42,9 @@ class MyPicker extends PureComponent {
         </View>
         {this.props.help ? (
           <IconButton
-            icon="help"
-            color={Colors.red500}
-            size={16}
+            icon="help-circle"
+            color={Colors.teal500}
+            size={18}
             onPress={this.openHelp}
             style={{
               alignSelf: "center"

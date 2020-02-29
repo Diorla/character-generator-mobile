@@ -36,9 +36,9 @@ class Input extends PureComponent {
         />
         {this.props.help ? (
           <IconButton
-            icon="help"
-            color={Colors.red500}
-            size={16}
+            icon="help-circle"
+            color={Colors.teal500}
+            size={18}
             onPress={this.openHelp}
             style={{
               alignSelf: "center",
