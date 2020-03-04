@@ -134,9 +134,9 @@ const MyDrawerNavigator = createDrawerNavigator(
     Character: {
       screen: Character
     },
-    Story: {
-      screen: Story
-    },
+    // Story: {
+    //   screen: Story
+    // },
     Feedback: {
       screen: Feedback
     },
