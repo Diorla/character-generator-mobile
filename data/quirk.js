@@ -14,7 +14,7 @@ const quirks = {
     "Control freak",
     "Slob",
     "Quite forgetful",
-    "OCD",
+    "Obsessive Compulsive Disorder",
     "Great at voice",
     "Does ventriloquy",
     "Likes to do magic",

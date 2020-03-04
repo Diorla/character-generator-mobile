@@ -64,6 +64,7 @@ const trait = {
     "Low key",
     "Modest",
     "Unassuming",
+    "Insecure",
     "Shy"
   ],
   riskTaking: [

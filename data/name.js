@@ -1249,14 +1249,18 @@ const names = {
     Male: [
       "Malcolm", "Abdoul Moubarak", "Dove", "Djene", "Hakim", "Steve", "Simon", "Adewale", "Wilson", "Abdoul", "Kangnivi", "Lalawele", "Floyd", "Mathieu", "Koffi", "Ihlas", "Gilles", "Marouf", "Yendoutie", "Kodjo", "Peniel", "Ahoueke", "David"
     ],
-    Female: [],
+    Female: [
+      "Abigail", "Caitlin", "Dani", "Edem", "Fabienne", "Gadowaye", "Hadiza", "Iara", "Jaelle", "Kadi", "Lan Anh", "Madeleine", "Nabila", "Pamella", "Queene", "Rachida", "Sacie", "Tabitha", "Valentina"
+    ],
     Surname: [
       "Henen", "Denkey", "Laba", "Nane", "Tchakei", "Sunu", "Bebou", "Atchou", "Dossevi", "Ayite", "Atakora", "Amatchoutchoui", "Bode", "Akakpo", "Olufade", "Gbegnon", "Ouro-Sama", "Lawson", "Abotchi", "Aigba", "Barcola"
     ]
   },
   "Sierra Leone": {
     Male: ["Solomon", "Mohamed", "Alhaji", "Umaru", "David", "Mila", "Abu", "Alie", "Osman", "Yeami", "Julius", "Medo", "Alfred", "John", "Michael", "Kei", "Alhassan", "Kwame", "Sheka", "Christian", "Buya", "Amadou", "Ibrahim"],
-    Female: [],
+    Female: [
+      "Adama", "Christiana", "Doris", "Fatmata", "Georgieta", "Hassanatou", "Kadie", "Marai", "Olivette", "Suzan", "Tenneh", "Yaema", "Titi", "Mariama", "Lucy", "Fatou", "Claudetta", "Aminata"
+    ],
     Surname: [
       "Conteh", "Bakayoko", "Turay", "Moses", "Fofanah", "Quee", "Kamara", "Lahoud", "Sankoh", "Wobay", "Dunia", "Kakay", "Sesay", "Suma", "Simbo", "Bangura", "Morris"
     ]
@@ -1283,7 +1287,7 @@ const names = {
       "Phomphakdy", "Khenkitisack", "Savatdy", "Syphasay", "Oudomphet", "Vatthana", "Muangmany", "Phongsa", "Chanthanivong", "Choulapanh", "Phongoudom", "Chantamala", "Louangamard", "Bounthan", "Soukpanhya", "Phommachack", "Chanphong", "Keosinthavone", "Vannalath", "Phomsuvan", "Douangmala", "Phonhalath", "Anmahongsa", "Khamla", "Phasiri", "Akkhavong"
     ]
   },
-  Paraguay: {
+  Paraguay: { //=> Mexico
     Male: [],
     Female: [],
     Surname: []
@@ -1309,24 +1313,48 @@ const names = {
     Surname: []
   },
   Kyrgyzstan: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Pavel", "Kutman", "Valery", "Tamirian", "Mustafa", "Aizar", "Viktor", "Azamat", "Aleksandr", "Akram", "Gulzhigit", "Edgar", "Bekzhan", "Odiljon", "Murolimzhon", "Kairat", "Bakhtiyar", "Farhat", "Alimardon", "Akhlidin", "Mirlan", "Vitalij"
+    ],
+    Female: [
+      "Adilet", "Aigul", "Anara", "Asel", "Aziza", "Bermet", "Cholpon", "Dinara", "Gulnara", "Jyrgal", "Zhyrgal", "Kunduz", "Omur", "Rakhat", "Salamat", "Tumar", "Turan", "Urmat"
+    ],
+    Surname: [
+      "Lux", "Murzaev", "Israilov", "Shukurov", "Musabekov", "Duyshobekov", "Uulu", "Akhmedov", "Abdurakhmanov", "Sagynbaev", "Bernhardt", "Alykulov", "Umarov", "Mishchenko", "Baimotov", "Maier", "Akmatov", "Iusupov", "Kozubaev", "Kichin", "Kashuba", "Kadyrbekov", "Matyash"
+    ]
   },
   Turkmenistan: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Mammet", "Batyr", "Rahat", "Mekan", "Zafar", "Sohrat", "Abdy", "Guycmyrat", "Gurbanguly", "Serdar", "Amir", "Wezirgeldi", "Yhlas", "Ruslan", "Resul", "Arslanmyrat", "Dowletmyrat", "Altymyrat", "Wahyt", "Didar", "Myrat", "Mihail"
+    ],
+    Female: [
+      "Annagul", "Ayna", "Aynabat", "Bahargul", "Didar", "Intizar", "Nyazik", "Rahat", "Sona", "Glalek", "Hatyja", "Jahan", "Keyik", "Maysa", "Ogulgerek", "Pamyk", "Tawus"
+    ],
+    Surname: [
+      "Titow", "Yagsyyew", "Durdyyew", "Orazsahedow", "Annadurdyyew", "Seyitmuhammedow", "Amanow", "Hojayew", "Mingazow", "Magtymow", "Ylyasow", "Geldiyew", "Gurbani", "Asyrow", "Annaorazow", "Annagulyyew", "Basimow", "Soyunow", "Babajanow", "Saparow", "Japarow", "Babayew", "Orazmuhammedow"
+    ]
   },
   Denmark: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Kasper", "Frederik", "Jesper", "Simon", "Andreas", "Jens", "Mathias", "Henrik", "Peter", "Jonas", "Joachim", "Christian", "Lasse", "Thomas", "Pierre-Emile", "Daniel", "Martin", "Kasper", "Robert"
+    ],
+    Female: [
+      "Amalie", "Pernille", "Stine", "Frederikke", "Rikke", "Marie", "Emma", "Josefine", "Nicoline", "Sanne", "Janni", "Nanna", "Sara", "Sofie", "Theresa", "Simone", "Rikke", "Kathrine", 
+    ],
+    Surname: [
+      "Skov", "Gytkjaer", "Dolberg", "Cornelius", "Braithwaite", "Poulsen", "Norgaard", "Wass", "Hojbjerg", "Delaney", "Schone", "Eriksen", "Andersen", "Knudsen", "Ankersen", "Dalsgaard", "Jorgensen", "Larsen", "Christensen", "Kjaer", "Hansen", "Ronnow", "Schmeichel", "Abel", "Arnth", "Sevecke", "Boye", "Ballisager", "Eslund", "Holmgaard", "Svava", "Thrige", "Thomsen", "Troelsgaard", "Sorensen", "Hasbo", "Snerle", "Madsen", "Thogersen", "Harder", "Moller", "Thestrup"
+    ]
   },
   Singapore: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Hassan", "Zaiful", "Nazrul", "Zulqarnaen", "Fadli", "Anders", "Iqram", "Tajeli", "Harith", "Jordan", "Shahdan", "Yasir", "Sahil", "Anumanthan", "Firdaus", "Christopher", "Afiq", "Haiqal", "Gabriel", "Shawal", "Hafiz", "Hazzuwan", "Fareez", "Rezza", "Farhan"
+    ],
+    Female: [
+      "Siti", "Raudhah", "Sitianiwati", "Stepahnie", "Venetia", "Dorcas", "Danelle", "Faradila", "Ernie", "Ho", "Nur", "Lim", "Mira", "Umairah", "Suria", "Dhaniyah", "Pamela", "Beatrice",
+    ],
+    Surname: [
+      "Zulkifli", "Rezky", "Farhan", "Halim", "Nor", "Anuar", "Quak", "Pashia", "Noor", "van Huizen", "Kasman", "Kumar", "Suhaimi", "Hanapi", "Sulaiman", "Vestering", "Kanadi", "Salamat", "Rifqi", "Aplin", "Kamis", "Suzliman", "Nazari", "Nizam", "Sunny", "Kusumawatibte", "Tan Li Bin", "Kong Zi En", "Qasimah", "Rosnani", "Ruhaizat", "Vaatharaja", "Hamdan", "Ruzi", "Ruzana", "Li Xian", "Rosni", "Huixin", "Sulastri", "Rafidi", "Tan", "Chu", "Lim", "Dominguez", "Rosielin", "Nabilah"
+    ]
   },
   Finland: {
     Male: [],

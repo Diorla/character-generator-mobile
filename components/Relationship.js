@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Image,
-  Text,
-  Picker,
-  View,
-  ScrollView,
-  KeyboardAvoidingView
-} from "react-native";
+import { Text, View } from "react-native";
 import {
   TextInput,
   Card,
@@ -15,7 +8,6 @@ import {
   Button,
   IconButton
 } from "react-native-paper";
-import styles from "./../modules/styles";
 import Helper from "./Helper";
 
 const Relationship = props => {
@@ -59,7 +51,7 @@ const Relationship = props => {
           <Divider
             style={{
               backgroundColor: "teal",
-              height: 1,
+              height: 1
             }}
           />
           {relationship.map((obj, index) => (

@@ -61,8 +61,29 @@ const outfit = {
       specific: []
     }
   },
-  // Business Casual
   // Evening black tie: I think this is specific
+  businessCasual: {
+    desc:
+      "Bright coloured/patterned shirts and ties, sports coats and jackets, dressy slacks with loafers or monk-strapped shoes. Short-sleeved tutton down shirts with sweaters, dress slacks and tie-up or dark letter shoes, or loafers. May wear dark jeans with blazers.",
+    demo: {
+      age: [15, 100],
+      gender: "Male",
+      social: "Lower middle class",
+      education: "Diploma/Associate degrees",
+      specific: []
+    }
+  },
+  businessCasualF: {
+    desc:
+      "Blouses, sleeveless shirts, turtle neck or dress with decent neckline. Pencil-cut or knee-length skirts or dress pants. Stilettos, open-toed or closed kitten hills or pumps with fashionable jackets",
+    demo: {
+      age: [15, 100],
+      gender: "Female",
+      social: "Lower middle class",
+      education: "Diploma/Associate degrees",
+      specific: []
+    }
+  },
   sportsWear: {
     desc:
       "Outerwear, Polo shirt or T-shirts, Yoga pants, Tracksuits and Trainers",

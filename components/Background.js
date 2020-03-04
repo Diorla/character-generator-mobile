@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Text, View } from "react-native";
 import {
-  TextInput,
   Card,
   Colors,
   Button,
@@ -13,7 +12,6 @@ import Input from "./Input";
 
 const Background = props => {
   const [display, setDisplay] = useState(false);
-  const [modalVisible, displayModal] = useState(false);
 
   const {
     familyEconomicStatus,

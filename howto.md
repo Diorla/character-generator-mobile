@@ -20,12 +20,16 @@ supercedingOdds("Igbeti", cities, 90, 10)
 - Comorbidity too e.g. HTN & DM
 
 
-
-
-
 # Appearance
 - Physical
   - Port bellied
 - Hair
   - Hairstyles, types of moustaches, 
 
+# Mannerisms
+## Likes
+> These are the types of thing someone may like. Not, if it's an activity, it becomes an hobby.
+- Food e.g. pizza
+- Music e.g. Rock and roll, blues
+- Movies, all movies, certain genre
+- Sport: this means following e.g. watching football
