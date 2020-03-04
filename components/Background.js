@@ -6,7 +6,6 @@ import {
   Button,
 } from "react-native-paper";
 import MyPicker from "./MyPicker";
-import Helper from "./Helper";
 import  socialStatus  from "./../data/socialStatus";
 import Input from "./Input";
 
