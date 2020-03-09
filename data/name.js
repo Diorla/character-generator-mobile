@@ -1371,12 +1371,17 @@ const names = {
     Female: [
       "Maria", "Lucia", "Patricia", "Jana", "Petra", "Monika", "Michaela", "Terezia", "Alexandra", "Dominika", "Simona", "Klaudia", "Lenka", "Katarina", "Martina", "Maria", "Veronika", "Laura", "Andrea", "Kristina", "Valentina", "Diana", "Veronika", "Stanislava", "Ludmila"
     ],
-    Surname: [
+    SurnameM: [
       "Panakov"
+    ],
+    SurnameF: [
+      "Panakova"
     ]
   },
   Norway: {
-    Male: [],
+    Male: [
+      "Rune", "Orjan", "Sten", "Omar", "Tore", "Haitam", "Even", "Jonas", "Kristoffer", "Birger", "Sigurd", "Markus", "Ole", "Mats", "Sander", "Moller", "Iver", "Fredrik", "Morten", "Tarik", "Joshua", "Alexander", "Erling", "Braut"
+    ],
     Female: [],
     Surname: []
   },

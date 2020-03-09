@@ -10,6 +10,18 @@ const getFullName = (country, gender) => {
   return `${firstName} ${lastName}`;
 };
 
+const getMaleName = (country, gender) => {
+  const firstName = oddCalculator(country[gender]);
+  const lastName = oddCalculator(country["SurnameM"]);
+  return `${firstName} ${lastName}`;
+};
+
+const getFemaleName = (country, gender) => {
+  const firstName = oddCalculator(country[gender]);
+  const lastName = oddCalculator(country["SurnameF"]);
+  return `${firstName} ${lastName}`;
+};
+
 const getNames = (country, gender) => {
   const anglophone = [
     "Ireland",
@@ -66,6 +78,16 @@ const getNames = (country, gender) => {
   const brazil = ["Portugal"];
   const paki = ["Bangladesh", "Sri Lanka"];
   const korea = ["South Korea", "North Korea"];
+  const genderBasedSurnames = [
+    "Uzbekistan",
+    "Kazakhstan",
+    "Azerbaijan",
+    "Slovakia"
+  ];
+  if (genderBasedSurnames.includes(country)) {
+    if (gender == "Male") return getMaleName(names[country], gender);
+    else return getFemaleName(names[country], gender);
+  }
   if (anglophone.includes(country))
     return getFullName(names["United States"], gender);
   else if (hispanic.includes(country)) return getFullName(names.Mexico, gender);
@@ -77,8 +99,7 @@ const getNames = (country, gender) => {
   else if (korea.includes(country)) return getFullName(names.Korea, gender);
   else if (country == "Burundi" && gender == "Female")
     return getFullName(names.Rwanda, gender);
-  else if (names[country]) return getFullName(names[country], gender);
-  else return getFullName(names.Nigeria, gender);
+  else return getFullName(names[country], gender);
 };
-
+console.log("running");
 export default getNames;
