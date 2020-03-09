@@ -591,7 +591,7 @@ const names = {
     Female: [],
     Surname: []
   },
-  Uzbekistan: {
+  Uzbekistan: { //=> gender based surname
     Male: [
       "Evgeniy", "Hurmatjon", "Zinnur", "Aleksandr", "Vyacheslav", "Nail", "Samender", "Gennadiy", "Evgenly",
       "Denis", "Kirill", "Artur", "Timur", "Ruslan", "Hasan", "Ildar", "Eldorbek", "Sanjar", "Abdumavlon",
@@ -698,7 +698,6 @@ const names = {
       "Tweneboaa", "Okyere", "Acheampong", "Abambila", "Boakye", "Owusu", "Owusua", "Animah", 
     ]
   },
-  // These names are sourced from celebrities (especially sportpersons) in each country
   Yemen: { //=> Egypt
     Male: [],
     Female: [],
@@ -865,7 +864,7 @@ const names = {
     Female: [],
     Surname: []
   },
-  Kazakhstan: {
+  Kazakhstan: { //=> gender based surnames
     Male: [
       "Stas", "Dmytro", "Igor", "Yuriy", "Dmitri", "Serhiy", "Gafurzhan", "Yan", "Temirian", "Aleksandr",
       "Nuraly", "Olzhas", "Bauyrzhan", "Islambek", "Askhat", "Georgy", "Baktiyar", "Aybol", "Aleksey",
@@ -1131,7 +1130,7 @@ const names = {
     Female: ["Hedvig", "Zecira", "Jennifer", "Linda", "Magdalena", "Jessica", "Jonna", "Hanna", "Nathalie", "Emma", "Caroline", "Kosvare", "Julia", "Hanna", "Michelle", "Sofia", "Stina", "Lina", "Pauline", "Madelen", "Loreta", "Anna", "Zigiotti"],
     Surname: ["Islamovic", "Soder", "Larsson", "Hedlund", "Erlingmark", "Irandust", "Saletros", "Karlsson", "Kacaniklic", "Tankovic", "Berggren", "Bojanic", "Sandberg", "De Graca", "Ahmedhodzic", "Andersson", "Larsson", "Danielson", "Dahlberg", "Pettersson", "Abrahamsson", "Kullashi", "Janogy", "Olme", "Anvegard", "Hammarlund", "Hurtig", "Blackstenius", "Jakobsson", "De Jongh", "Bennison", "Karlernas", "Asllani", "Serger", "Kullberg", "Bjorn", "Glas", "Samuelsson", "Eriksson", "Sembrant", "Falk", "Musovic", "Lindahl"]
   },
-  Azerbaijan: {
+  Azerbaijan: { //=> gender based surnames
     Male: [
       "Salahat", "Emil", "Mehdi", "Badavi", "Pavel", "Tamkin", "Shahriyar", "Anton", "Bahlul", "Abbas", "Javid", "Gara", "Dimitrij", "Araz", "Richard", "Aghabala", "Emin", "Eddi", "Elvin", "Vusal", "Ramil", "Renat"
     ],
@@ -1357,14 +1356,24 @@ const names = {
     ]
   },
   Finland: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "LUkas", "Jesse", "Anssi", "Joona", "Jukka", "Paulus", "Thomas", "Albin", "Juha", "Sauli", "Daniel", "Leo", "Tim", "Rasmus", "Robin", "Pyry", "Glen", "Joni", "Simon", "Fredrik", "Robert", "Teemu", "Jasse", 
+    ],
+    Female: [
+      "Paula", "Anna", "Tinja-Riikka", "Tuija", "Emma", "Natalia", "Tiia", "Elli", "Ria", "Adelina", "Olga", "Emmi", "Nora", "Julia", "Eveliina", "Iina", "Juliette", "Sanni", "Linda", "Kaisa", "Heidi"
+    ],
+    Surname: [
+      "Karjalainen", "Tuominen", "Pukki", "Taylor", "Jensen", "Skrabb", "Kauko", "Kamara", "Soiri", "Lod", "Schuller", "Sparv", "Valsanen", "O'Shaughnessy", "Vaisanen", "Pirinen", "Granlund", "Lam", "Arajuuri", "Raitala", "Toivio", "Jaakkola", "Joronen", "Hradecky", "Myllyoja", "Tamminen", "Korpela", "Hyyrynen", "Koivisto", "Auvinen", "Kuikka", "Wasterlund", "Peltonen", "Pikkujamsa", "Oling", "Engman", "Ahtinen", "Alanen", "Heroum", "Tunturi", "Summanen", "Salmi", "Kemppi", "Danielsson", "Franssi", "Sallstrom", "Collin", "Kollanen"
+    ]
   },
-  Slovakia: {
+  Slovakia: { // => gender based surnames
     Male: [],
-    Female: [],
-    Surname: []
+    Female: [
+      "Maria", "Lucia", "Patricia", "Jana", "Petra", "Monika", "Michaela", "Terezia", "Alexandra", "Dominika", "Simona", "Klaudia", "Lenka", "Katarina", "Martina", "Maria", "Veronika", "Laura", "Andrea", "Kristina", "Valentina", "Diana", "Veronika", "Stanislava", "Ludmila"
+    ],
+    Surname: [
+      "Panakov"
+    ]
   },
   Norway: {
     Male: [],

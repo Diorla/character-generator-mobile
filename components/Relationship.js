@@ -9,6 +9,7 @@ import {
   IconButton
 } from "react-native-paper";
 import Helper from "./Helper";
+import MyText from "./MyText/MyText";
 
 const Relationship = props => {
   const [display, setDisplay] = useState(false);
@@ -41,12 +42,35 @@ const Relationship = props => {
           <Helper
             visible={modalVisible}
             onRequestClose={() => displayModal(false)}
-            helpHeader="Physical Attributes"
+            helpHeader="Relationships"
             closeModal={() => displayModal(false)}
             openModal={() => displayModal(true)}
-            information="This is basic information about"
+            information="Connection, bond or family ties"
+            quote="This is basic information about the most important relationships or connections the character has"
           >
-            <Text>This is help</Text>
+            <View>
+              <Text>
+                This should only include the most important relationship that
+                have significant effect on the character's story.{" "}
+              </Text>
+              <MyText type="h3">Name</MyText>
+              <MyText>
+                If needed, you may group two or more people together e.g.{" "}
+                <MyText type="strong">Friends</MyText> or{" "}
+                <MyText type="strong">Extended family</MyText> instead of
+                listing their names one by one.
+              </MyText>
+              <MyText type="h3">Connection</MyText>
+              <MyText>
+                What is their relationship? Family, son, daughter, friend,
+                colleagues etc.
+              </MyText>
+              <MyText type="h3">Description</MyText>
+              <MyText>
+                This describes how good or bad their relationship is, perhaps a
+                few insight into how they got here.
+              </MyText>
+            </View>
           </Helper>
           <Divider
             style={{
