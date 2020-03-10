@@ -39,7 +39,9 @@ const Habit = props => {
     hobby,
     changeHobby,
     tic,
-    changeTic
+    changeTic,
+    habit,
+    changeHabit
   } = props;
 
   const mode = display ? "contained" : "text";
@@ -200,6 +202,14 @@ const Habit = props => {
             style={{ width: "100%" }}
             multiline
             help="This are things that most people wouldn't find annoying or can tolerate."
+          />
+          <Input
+            label="More"
+            value={habit}
+            onChangeText={changeHabit}
+            style={{ width: "100%" }}
+            multiline
+            help="Any additional information, regarding habits and mannerisms"
           />
         </Card>
       ) : null}

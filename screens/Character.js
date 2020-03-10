@@ -74,8 +74,8 @@ import getMorality from "../modules/getMorality";
 import generateGender from "./../modules/generateGender";
 import getGroupDynamic from "./../modules/getGroupDynamic";
 import getDependent from "../modules/getDependent";
-import getClothing from './../data/clothing';
-import oddCalculator from './../modules/oddCalculator';
+import getClothing from "./../data/clothing";
+import oddCalculator from "./../modules/oddCalculator";
 
 // subversive, rebellious etc
 class Character extends React.Component {
@@ -144,11 +144,14 @@ class Character extends React.Component {
     strength: "",
     flaw: "",
     hobby: "",
+    habit: "",
     phobia: "",
     story: "",
     immediateFamily: "",
     extendedFamily: "",
     friend: "",
+    self: "",
+    perception: "",
     acquaintance: "",
     colleague: "",
     subordinate: "",
@@ -329,14 +332,13 @@ class Character extends React.Component {
     const gender = this.state.gender || generateGender();
     const ageRange = oddCalculator([15, 65, 100], [26.3, 65.9, 7.9]);
     let age = this.state.age;
-    if(ageRange === 15) {
-      age = age || Math.floor(Math.random() * 15)
-    } else if(ageRange===65) {
-      age = age || 15 + Math.floor(Math.random() * 41)
+    if (ageRange === 15) {
+      age = age || Math.floor(Math.random() * 15);
+    } else if (ageRange === 65) {
+      age = age || 15 + Math.floor(Math.random() * 41);
     } else {
-      age = age || 65 + Math.floor(Math.random() * 60) 
+      age = age || 65 + Math.floor(Math.random() * 60);
     }
-    
 
     const {
       weight,
@@ -372,8 +374,6 @@ class Character extends React.Component {
       ear
     } = getFace(skinTone, weightType, hairColour, gender, age);
 
-    
-
     const distinguishingFeatures =
       this.state.distinguishingFeatures || getDistFeat();
     const education = this.state.education || getEducation();
@@ -390,7 +390,8 @@ class Character extends React.Component {
     const socialStatus = this.state.socialStatus || getSocialStatus(education);
     const familyEconomicStatus =
       this.state.familyEconomicStatus || getSocialStatus(socialStatus);
-    const outfit = this.state.outfit || getClothing(age, gender, education, socialStatus);
+    const outfit =
+      this.state.outfit || getClothing(age, gender, education, socialStatus);
     const accessories = this.state.accessories || getAccessories(age);
     //cities would be in the same country of nationality
     const birthPlace = this.state.birthPlace || `${getCity(nationality)}`;
@@ -428,8 +429,6 @@ class Character extends React.Component {
     const groupDynamic = this.state.groupDynamic || getGroupDynamic();
 
     const dependent = this.state.dependent || getDependent();
-
-    
 
     for (let i = 0; i < keys.length; i++) {
       const k = keys[i];
@@ -578,6 +577,7 @@ class Character extends React.Component {
       dislikes: "",
       folly: "",
       hobby: "",
+      habit: "",
       modalVisible: false,
       bloodGroup: "",
       birthday: "",
@@ -642,11 +642,14 @@ class Character extends React.Component {
       strength: "",
       flaw: "",
       hobby: "",
+      habit: "",
       phobia: "",
       story: "",
       immediateFamily: "",
       extendedFamily: "",
       friend: "",
+      self: "",
+      perception: "",
       acquaintance: "",
       colleague: "",
       subordinate: "",
@@ -887,10 +890,13 @@ class Character extends React.Component {
             changeRestingFace={restingFace => this.setState({ restingFace })}
             changeLikes={likes => this.setState({ likes })}
             changeBoringStuff={boringStuff => this.setState({ boringStuff })}
+            changeFolly={folly => this.setState({ folly })}
             changeAnnoyingStuff={annoyingStuff =>
               this.setState({ annoyingStuff })
             }
             changeDisLikes={dislikes => this.setState({ dislikes })}
+            changeHobby={hobby => this.setState({ hobby })}
+            changeHabit={habit => this.setState({ habit })}
             {...this.state}
           />
           <Divider
@@ -985,6 +991,8 @@ class Character extends React.Component {
               this.setState({ extendedFamily })
             }
             changeFriend={friend => this.setState({ friend })}
+            changeSelf={self => this.setState({ self })}
+            changePerception={perception => this.setState({ perception })}
             changeAcquaintance={acquaintance => this.setState({ acquaintance })}
             changeColleague={colleague => this.setState({ colleague })}
             changeSubordinate={subordinate => this.setState({ subordinate })}

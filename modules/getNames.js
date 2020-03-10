@@ -79,6 +79,8 @@ const getNames = (country, gender) => {
   const paki = ["Bangladesh", "Sri Lanka"];
   const korea = ["South Korea", "North Korea"];
   const genderBasedSurnames = [
+    "Russia",
+    "Belarus",
     "Uzbekistan",
     "Kazakhstan",
     "Azerbaijan",
@@ -101,5 +103,5 @@ const getNames = (country, gender) => {
     return getFullName(names.Rwanda, gender);
   else return getFullName(names[country], gender);
 };
-console.log("running");
+
 export default getNames;
