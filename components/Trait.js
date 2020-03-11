@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Text, Picker, View } from "react-native";
 import { Card, Colors, Button } from "react-native-paper";
 import Helper from "./Helper";
+import MyText from "./MyText";
 
 const Trait = props => {
   const [display, setDisplay] = useState(false);
@@ -72,12 +73,31 @@ const Trait = props => {
           <Helper
             visible={modalVisible}
             onRequestClose={() => displayModal(false)}
-            helpHeader="Physical Attributes"
+            helpHeader="Trait"
             closeModal={() => displayModal(false)}
             openModal={() => displayModal(true)}
-            information="This is basic information about"
+            information="Attributes and personality"
+            quote="A long list of human tendencies and characteristics"
           >
-            <Text>This is help</Text>
+            <View>
+              <MyText type="h3">Related/contradicting traits</MyText>
+              <MyText>
+                Some traits, tends to correlate with each other e.g. timid
+                person(sociability) is less likely to be talkative. But then,
+                s/he may be timid and taciturn in front of strangers but
+                absolutely chatty among friends and close acqaintances.
+              </MyText>
+              <MyText></MyText>
+              <MyText>
+                Of course, there are some traits that may be seems contradictory
+                but in the context of your story, perfectly logically. For
+                example, someone who is decadent and candid will aptly desribe
+                someone who partakes in a lot of immoral act but not ashamed to
+                talk about it. It could also refer to a criminal who doesn't
+                mince word and says what's on their mind as long as it's not the
+                police.
+              </MyText>
+            </View>
           </Helper>
           <View
             style={{
