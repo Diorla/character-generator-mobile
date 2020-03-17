@@ -1,3 +1,4 @@
+// TODO: Update the printed document
 const line = (title, content) => {
   if (content == "N/A") return "";
   else if (content) {
@@ -12,6 +13,7 @@ const htmlGenerator = obj => {
   htmlString += `${line("Name", obj.name)}`;
   htmlString += `${line("Age", obj.age)}`;
   htmlString += `${line("Gender", obj.gender)}`;
+  htmlString += `${line("Blood group", obj.bloodGroup)}`;
   htmlString += `${line("Place of birth", obj.birthPlace)}`;
   htmlString += `${line("Current location", obj.currentLocation)}`;
   htmlString += `${line("Nationality", obj.nationality)}`;
@@ -19,7 +21,7 @@ const htmlGenerator = obj => {
   htmlString += `${line("Occupation", obj.occupation)}`;
   htmlString += `${line("Income", obj.income)}`;
   htmlString += `${line("Social status", obj.socialStatus)}`;
-  htmlString += `${line("Others", obj.moreBiodata)}`;
+  htmlString += `${line("More", obj.moreBiodata)}`;
   htmlString += "</ul></div>";
 
   htmlString += "<h2>Physical Attributes</h2>";
@@ -29,7 +31,7 @@ const htmlGenerator = obj => {
   htmlString += `${line("Skin tone", obj.skinTone)}`;
   htmlString += `${line("Face", obj.face)}`;
   htmlString += `${line("Hair", obj.hair)}`;
-  htmlString += `${line("Others", obj.skinTone)}`;
+  //htmlString += `${line("Others", obj.skinTone)}`;
   htmlString += `${line("Eyes", obj.eye)}`;
   htmlString += `${line(
     "Distinguishing features",
@@ -38,12 +40,11 @@ const htmlGenerator = obj => {
   htmlString += `${line("Preferred outfit", obj.outfit)}`;
   htmlString += `${line("Accesories", obj.accessories)}`;
   htmlString += `${line("Grooming", obj.grooming)}`;
-  htmlString += `${line("Tic/Quirks", obj.tic)}`;
   htmlString += `${line("Health", obj.health)}`;
   htmlString += `${line("Handwriting", obj.handwriting)}`;
   htmlString += `${line("Gait", obj.gait)}`;
   htmlString += `${line("Posture", obj.posture)}`;
-  htmlString += `${line("Others", obj.morePhysical)}`;
+  htmlString += `${line("More", obj.morePhysical)}`;
   htmlString += "</ul></div>";
 
   htmlString += "<hr/><h1>Status</h1>";
@@ -62,8 +63,6 @@ const htmlGenerator = obj => {
   htmlString += `${line("External conflicts", obj.externalConflict)}`;
   htmlString += `${line("Strengths", obj.strength)}`;
   htmlString += `${line("Flaw or weakness", obj.flaw)}`;
-  htmlString += `${line("Hobbies", obj.hobby)}`;
-  htmlString += `${line("Phobias", obj.phobia)}`;
   htmlString += `${line("More", obj.story)}`;
   htmlString += "</ul></div>";
 
@@ -72,15 +71,16 @@ const htmlGenerator = obj => {
   htmlString += `${line("Family economic status", obj.familyEconomicStatus)}`;
   htmlString += `${line("Hometown", obj.hometown)}`;
   htmlString += `${line("Childhood", obj.childhood)}`;
-  htmlString += `${line("Education", obj.education)}`;
-  htmlString += `${line("School club", obj.schoolClub)}`;
   htmlString += `${line("Favourite activity", obj.favouriteActivity)}`;
+  htmlString += `${line("Phobias", obj.phobia)}`;
+  htmlString += `${line("Education history", obj.educationHistory)}`;
+  htmlString += `${line("School club", obj.schoolClub)}`;
   htmlString += `${line("Job history", obj.jobHistory)}`;
   htmlString += `${line("Favourite place", obj.favouritePlace)}`;
-  htmlString += `If they could change one thing in their past<ul>`;
+  htmlString += `<li><b>If they could change one thing in their past</b><ul>`;
   htmlString += `${line("What will they change", obj.whatThing)}`;
   htmlString += `${line("Why that thing", obj.whyThatThing)}`;
-  htmlString += `</ul>`;
+  htmlString += `</ul></li>`;
   htmlString += `${line("Turning point", obj.turningPoint)}`;
   htmlString += `${line("Earliest memory", obj.earliestMemory)}`;
   htmlString += `${line("Saddest memory", obj.saddestMemory)}`;
@@ -100,22 +100,22 @@ const htmlGenerator = obj => {
   htmlString += "<div><ul>";
   htmlString += `${line("Style", obj.speechStyle)}`;
   htmlString += `${line("Tempo", obj.speechTempo)}`;
-  htmlString += `${line("Pitch", obj.speechPitch)}`;
+  htmlString += `${line("Voice", obj.speechPitch)}`;
   htmlString += `${line("Gesturing", obj.gesturing)}`;
-  htmlString += `${line("Eye contact", obj.eyeContact)}`;
   htmlString += `${line("Impediments", obj.speechImpediment)}`;
-  htmlString += `${line("Curse word", obj.curseWord)}`;
   htmlString += `${line("Catch phrase", obj.catchPhrase)}`;
-  htmlString += "</ul></div>";
-
-  htmlString += "<h2>Others</h2>";
-  htmlString += "<div><ul>";
+  htmlString += `${line("Curse word", obj.curseWord)}`;
   htmlString += `${line("Laughter", obj.laughter)}`;
   htmlString += `${line("Smile", obj.smile)}`;
   htmlString += `${line("Resting face", obj.restingFace)}`;
   htmlString += `${line("Likes", obj.likes)}`;
+  htmlString += `${line("Dislikes", obj.dislikes)}`;
+  htmlString += `${line("Hobbies", obj.hobby)}`;
+  htmlString += `${line("Bad habits", obj.folly)}`;
+  htmlString += `${line("Quirks", obj.tic)}`;
   htmlString += `${line("Things they find boring", obj.boringStuff)}`;
   htmlString += `${line("Things they find annoying", obj.annoyingStuff)}`;
+  htmlString += `${line("More", obj.habit)}`;
   htmlString += "</ul></div>";
 
   htmlString += "<hr/><h1>Relationships</h1>";
@@ -132,7 +132,8 @@ const htmlGenerator = obj => {
 
   htmlString += "<hr/><h1>Perception</h1>";
   htmlString +=
-    "<hr/><blockquote>This is how people see the character</blockquote>";
+    "<blockquote style='border-left: 2px solid silver; padding: 4px'><i>This is how people see the character</i></blockquote>";
+  htmlString += `${line("How they see themselve", obj.self)}`;
   htmlString += `${line("Immediate family", obj.immediateFamily)}`;
   htmlString += `${line("Extended family", obj.extendedFamily)}`;
   htmlString += `${line("Friends", obj.friend)}`;
@@ -140,11 +141,13 @@ const htmlGenerator = obj => {
   htmlString += `${line("Colleagues", obj.colleague)}`;
   htmlString += `${line("Subordinates", obj.subordinate)}`;
   htmlString += `${line("Superiors", obj.superior)}`;
-  htmlString += `${line("Authority figures", obj.authorityFigure)}`;
+  htmlString += `${line("Authorities", obj.authorityFigure)}`;
   htmlString += `${line("Confidant", obj.confidant)}`;
   htmlString += `${line("Opposite sex", obj.oppositeSex)}`;
+  htmlString += `${line("Adversary", obj.adversary)}`;
   htmlString += `${line("Group dynamic", obj.groupDynamic)}`;
   htmlString += `${line("Why do people depend on them?", obj.dependent)}`;
+  htmlString += `${line("More", obj.perception)}`;
   htmlString += "<div><ul>";
   htmlString += "</ul></div>";
 

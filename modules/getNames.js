@@ -29,7 +29,25 @@ const getNames = (country, gender) => {
     "United States",
     "Australia",
     "Canada",
-    "New Zealand"
+    "New Zealand",
+    "Antigua And Barbuda",
+    "Bahamas",
+    "Barbados",
+    "Belize",
+    "Grenada",
+    "Guyana",
+    // US Territory
+    "American Samoa",
+    // British Territory
+    "Anguilla",
+    "Bermuda",
+    "Cayman Islands",
+    "Falkland Islands",
+    "Gibraltar",
+    "Guernsey",
+    "Jersey",
+    // New Zealand Territory
+    "Cook Islands"
   ];
   const hispanic = [
     "Chile",
@@ -50,7 +68,9 @@ const getNames = (country, gender) => {
     "Puerto Rico",
     "Uruguay",
     "Bolivia",
-    "Paraguay"
+    "Paraguay",
+    "Andorra",
+    "Guam"
   ];
   const middleEast = [
     "Iran",
@@ -72,26 +92,50 @@ const getNames = (country, gender) => {
     "Oman",
     "Kuwait",
     "Qatar",
-    "Bahrain"
+    "Bahrain",
+    "Comoros",
+    "Djibouti"
   ];
-  const sinophone = ["Thailand", "Taiwan"];
-  const brazil = ["Portugal"];
+  const sinophone = ["Thailand", "Taiwan", "Bhutan"];
+  const brazil = ["Portugal", "Cape Verde"];
   const paki = ["Bangladesh", "Sri Lanka"];
   const korea = ["South Korea", "North Korea"];
   const genderBasedSurnames = [
     "Russia",
-    "Belarus",
+    "Ukraine",
     "Uzbekistan",
     "Kazakhstan",
+    "Czech Republic",
     "Azerbaijan",
+    "Belarus",
+    "Tajikistan",
+    "Kyrgyzstan",
     "Slovakia"
   ];
+  const dutchTerritory = ["Aruba"];
+  const malay = ["Brunei", "Christmas Island"];
+  const danish = ["Faroe Islands", "Greenland"];
+  const francophone = [
+    // French territory
+    "French Guiana",
+    "French Polynesia",
+    "Guadeloupe"
+  ];
+  const norse = ["Iceland"];
+  const german = ["Liechtenstein", "Luxembourg"]
   if (genderBasedSurnames.includes(country)) {
     if (gender == "Male") return getMaleName(names[country], gender);
     else return getFemaleName(names[country], gender);
   }
   if (anglophone.includes(country))
     return getFullName(names["United States"], gender);
+  if (malay.includes(country)) return getFullName(names.Malaysia, gender);
+  if (german.includes(country)) return getFullName(names.Germany, gender);
+  if (norse.includes(country)) return getFullName(names.Sweden, gender);
+  if (francophone.includes(country)) return getFullName(names.France, gender);
+  if (danish.includes(country)) return getFullName(names.Denmark, gender);
+  if (dutchTerritory.includes(country))
+    return getFullName(names.Netherlands, gender);
   else if (hispanic.includes(country)) return getFullName(names.Mexico, gender);
   else if (middleEast.includes(country))
     return getFullName(names.Egypt, gender);

@@ -10,8 +10,9 @@
 /**
  * Eastern Slavic naming customs
  * - Tends to use gender in surnames
- * Russia, Belarus, Ukraine, Kazakhstan, Turkmenistan, Uzbekistan, Tajikistan
- * and to some extent in Kyrgyzstan and Georgia
+ * Russia-, Belarus-, Ukraine-, Kazakhstan-, Turkmenistan+, Uzbekistan-, Tajikistan-
+ * and to some extent in Kyrgyzstan-
+ * I also discovered that Czech too, perhaps slovakia
  */
 const names = {
   China: { // Sinophone
@@ -164,13 +165,10 @@ const names = {
       "Elvira", "Nasiba", "Elena", "Marina", "Sofia", "Elvira", "Margarita", "Yulia", "Natalia", "Kseniia", "Raisa", "Anastasia"
     ],
     SurnameM: [
-      "Shunin", "Dzhaneyez", "Zhikov", "Kudryashov", "Dzhikiya", "Fernandes", "Semyonov", "Petrov", "Belyayev",
-      "Karaveyev", "Chistyakov", "Golovin", "Zobnin", "Ionov", "Miranchuk", "Yerokhin", "Ozdoyev", "Kuzyayev",
-      "Ahkmetov", "Bakayev", "Fomin", "Zhemaletdinov", "Dzyuba", "Komlichenko", "Shcherbak", "Akimova",
+      "Shunin", "Dzhaneyez", "Zhikov", "Kudryashov", "Dzhikiya", "Fernandes", "Semyonov", "Petrov", "Belyayev", "Karaveyev", "Chistyakov", "Golovin", "Zobnin", "Ionov", "Miranchuk", "Yerokhin", "Ozdoyev", "Kuzyayev", "Ahkmetov", "Bakayev", "Fomin", "Zhemaletdinov", "Dzyuba", "Komlichenko", 
     ],
     SurnameF: [ 
-      "Kozhnikova", "Lazareva", "Tyryshkina", "Andreeva", "Podshibyakina", "Zhukova", "Galay", "Smirnova",
-      "Sochneva", "Todua", "Belomyttseva", "Gasanova", "Danilova", "Fedorova", "Shishkina", "Ziyastinova",
+      "Akimova", "Kozhnikova", "Lazareva", "Tyryshkina", "Andreeva", "Podshibyakina", "Zhukova", "Galay", "Smirnova", "Shcherbak", "Sochneva", "Todua", "Belomyttseva", "Gasanova", "Danilova", "Fedorova", "Shishkina", "Ziyastinova", "Koltakova", "Chernomyrdina", "Grichenko", "Alekseeva", "Morozova"
     ]
   },
   Mexico: { // Hispanic
@@ -211,11 +209,9 @@ const names = {
       "Nishi", "Terabe", "Kon", "Hiraga", "Kaneko", "Ishida", "Deguchi", "Rokkaku", "Atsugase", "Kawabata"
     ]
   },
-  Ethiopia: {
+  Ethiopia: { //surname=father's first name, so I merged male & surname
     Male: [
-      "Mintesinot", "Jamal", "Lealem", "Getu", "Desta", "Anteneh", "Ramadan", "Ahmed", "Aschalew", "Yared",
-      "Mujib", "Haider", "Gatoch", "Amanuel", "Beneyam", "Shimelis", "Canaan", "Yonas", "Mesfin", "Oumed",
-      "Addis", "Fuad"
+      "Mintesinot", "Jamal", "Lealem", "Getu", "Desta", "Anteneh", "Ramadan", "Ahmed", "Aschalew", "Yared", "Mujib", "Haider", "Gatoch", "Amanuel", "Beneyam", "Shimelis", "Canaan", "Yonas", "Mesfin", "Oumed", "Addis", "Fuad", "Allo", "Tassew", "Birhanu", "Hailemaryam", "Tura", "Tesfaye", "Yusef", "Reshid", "Tamene", "Baye", "Kasim", "Sherefa", "Panom", "Yohannes", "Demte", "Bekele", "Markneh", "Berta", "Gebremichael", "Tafesse", "Oukri", "Gidey", "Fereje", "Ossa", "Gebru", "Deste", "Sisay", "Mamuye", "Buwli", "Alemar", "Adere", "Negeri", "Melaku", "Badega", "Gebra", "Aboye", "Endale", "Hadera", "Biza", "Abaa", 
     ],
     Female: [
       "Liya", "Dagmawet", "Israel", "Woinshet", "Tiruanchi", "Kelem", "Hiwot", "Bezuhan", "Adanech",
@@ -225,8 +221,7 @@ const names = {
     Surname: [
       "Allo", "Tassew", "Birhanu", "Hailemaryam", "Tura", "Tesfaye", "Yusef", "Reshid", "Tamene", "Baye",
       "Kasim", "Sherefa", "Panom", "Yohannes", "Demte", "Bekele", "Markneh", "Berta", "Gebremichael", 
-      "Tafesse", "Oukri", "Gidey", "Fereje", "Ossa", "Gebru", "Deste", "Sisay", "Mamuye", "Buwli", "Alemar",
-      "Adere", "Negeri", "Melaku", "Badega", "Gebra", "Aboye", "Endale", "Hadera", "Biza", "Abaa", 
+      "Tafesse", "Oukri", "Gidey", "Fereje", "Ossa", "Gebru", "Deste", "Sisay", "Mamuye", "Buwli", "Alemar", "Adere", "Negeri", "Melaku", "Badega", "Gebra", "Aboye", "Endale", "Hadera", "Biza", "Abaa", "Mintesinot", "Jamal", "Lealem", "Getu", "Desta", "Anteneh", "Ramadan", "Ahmed", "Aschalew", "Yared", "Mujib", "Haider", "Gatoch", "Amanuel", "Beneyam", "Shimelis", "Canaan", "Yonas", "Mesfin", "Oumed", "Addis", "Fuad", 
     ]
   },
   Phillippines: {
@@ -248,21 +243,20 @@ const names = {
       "Lemoran", "Madarang", "Bolden", "Quezada", "Cadag", "Campo", "Cavill", "Caparros", "Amita", "Lam"
     ]
   },
-  Egypt: { //Middle east
+  Egypt: { //Middle east, last name is usually their father's first name, so male=surname. Remove "El" names from first name, because it sounds like a title
     Male: [
       "Mohamed", "Baher", "Abdallah", "Ramy", "Ahmed", "Ayman", "Mahmoud", "Tarek", "Hussein", "Amr", 
       "Hossam", "Karim", "Marwan", "Amer", "Omar", "Ragab", "Ali", "Islam", "Walid", "Salah", "Mostafa",
-      "Abdel Rahman"
+      "Abdel Rahman", "Awad", "Bassam", "Gomaa", "Hany", "Rabia", "Hegazi", "Fathy", "Ashraf", "Wahid", "Alaa", "Hamed", "Hassan", "Hamdy", "Gaber", "Bakar", "Gabr", "Hafez", "Farouk", "Issa", "Warda", "Soliman", "Mohsen", "Magdy", "Shehata", "Adam", "Rashwan", "Sayed", "Ghazy", "Rashad"
     ],
     Female: [
       "Maha", "Samia", "Rana", "Sara", "Mervat", "Engy", "Nadin", "Omnia", "Amany", "Salma", "Fayza", 
       "Suzanne", "Aliaa", "Mahira", "Noha", "Elham", "Sherouk", "Mirna", "Esraa", "Rehad", "Farah", "Aisha"
     ],
     Surname: [
-      "El Shenawy", "Awad", "Bassam", "El Mohamady", "Gomaa", "Hany", "Rabia", "Hegazi", "Fathy", "Ashraf",
-      "Wahid", "Alaa", "Hamed", "El Shahat", "El Solia", "El Neny", "Salah", "Hassan", "Tarek", "Hamdy",
-      "Mohamed", "Gaber", "Ayman", "Bakar", "Gabr", "Hafez", "Fathy", "El Said", "Farouk", "Issa", "Warda",
-      "Soliman", "Mohsen", "Magdy", "Shehata", "Adam", "Rashwan", "Sayed", "Ghazy", "Rashad"
+      "El Shenawy", "Awad", "Bassam", "El Mohamady", "Gomaa", "Hany", "Rabia", "Hegazi", "Fathy", "Ashraf", "Wahid", "Alaa", "Hamed", "El Shahat", "El Solia", "El Neny", "Salah", "Hassan", "Tarek", "Hamdy", "Mohamed", "Gaber", "Bakar", "Gabr", "Hafez", "El Said", "Farouk", "Issa", "Warda", "Soliman", "Mohsen", "Magdy", "Shehata", "Adam", "Rashwan", "Sayed", "Ghazy", "Rashad", "Baher", "Abdallah", "Ramy", "Ahmed", "Ayman", "Mahmoud", "Hussein", "Amr", 
+      "Hossam", "Karim", "Marwan", "Amer", "Omar", "Ragab", "Ali", "Islam", "Walid", "Mostafa",
+      "Abdel Rahman", 
     ]
   },
   Vietnam: { //like 15 out of 20 is Nguyen! Also, Surname starts first, and according to
@@ -506,12 +500,13 @@ const names = {
       "Iryna", "Kateryna", "Olha", "Anastasia", "Mariana", "Darya", "Vira", "Iya", "Ludmila", "Daryna",
       "Nadiia", "Yana", "Veronika", "Tetyana", "Olena", "Natalia", 
     ],
-    Surname: [
+    SurnameM: [
       "Pyatov", "Lunin", "Pankiv", "Matviyenko", "Kryvtsov", "Karavayev", "Sobol", "Mykolenko", "Bolbat", 
       "Plastun", "Shabanov", "Yarmolenko", "Konoplyanka", "Sydorchuk", "Malinovskyi", "Kovalenko",
-      "Bezus", "Tsyhankov", "Buyalskyi", "Shakhov", "Shepelyev", "Besyedin", "Yaremchuk", "Zvarych", 
-      "Sanina", "Kochneva", "Basanska", "Filenko", "Ivanyshyn", "VAsylyuk", "Boychenko", "Dyatel",
-      "Andrushchak", "Pekur", "Khavanska", "Kalinina", "Andrukhiv", "Romanenko", "Ovdiychuk", "Kozyrenko"
+      "Bezus", "Tsyhankov", "Buyalskyi", "Shakhov", "Shepelyev", "Besyedin", "Yaremchuk", "Kravets", 
+    ],
+    SurnameF: [
+      "Zvarych", "Sanina", "Kochneva", "Basanska", "Filenko", "Ivanyshyn", "Vasylyuk", "Boychenko", "Dyatel", "Andrushchak", "Pekur", "Khavanska", "Kalinina", "Andrukhiv", "Romanenko", "Ovdiychuk", "Kozyrenko", "Kravets", "Apanaschenko", 
     ]
   },
   Uganda: {
@@ -608,12 +603,12 @@ const names = {
       "Yuliya", "Anastasiya", "Gulnaz", "Elena", "Tatyana", "Khristina", "Natalya", "Elvira", "Irina", 
       "Dlyara", "Katerina", "Aliya",
     ],
-    Surname: [
+    SurnameM: [
       "Abdukholiqov", "Shomurodov", "Sergeev", "Sabirkhodjaev", "Giyosov", "Turgunboev", "Khamdamov", 
-      "Turaev", "Alibaev", "Iskanderov", "Masharipov", "Skukurov", "Ahmedov", "Kodirkulov", "Kholmukhamedov",
-      "Alijonov", "Ashurmatov", "Zoteev", "Sayfiev", "Tukhtakhodjaev", "Abdujalilov", "Kuvvatov", "Suyunov",
-      "Kashuba", "Sevastyanova", "Nauruzbaeva", "Khusnitdinova", "Komarova", "Avdeeva", "Koneva", "Salavatova",
-      "Averyanova", "Ejova", "Samatova",
+      "Turaev", "Alibaev", "Iskanderov", "Masharipov", "Skukurov", "Ahmedov", "Kodirkulov", "Kholmukhamedov", "Alijonov", "Ashurmatov", "Zoteev", "Sayfiev", "Tukhtakhodjaev", "Abdujalilov", "Kuvvatov", "Suyunov",
+    ],
+    SurnameF: [
+      "Kashuba", "Sevastyanova", "Nauruzbaeva", "Khusnitdinova", "Komarova", "Avdeeva", "Koneva", "Salavatova", "Averyanova", "Ejova", "Samatova",
     ]
   },
   Malaysia: {
@@ -888,10 +883,7 @@ const names = {
       "Vorogovskiy", "Suyumbayev", "Malyi", "Shomko", "Logvinenko", "Shatskiy", "Nepohodov", "Pokatilov",
     ],
     SurnameF: [
-      "Alimbozova", "Alimkulova", "Alyakina",
-      "Aytymova", "Bisembayeva", "Idiatulina", "Ivanova", "Krasyukova", "Nikolayenko", "Stolpovskaya",
-      "Zholchieva", "Babshuk", "Birvagen", "Karibayeva", "Kirgizbaeva", "Maksimenko", "Myasnikova", 
-      "Samosledova", "Tampysheva", "Zhanatayeva", "Vyldanova", "Yalova"
+      "Alimbozova", "Alimkulova", "Alyakina", "Aytymova", "Bisembayeva", "Idiatulina", "Ivanova", "Krasyukova", "Nikolayenko", "Stolpovskaya", "Zholchieva", "Babshuk", "Birvagen", "Karibayeva", "Kirgizbaeva", "Maksimenko", "Myasnikova", "Samosledova", "Tampysheva", "Zhanatayeva", "Vyldanova", "Yalova"
     ]
   },
   Chile: { //=> Mexico
@@ -1125,8 +1117,11 @@ const names = {
       "Tomas", "Radim", "Stefan", "David", "Marek", "Theodor", "Gebre", "Lukas", "Jan", "Jaromir", "Michal", "Borek", "Martin", "Patrik", "Matej", "Libor", "Milan"
     ],
     Female: ["Barbora", "Ivana", "Petra", "Aneta", "Jitka", "Simona", "Jana", "Eliska", "Katerina", "Klara", "Kamila", "Michaela", "Pavlina", "Marketa", "Lucie", "Andrea", "Tereza"],
-    Surname: [
-      "Skoda", "Kozak", "Vydra", "Dolezal", "Schnick", "Frydek", "Dockal", "Sadilek", "Pavelka", "Zmrhal", "Kopic", "Kalvach", "Selassie", "Suchy", "Hovorka", "Simic", "Reznik", "Koubek", "Vonkova", "Szewieczkova", "Staskova", "Martinkova", "Svitkova", "Ringelova", "Nepokoja", "Dubcova", "Cahynova", "Buzkova", "Sonnogova", "Sedlackova", "Necidova", "Chlastakova", "Dedinova", "Bertholdova", "Pizlova", "Ruzickova", "Votikova"
+    SurnameM: [
+      "Skoda", "Kozak", "Vydra", "Dolezal", "Schnick", "Frydek", "Dockal", "Sadilek", "Pavelka", "Zmrhal", "Kopic", "Kalvach", "Selassie", "Suchy", "Hovorka", "Simic", "Reznik", "Koubek", 
+    ],
+    SurnameF: [
+      "Vonkova", "Szewieczkova", "Staskova", "Martinkova", "Svitkova", "Ringelova", "Nepokoja", "Dubcova", "Cahynova", "Buzkova", "Sonnogova", "Sedlackova", "Necidova", "Chlastakova", "Dedinova", "Bertholdova", "Pizlova", "Ruzickova", "Votikova"
     ]
   },
   Portugal: { //=> Brazil
@@ -1146,8 +1141,10 @@ const names = {
     Female: [
       "Farida", "Lyubov", "Nigar", "Svetlana", "Olga", "Elena", "Anastasia", "Natalya", "Narmina", "Masha", "Tamara", "Ekaterina", "Inna", "Lyudmila", "Raisa", "Marina", "Galina", "Nargiz"
     ],
-    Surname: [, 
-      "Dadashov", "Sheydayev", "Isgandarli", "Jamalov", "Israfilov", "Mahmudov", "Ramazanov", "Almeida", "Abdullayev", "Nazarov", "Garayev", "Huseynov", "Aliyev", "Mustafazade", "Krivotsyuk", "Rahimov", "Khalilzade", "Pashayev", "Jannatov", "Baleyev", "Aghayev", "Babayeva", "Tirina", "Ismayilova", "Famenko", "Gaziyeva", "Nabiyeva", "Rahmanova", "Safarova", "Saratovtseva", "Rzayeva", "Makarova", "Starovoytova", "Kamasheva", "Komarova", "Akayeva", "Zhidkova", "Davidok", "Kuzniatsova", "Alakbarova", "Boyko", "Nosova", "Shevtsova",
+    SurnameM: [
+      "Dadashov", "Sheydayev", "Isgandarli", "Jamalov", "Israfilov", "Mahmudov", "Ramazanov", "Almeida", "Abdullayev", "Nazarov", "Garayev", "Huseynov", "Aliyev", "Mustafazade", "Krivotsyuk", "Rahimov", "Khalilzade", "Pashayev", "Jannatov", "Baleyev", "Aghayev", "Babayeva", "Tirina", "Ismayilova", "Famenko", 
+    ],
+    SurnameF: ["Gaziyeva", "Nabiyeva", "Rahmanova", "Safarova", "Saratovtseva", "Rzayeva", "Makarova", "Starovoytova", "Kamasheva", "Komarova", "Akayeva", "Zhidkova", "Davidok", "Kuzniatsova", "Alakbarova", "Boyko", "Nosova", "Shevtsova",
     ]
   },
   Hungary: {
@@ -1174,9 +1171,11 @@ const names = {
       "Natalya", "Ekaterina", "Zaryna", "Valeriya", "Anna", "Ksenia", "Anastasiya", "Polina", "Elvira", "Margarita", "Lyubov", "Tatiana", "Vita", "Yulia", "Viktoriya", "Karina", 
     ],
     SurnameM: [ //=> gender based names
-      "Sadovsky", "Podstrelov", "Shevchenko", "Lisakovich", "Skavysh", "Laptsew", "Volkaw", "Yuzepchuk", "Klimovich", "Bakhar", "Yablonskiy", "Kendysh", "Korzun", "Nyakhaychyk", "Stasevich", "Drahun", "Stephanov", "Poznyak", "Karpovich", "Shvyatsow", "Pyachenin", "Burko", "Pavlovets", "Matsveychyk", "Palitsevich", "Hatkevich", "Pavlyuchenko", "Shuppo", "Olkhovik", "Lutskevich", "Linnik", "Kazakevich", "Slesarchik", "Shlapakova", "Shcherbachenia", "Nikolaenko", "Markushevskaya", "Kharlanova", "Gudchenko", "Yushko", "Urazaeva", "Shatsilenia", "Novikava", "Kubichnaya", "Kozyupa", "Karachun", "Kapustsina", "Kovalchuk", "Voskobovich"
+      "Sadovsky", "Podstrelov", "Shevchenko", "Lisakovich", "Skavysh", "Laptsew", "Volkaw", "Yuzepchuk", "Klimovich", "Bakhar", "Yablonskiy", "Kendysh", "Korzun", "Nyakhaychyk", "Stasevich", "Drahun", "Stephanov", "Poznyak", "Karpovich", "Shvyatsow", "Pyachenin", "Burko", "Pavlovets", "Matsveychyk", "Palitsevich", "Hatkevich", "Pavlyuchenko"
     ],
-    SurnameF: []
+    SurnameF: [
+      "Shuppo", "Olkhovik", "Lutskevich", "Linnik", "Kazakevich", "Slesarchik", "Shlapakova", "Shcherbachenia", "Nikolaenko", "Markushevskaya", "Kharlanova", "Gudchenko", "Yushko", "Urazaeva", "Shatsilenia", "Novikava", "Kubichnaya", "Kozyupa", "Karachun", "Kapustsina", "Kovalchuk", "Voskobovich"
+    ]
   },
   "United Arab Emirates": { //=> Egypt
     Male: [],
@@ -1188,15 +1187,18 @@ const names = {
     Female: [],
     Surname: []
   },
-  Tajistan: {
+  Tajikistan: {
     Male: [
       "Rustam", "Fathulo", "Shokhrukh", "Manuchehr", "Tabrezi", "Khurshed", "Iskandar", "Davron", "Farkhod", "Akhtam", "Parvizdzhon", "Nuriddin", "Alisher", "Muhammadjon", "Ehson", "Fatkhullo", "Amirbek", "Karomatullo", "Jahongir", "Komron", "Sheeriddin", "Shahrom", "Manuchekhr"
     ],
     Female: [
       "Afareen", "Bahar", "Darya", "Farahnak", "Gawhar", "Hangahma", "Jahan", "Katayoun", "Lala", "Mahasti", "Nahal", "Padidah", "Rasa", "Saaman", "Tahminah", "Yagana", "Zarrin", "Zheela", "Yasaman", "Taranum", "Souzan", "Roudabeh", "Poran", "Noushin", 
     ],
-    Surname: [
+    SurnameM: [
       "Dzhalilov", "Samiyev", "Boboev", "Tursunov", "Ergashev", "Saidov", "Juraboev", "Fatkhuloev", "Panjshanbe", "Rakhimov", "Dzhalilov", "Davronov", "Umarbayev", "Nazarov", "Vosiyev", "Beknazarov", "Davlatmir", "Safarov", "Kirgizboev", 
+    ],
+    SurnameF: [ // I couldn't find female team, so I change the v to va
+      "Dzhalilova", "Samiyeva", "Boboeva", "Tursunova", "Ergasheva", "Saidova", "Juraboeva", "Fatkhuloeva", "Rakhimova", "Dzhalilova", "Davronova", "Umarbayeva", "Nazarova", "Vosiyeva", "Beknazarova", "Safarova", "Kirgizboeva", 
     ]
   },
   Serbia: {
@@ -1328,11 +1330,14 @@ const names = {
     Female: [
       "Adilet", "Aigul", "Anara", "Asel", "Aziza", "Bermet", "Cholpon", "Dinara", "Gulnara", "Jyrgal", "Zhyrgal", "Kunduz", "Omur", "Rakhat", "Salamat", "Tumar", "Turan", "Urmat"
     ],
-    Surname: [
+    SurnameM: [
       "Lux", "Murzaev", "Israilov", "Shukurov", "Musabekov", "Duyshobekov", "Uulu", "Akhmedov", "Abdurakhmanov", "Sagynbaev", "Bernhardt", "Alykulov", "Umarov", "Mishchenko", "Baimotov", "Maier", "Akmatov", "Iusupov", "Kozubaev", "Kichin", "Kashuba", "Kadyrbekov", "Matyash"
+    ],
+    SurnameF: [ // changed v to va
+      "Murzaeva", "Israilova", "Shukurova", "Musabekova", "Duyshobekova", "Akhmedova", "Abdurakhmanova", "Sagynbaeva", "Alykulova", "Umarova", "Baimotova", "Akmatova", "Iusupova", "Kozubaeva", "Kashuba", "Kadyrbekova"
     ]
   },
-  Turkmenistan: {
+  Turkmenistan: { // No female team, and I don't know how to turn it to negative
     Male: [
       "Mammet", "Batyr", "Rahat", "Mekan", "Zafar", "Sohrat", "Abdy", "Guycmyrat", "Gurbanguly", "Serdar", "Amir", "Wezirgeldi", "Yhlas", "Ruslan", "Resul", "Arslanmyrat", "Dowletmyrat", "Altymyrat", "Wahyt", "Didar", "Myrat", "Mihail"
     ],
@@ -1405,16 +1410,21 @@ const names = {
     Male: [
       "Christoffer", "Paveh", "Gisscard", "Magnoleke", "Carof", "Fernand", "Beranger", "Hugo", "Ravy", "Dorvel", "Eie", "Amour", "Durel", "Harvy", "GAius", "Yhoan", "Thievy", "Junior", "Prince", "Silvere", "Yann", "Juvhel"
     ],
-    Female: [],
+    Female: [
+      "Badinabi", "Diba", "Elonga", "Feza", "Kabanga", "Lubuya", "Majambu", "Ndaya", "Tshamala", "Tushiminina", "Samba", "Munia", "Lusamba", "Kayipu", "Disanka", "Bulungu", "Balela", "Dibenesha", "Kampata", "Malu", "Tshishimbi"
+    ],
     Surname: [
       "Tsoumou", "Mokombo", "Ganvoua", "Ibara", "Makiesse", "Bifouma","Andzouana", "Makouta", "Ossete", "Avounou", "Loussoukou", "Ikouma", "Dibekou", "Tsouka", "Konongo", "Itoua", "Mayembo", "Bakoua", "Bissiki", "Mavoungou", "Ndzila", "Mafoumbi"
     ]
   },
-  Eritrea: {
+  Eritrea: { // Ethiopia and Eritrea has the same naming convention.
     Male: [
       "Kibrom", "Abduahi", "Girmay", "Filmon", "Robe", "Tekle", "Herman", "Emias", "Ablelom", "Abel", "Yons", "Samiyuma", "Senai", "Christoffer", "Mohammed", "Alexander", "Ali", "Henok", "Ezana"
     ],
-    Female: [],
+    // I tried this, but it keeps bringing Egypt on angelsname, so I'm going to use Ethiopia's angelsname for now since Ethipia has a female team available and their close in term of naming convention
+    Female: [ 
+      "Adeele", "Berit", "Carmen", "Diana", "Eda", "Galina", "Hanna", "Iiris", "Jaana", "Kadi", "Laura", "Maarja", "Nele", "Olga", "Paula", "Ragne", "Signe", "Teele", "Urve", "Veronika", "Vivian", "Susanna", "Ruth", "Piret", "Mirjam", "Liisi", "Kristel", "Juta", "Inna", "Helis", "Grete", "Eneli", "Birgit", "Anneli"
+    ],
     Surname: [
       "Solomun", "Abdurahman", "Eyob", "Tumzghi", "Fessehaye", "Simon", "Teklezgi", "Okray", "Solomon", "Alexander", "Hagos", "Forsell", "Saeid", "Asfaha", "Andue", "Sulieman", "Goitom", "Kahsay"
     ]
@@ -1435,9 +1445,15 @@ const names = {
     Surname: []
   },
   Liberia: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Boison", "Tommy", "Ashley", "Teah", "Adophus", "Kemoh", "Aloysius", "Joel", "Samuel", "Oscar", "Sylvanus", "Saah", "Allen", "Tonia", "Dennis", "Mohammed", "Anthony", "William", "Seku", "Kpah"
+    ],
+    Female: [
+      "Akeelah", "Confidence", "Eleanor", "Faith", "Islah", "Jerelyn", "Lisa", "Manila", "Nasma", "Sarifina", "Teta", "Tracy", "Sonia", "Musu", "Juliet", "Emine", "Ariana", "Alphia", "Jernora", "Joy", 
+    ],
+    Surname: [
+      "Sherman", "Conneh", "Jebor", "Laffor", "Sangare", "Roberts", "Tisdell", "Njie", "Nyumah", "Nimely", "Dorley", "Johnson", "Simujla", "Kamara", "Nagbe", "Dennis", "Williams", "Songo", "Wynney"
+    ]
   },
   "New Zealand": { //=> USA
     Male: [],
@@ -1480,9 +1496,15 @@ const names = {
     Surname: []
   },
   Georgia: {
-    Male: [],
-    Female: [],
-    Surname: []
+    Male: [
+      "Elguja", "Bachana", "Giorgi", "Zuriko", "Levan", "Jaba", "Otar", "Nika", "Valerian", "Murtaz", "Jano", "Valeri", "Jemal", "Davit", "Gia", "Otar", "Solomon", "Guram", "Lazare"
+    ],
+    Female: [
+      "Nino", "Tekle", "Salome", "Tamar", "Natia", "Nino", "Ana", "Teona", "Mari", "Tatiana", "Lela", "Khatia"
+    ],
+    Surname: [
+      "Loria", "Makaridze", "Kupatadze", "Kashia", "Navalovski", "Kvirkvelia", "Kakabadze", "Grigalava", "Khocholava", "Tabidze", "Kankava", "Qazaishvili", "Ananidze", "Daushvili", "Gvilia", "Kvekveskiri", "Aburjania", "Kiteishvili", "Jighauri", "Papunashvili", "Kharaishvili", "Shengelia", "Davitashvili", "Kvilitaia", "Arabuli", "Lobjanidze", "Kvaliashvili", "Chkonia", "Chichinadze", "Todadze", "Pasikashvili", "Matveeva", "Basiladze", "Bakradze", "Zakhaidze", "Tatuashvili", "Sutidze", "Skhirtladze", "Malidze", "Kvelidze", "Khuluburi", "Gulordava", "Chkuaseli"
+    ]
   },
   "Puerto Rico": { // Mexico
     Male: [],
@@ -1614,6 +1636,10 @@ const names = {
     Female: [],
     Surname: []
   },
+  // No odds for the countries below
+  Bhutan: {},
+  Fiji: {},
+  Kiribati: {},
 }
 
 

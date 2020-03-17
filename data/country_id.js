@@ -1,3 +1,4 @@
+// TODO: Add countries like "Andorra" to the list of countries
 const countryId = {
   Afghanistan: 1,
   Albania: 2,
@@ -37,7 +38,7 @@ const countryId = {
   Cambodia: 36,
   Cameroon: 37,
   Canada: 38,
-  "Cape Verde": 39,
+  "Cape Verde": 39, 
   "Cayman Islands": 40,
   "Central African Republic": 41,
   Chad: 42,
@@ -71,7 +72,7 @@ const countryId = {
   "External Territories of Australia": 70,
   "Falkland Islands": 71,
   "Faroe Islands": 72,
-  "Fiji Islands": 73,
+  "Fiji": 73,
   Finland: 74,
   France: 75,
   "French Guiana": 76,
@@ -89,7 +90,7 @@ const countryId = {
   Guadeloupe: 88,
   Guam: 89,
   Guatemala: 90,
-  "Guernsey and Alderney": 91,
+  "Guernsey": 91,
   Guinea: 92,
   "Guinea-Bissau": 93,
   Guyana: 94,
@@ -126,77 +127,77 @@ const countryId = {
   Lithuania: 126,
   Luxembourg: 127,
   "Macau S.A.R.": 128,
-  Macedonia: 129,
+  Macedonia: 129,//
   Madagascar: 130,
   Malawi: 131,
   Malaysia: 132,
-  Maldives: 133,
+  Maldives: 133,//
   Mali: 134,
-  Malta: 135,
-  "Man (Isle of)": 136,
-  "Marshall Islands": 137,
-  Martinique: 138,
+  Malta: 135,//
+  "Man (Isle of)": 136,//
+  "Marshall Islands": 137,//
+  Martinique: 138,//
   Mauritania: 139,
   Mauritius: 140,
-  Mayotte: 141,
+  Mayotte: 141,//
   Mexico: 142,
-  Micronesia: 143,
+  Micronesia: 143,//
   Moldova: 144,
-  Monaco: 145,
+  Monaco: 145,//
   Mongolia: 146,
-  Montserrat: 147,
+  Montserrat: 147,//
   Morocco: 148,
   Mozambique: 149,
   Myanmar: 150,
   Namibia: 151,
-  Nauru: 152,
+  Nauru: 152,//
   Nepal: 153,
-  "Netherlands Antilles": 154,
+  "Netherlands Antilles": 154,//
   Netherlands: 155,
-  "New Caledonia": 156,
+  "New Caledonia": 156,//
   Nicaragua: 158,
   Niger: 159,
   Nigeria: 160,
-  Niue: 161,
-  "Norfolk Island": 162,
-  "Northern Mariana Islands": 163,
+  Niue: 161,//
+  "Norfolk Island": 162,//
+  "Northern Mariana Islands": 163,//
   Norway: 164,
   Oman: 165,
   Pakistan: 166,
-  Palau: 167,
+  Palau: 167,//
   Palestine: 168,
   Panama: 169,
   "Papua new Guinea": 170,
   Paraguay: 171,
   Peru: 172,
   Philippines: 173,
-  "Pitcairn Island": 174,
+  "Pitcairn Island": 174,//
   Poland: 175,
   Portugal: 176,
   "Puerto Rico": 177,
   Qatar: 178,
-  Reunion: 179,
+  Reunion: 179,//
   Romania: 180,
   Russia: 181,
   Rwanda: 182,
-  "Saint Helena": 183,
-  "Saint Kitts And Nevis": 184,
-  "Saint Lucia": 185,
-  "Saint Pierre and Miquelon": 186,
-  "Saint Vincent And The Grenadines": 187,
-  Samoa: 188,
-  "San Marino": 189,
-  "Sao Tome and Principe": 190,
+  "Saint Helena": 183,//
+  "Saint Kitts And Nevis": 184,//
+  "Saint Lucia": 185,//
+  "Saint Pierre and Miquelon": 186,//
+  "Saint Vincent And The Grenadines": 187,//
+  Samoa: 188,//
+  "San Marino": 189,//
+  "Sao Tome and Principe": 190,//
   "Saudi Arabia": 191,
   Senegal: 192,
   Serbia: 193,
-  Seychelles: 194,
+  Seychelles: 194,//
   "Sierra Leone": 195,
   Singapore: 196,
   Slovakia: 197,
   Slovenia: 198,
-  "Smaller Territories of the UK": 199,
-  "Solomon Islands": 200,
+  "Smaller Territories of the UK": 199,//
+  "Solomon Islands": 200,//
   Somalia: 201,
   "South Africa": 202,
   "South Georgia": 203,
@@ -204,8 +205,8 @@ const countryId = {
   Spain: 205,
   "Sri Lanka": 206,
   Sudan: 207,
-  Suriname: 208,
-  "Svalbard And Jan Mayen Islands": 209,
+  Suriname: 208,//
+  "Svalbard And Jan Mayen Islands": 209,//
   Swaziland: 210,
   Sweden: 211,
   Switzerland: 212,
@@ -215,32 +216,32 @@ const countryId = {
   Tanzania: 216,
   Thailand: 217,
   Togo: 218,
-  Tokelau: 219,
-  Tonga: 220,
+  Tokelau: 219,//
+  Tonga: 220,//
   "Trinidad And Tobago": 221,
   Tunisia: 222,
   Turkey: 223,
   Turkmenistan: 224,
-  "Turks And Caicos Islands": 225,
-  Tuvalu: 226,
+  "Turks And Caicos Islands": 225,//
+  Tuvalu: 226,//
   Uganda: 227,
   Ukraine: 228,
   "United Arab Emirates": 229,
   "United Kingdom": 230,
   "United States": 231,
-  "United States Minor Outlying Islands": 232,
+  "United States Minor Outlying Islands": 232,//
   Uruguay: 233,
   Uzbekistan: 234,
-  Vanuatu: 235,
-  "Vatican City State": 236,
+  Vanuatu: 235,//
+  "Vatican City State": 236,//
   Venezuela: 237,
   Vietnam: 238,
-  "Virgin Islands (British)": 239,
-  "Virgin Islands (US)": 240,
-  "Wallis And Futuna Islands": 241,
-  "Western Sahara": 242,
+  "Virgin Islands (British)": 239,//
+  "Virgin Islands (US)": 240,//
+  "Wallis And Futuna Islands": 241,//
+  "Western Sahara": 242,//
   Yemen: 243,
-  Yugoslavia: 244,
+  Yugoslavia: 244,//
   Zambia: 245,
   Zimbabwe: 246
 };

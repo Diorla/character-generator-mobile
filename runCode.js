@@ -19,7 +19,7 @@ const _gaussian = arr => {
   let max = Math.ceil(arr.length / 2);
   let isEven = arr.length % 2 == 0;
   for (let i = 1; i <= max; i++) {
-    next++;
+    next +=5;
     prev += next;
     coeffArr.push(prev);
   }
@@ -52,23 +52,6 @@ const _withOdds = (arr, odds) => {
 const oddCalculator = (arr, odds) =>
   odds ? _withOdds(arr, odds) : _withoutOdds(arr);
 
-let fifteen = 0;
-let sixtyfive = 0;
-let hundred = 0;
-for (let i = 0; i < 1000; i++) {
-  let age;
-  const ageRange = oddCalculator([15, 65, 100], [26.3, 65.9, 7.9]);
-  if(ageRange===15) fifteen++;
-  if(ageRange===65) sixtyfive++;
-  if(ageRange===100) hundred++;
-  // if (ageRange === 15) {
-  //   age = Math.floor(Math.random() * 15);
-  // } else if (ageRange === 65) {
-  //   age = 15 + Math.floor(Math.random() * 41);
-  // } else {
-  //   age = 65 + Math.floor(Math.random() * 60);
-  // }
-  // console.log(ageRange, age);
-}
 
-console.log(fifteen, sixtyfive, hundred)
+
+console.log(oddCalculator(["a", "b"], [1000]))
