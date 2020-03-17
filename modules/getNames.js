@@ -57,7 +57,7 @@ const getNames = (country, gender) => {
     "Guatemala",
     "Ecuador",
     "Spain",
-    "Columbia",
+    "Colombia",
     "Argentina",
     "Peru",
     "Venezuela",

@@ -458,7 +458,7 @@ const names = {
       "Min-ji", "Seol-bin", "So-dam", "Young-ju", "Ye-eun", "Hye-ji", "Seo-yeon", "Hee-ji", "Eun-mi", 
     ]
   },
-  Columbia: { // => Mexico
+  Colombia: { // => Mexico
     Male: [],
     Female: [],
     Surname: []

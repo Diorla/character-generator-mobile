@@ -387,7 +387,8 @@ class Character extends React.Component {
     const posture = this.state.posture || getPosture();
     const bloodGroup = this.state.bloodGroup || getBloodGroup();
     const gesture = this.state.gesture || getGesture();
-    const socialStatus = this.state.socialStatus || getSocialStatus(education, age);
+    const socialStatus =
+      this.state.socialStatus || getSocialStatus(education, age);
     const familyEconomicStatus =
       this.state.familyEconomicStatus || getSocialStatus(socialStatus);
     const outfit =
@@ -399,7 +400,8 @@ class Character extends React.Component {
       this.state.currentLocation || `${getCity(nationality, birthPlace)}`;
     const hometown =
       this.state.hometown || `${getCity(nationality, birthPlace)}`;
-    const occupation = this.state.occupation || getJob(education, socialStatus, age);
+    const occupation =
+      this.state.occupation || getJob(education, socialStatus, age);
     const name = this.state.name || getNames(nationality, gender);
     const restingFace = this.state.restingFace || getRestingface();
     const childhood = this.state.childhood || getChildhood();
@@ -420,7 +422,8 @@ class Character extends React.Component {
     const dislikes = this.state.dislikes || view.dislikes;
     const cursweWord = this.state.curseWord || getCurseWord();
     const traitList = getTrait();
-    const health = this.state.health || print(getHealth(Number(age), gender), ", ");
+    const health =
+      this.state.health || print(getHealth(Number(age), gender), ", ");
     const generatedTraits = {};
 
     const keys = Object.keys(traitList);
@@ -443,7 +446,19 @@ class Character extends React.Component {
     const hobby = this.state.hobby || print(pastime.hobby, ", ", " and ");
     const favouriteActivity =
       this.state.favouriteActivity || print(pastime.activity, ", ", " and ");
-
+    const weightParams = [
+      weightType,
+      shoulderSize,
+      breastSize,
+      limbs.handFeetSize,
+      limbs.length,
+      limbs.thickness,
+      hips,
+      neck,
+      stomach,
+      buttock
+    ];
+    if (weight) weightParams.push(`weighs about ${weight}kg`);
     this.setState({
       gender,
       skinTone,
@@ -487,26 +502,10 @@ class Character extends React.Component {
       cursweWord,
       dislikes,
       age: this.state.age || String(age),
-      height: this.state.height || `${heightType}, about ${height}cm`,
-      build:
-        this.state.build ||
-        print(
-          [
-            weightType,
-            shoulderSize,
-            breastSize,
-            limbs.handFeetSize,
-            limbs.length,
-            limbs.thickness,
-            hips,
-            neck,
-            stomach,
-            buttock,
-            `weighs about ${weight}kg`
-          ],
-          ", ",
-          " and "
-        ),
+      height:
+        this.state.height ||
+        `${heightType}${height ? `, about ${height}cm` : ""}`,
+      build: this.state.build || print(weightParams, ", ", " and "),
       eye:
         this.state.eye ||
         print(
