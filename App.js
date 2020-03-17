@@ -137,14 +137,14 @@ const MyDrawerNavigator = createDrawerNavigator(
     // Story: {
     //   screen: Story
     // },
+    World: {
+      screen: Profile
+    },
     Feedback: {
       screen: Feedback
     },
     Help: {
       screen: Help
-    },
-    Profile: {
-      screen: Profile
     },
     Settings: {
       screen: Settings

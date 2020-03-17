@@ -354,6 +354,11 @@ const nationality = {
     "Kiribati",
     "Liechtenstein",
     "Luxembourg",
+    "Maldives",
+    "Malta",
+    "Man (Isle of)",
+    "Marshall Islands",
+    "Martinique",
   ]
 };
 

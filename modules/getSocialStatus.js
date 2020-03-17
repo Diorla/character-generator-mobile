@@ -5,7 +5,8 @@ import socialStatus from "../data/socialStatus";
  * This function returns social status
  * @param {String} education : The education or social status(to get family status)
  */
-const getSocialStatus = education => {
+const getSocialStatus = (education, age) => {
+  if(age < 18) return "";
   const { main, odds } = socialStatus;
   if (education == "Preschool" || education == "Underclass")
     return oddCalculator(main, odds.Preschool);

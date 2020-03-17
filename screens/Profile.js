@@ -18,7 +18,7 @@ class Profile extends React.Component {
     const { openDrawer } = this.props.navigation;
     return (
       <Layout drawMenu={()=>openDrawer()} title="Profile" subtitle="Basic information about yourself">
-        <Text>Profile is under construction.</Text>
+        <Text>World building is under construction.</Text>
       </Layout>
     );
   }

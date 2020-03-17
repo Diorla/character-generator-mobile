@@ -376,7 +376,7 @@ class Character extends React.Component {
 
     const distinguishingFeatures =
       this.state.distinguishingFeatures || getDistFeat();
-    const education = this.state.education || getEducation();
+    const education = this.state.education || getEducation(age);
     const nationality = this.state.nationality || getNationality();
     const grooming = this.state.grooming || getGrooming();
     const birthday = this.state.birthday || getBirthday();
@@ -387,7 +387,7 @@ class Character extends React.Component {
     const posture = this.state.posture || getPosture();
     const bloodGroup = this.state.bloodGroup || getBloodGroup();
     const gesture = this.state.gesture || getGesture();
-    const socialStatus = this.state.socialStatus || getSocialStatus(education);
+    const socialStatus = this.state.socialStatus || getSocialStatus(education, age);
     const familyEconomicStatus =
       this.state.familyEconomicStatus || getSocialStatus(socialStatus);
     const outfit =
@@ -399,7 +399,7 @@ class Character extends React.Component {
       this.state.currentLocation || `${getCity(nationality, birthPlace)}`;
     const hometown =
       this.state.hometown || `${getCity(nationality, birthPlace)}`;
-    const occupation = this.state.occupation || getJob(education, socialStatus);
+    const occupation = this.state.occupation || getJob(education, socialStatus, age);
     const name = this.state.name || getNames(nationality, gender);
     const restingFace = this.state.restingFace || getRestingface();
     const childhood = this.state.childhood || getChildhood();
@@ -420,7 +420,7 @@ class Character extends React.Component {
     const dislikes = this.state.dislikes || view.dislikes;
     const cursweWord = this.state.curseWord || getCurseWord();
     const traitList = getTrait();
-    const health = this.state.health || print(getHealth(age, gender), ", ");
+    const health = this.state.health || print(getHealth(Number(age), gender), ", ");
     const generatedTraits = {};
 
     const keys = Object.keys(traitList);

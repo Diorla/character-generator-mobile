@@ -127,16 +127,16 @@ const countryId = {
   Lithuania: 126,
   Luxembourg: 127,
   "Macau S.A.R.": 128,
-  Macedonia: 129,//
+  Macedonia: 129,
   Madagascar: 130,
   Malawi: 131,
   Malaysia: 132,
-  Maldives: 133,//
+  Maldives: 133,
   Mali: 134,
-  Malta: 135,//
-  "Man (Isle of)": 136,//
-  "Marshall Islands": 137,//
-  Martinique: 138,//
+  Malta: 135,
+  "Man (Isle of)": 136,
+  "Marshall Islands": 137,
+  Martinique: 138,
   Mauritania: 139,
   Mauritius: 140,
   Mayotte: 141,//

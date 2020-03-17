@@ -7,7 +7,8 @@ import oddCalculator from './oddCalculator';
  * @param {string} education - indicates the education level
  * @param {string} socialStatus - indicates the social class like working poor or upperclass
  */
-const getJob = (education, socialStatus) => {
+const getJob = (education, socialStatus, age) => {
+  if(age < 18) return "";
   let qualifiedJobs, possibleJobs = [];
 
   const { Preschool, Degree, Masters, Doctorate } = occupation;

@@ -36,8 +36,10 @@ const getNames = (country, gender) => {
     "Belize",
     "Grenada",
     "Guyana",
+    "Malta",
     // US Territory
     "American Samoa",
+    "Marshall Islands",
     // British Territory
     "Anguilla",
     "Bermuda",
@@ -46,6 +48,7 @@ const getNames = (country, gender) => {
     "Gibraltar",
     "Guernsey",
     "Jersey",
+    "Man (Isle of)",
     // New Zealand Territory
     "Cook Islands"
   ];
@@ -94,7 +97,8 @@ const getNames = (country, gender) => {
     "Qatar",
     "Bahrain",
     "Comoros",
-    "Djibouti"
+    "Djibouti",
+    "Maldives",
   ];
   const sinophone = ["Thailand", "Taiwan", "Bhutan"];
   const brazil = ["Portugal", "Cape Verde"];
@@ -119,7 +123,8 @@ const getNames = (country, gender) => {
     // French territory
     "French Guiana",
     "French Polynesia",
-    "Guadeloupe"
+    "Guadeloupe",
+    "Martinique"
   ];
   const norse = ["Iceland"];
   const german = ["Liechtenstein", "Luxembourg"]

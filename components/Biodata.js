@@ -115,21 +115,21 @@ const Biodata = props => {
             data={educationLevel}
             selectedValue={education}
             onValueChange={changeEducation}
-            help="The highest level of education that has been completed."
+            help="The highest level of education that has been completed. It's influenced by age"
           />
           <Input
             label="Occupation"
             value={occupation}
             onChangeText={changeOccupation}
             style={{ width: "100%" }}
-            help="When auto-generated, it will be influenced by education and social status."
+            help="When auto-generated, it will be influenced by education and social status. Doesn't apply to character under 18"
           />
           <MyPicker
             label="Social status"
             data={income["default"]["main"]}
             selectedValue={socialStatus}
             onValueChange={changeSocialStatus}
-            help="When randomly generated, it's influenced by education. Underclass refers to people like beggars or hobos, who have no interest in climbing the financial ladder. Working poor refers to those who don't have a stable source of income and lives below poverty line. Working class and lower middle class earns around the same, but working class are usually blue collared while lower middle class tends to work in offices. Upper middle class are rich while Upper class are the super rich."
+            help="When randomly generated, it's influenced by education. Doesn't apply to character under 18. Underclass refers to people like beggars or hobos, who have no interest in climbing the financial ladder. Working poor refers to those who don't have a stable source of income and lives below poverty line. Working class and lower middle class earns around the same, but working class are usually blue collared while lower middle class tends to work in offices. Upper middle class are rich while Upper class are the super rich."
           />
           <Input
             label="More"

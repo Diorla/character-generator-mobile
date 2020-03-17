@@ -13211,7 +13211,7 @@ const states = [
   },
   {
     id: "2648",
-    name: "Abuja Federal Capital Territor",
+    name: "Abuja",
     country_id: "160"
   },
   {
