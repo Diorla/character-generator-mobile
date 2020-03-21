@@ -319,55 +319,53 @@ const nationality = {
     "Equatorial Guinea",
     "Mauritius",
     "Cyprus",
-    // All the states below this threshold are not randomly generated
-    "American Samoa",
+    // All the states below this threshold are not randomly generated.
     "Andorra",
-    "Anguilla",
     "Antigua And Barbuda",
-    "Aruba",
     "Bahamas",
     "Barbados",
     "Belize",
-    "Bermuda",
     "Bhutan",
     "Brunei",
     "Cape Verde",
-    "Cayman Islands",
-    "Christmas Island",
     "Comoros",
-    "Cook Islands",
     "Djibouti",
-    "Falkland Islands",
-    "Faroe Islands",
+    "Dominica",
     "Fiji",
-    "French Guiana",
-    "French Polynesia",
-    "Gibraltar",
-    "Greenland",
+    "Gambia",
     "Grenada",
-    "Guadeloupe",
-    "Guam",
-    "Guernsey",
     "Guyana",
     "Iceland",
-    "Jersey",
     "Kiribati",
     "Liechtenstein",
     "Luxembourg",
     "Maldives",
     "Malta",
-    "Man (Isle of)",
     "Marshall Islands",
-    "Martinique",
+    "Micronesia",
+    "Montenegro",
+    "Nauru",
+    "North Macedonia",
+    "Palau",
+    "Saint Kitts And Nevis",
+    "Saint Lucia",
+    "Saint Vincent And The Grenadines",
+    "Samoa",
+    "San Marino",
+    "Sao Tome and Principe",
+    "Seychelles",
+    "Solomon Islands",
+    "Suriname",
+    "Tonga",
+    "Tuvalu",
+    "Vanuatu"
   ]
 };
 
-export {
-  nationality
-}
+export { nationality };
 
-const sortedCountry=()=> {
-  const country = [...nationality["country"]]
+const sortedCountry = () => {
+  const country = [...nationality["country"]];
   return country.sort();
-}
-export default sortedCountry
+};
+export default sortedCountry;

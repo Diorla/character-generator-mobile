@@ -58,7 +58,6 @@ import getVoice from "./../modules/getVoice";
 import getSpeech from "../modules/getSpeech";
 import getJob from "./../modules/getJob";
 import getGesture from "./../modules/getGesture";
-import getCity from "../modules/getCity";
 import getNames from "../modules/getNames";
 import getHealth from "../modules/getHealth";
 import getRestingface from "./../modules/getRestingface";
@@ -76,8 +75,8 @@ import getGroupDynamic from "./../modules/getGroupDynamic";
 import getDependent from "../modules/getDependent";
 import getClothing from "./../data/clothing";
 import oddCalculator from "./../modules/oddCalculator";
+import getLocation from "../modules/getLocation";
 
-// subversive, rebellious etc
 class Character extends React.Component {
   state = {
     birthday: "",
@@ -86,8 +85,11 @@ class Character extends React.Component {
     age: "",
     gender: "",
     others: "",
-    birthPlace: "",
-    currentLocation: "",
+    birthCity: "",
+    birthSubCountry: "",
+    residentCity: "",
+    residentSubcountry: "",
+    residentCountry: "",
     nationality: "",
     education: "",
     occupation: "",
@@ -175,7 +177,6 @@ class Character extends React.Component {
     boringStuff: "",
     annoyingStuff: "",
     familyEconomicStatus: "",
-    hometown: "",
     childhood: "",
     schoolClub: "",
     favouriteActivity: "",
@@ -214,7 +215,6 @@ class Character extends React.Component {
   };
 
   deleteCharacter = () => {
-    console.log(`deleting ${this.state.id}`);
     const { id, allData } = this.state;
     if (!allData[id]) {
       this.feedback("No character to delete");
@@ -377,7 +377,6 @@ class Character extends React.Component {
     const distinguishingFeatures =
       this.state.distinguishingFeatures || getDistFeat();
     const education = this.state.education || getEducation(age);
-    const nationality = this.state.nationality || getNationality();
     const grooming = this.state.grooming || getGrooming();
     const birthday = this.state.birthday || getBirthday();
     const tic = this.state.tic || print(getQuirk(), ", ", " and ");
@@ -395,11 +394,48 @@ class Character extends React.Component {
       this.state.outfit || getClothing(age, gender, education, socialStatus);
     const accessories = this.state.accessories || getAccessories(age);
     //cities would be in the same country of nationality
-    const birthPlace = this.state.birthPlace || `${getCity(nationality)}`;
-    const currentLocation =
-      this.state.currentLocation || `${getCity(nationality, birthPlace)}`;
-    const hometown =
-      this.state.hometown || `${getCity(nationality, birthPlace)}`;
+    let birthPlace;
+    if (this.state.birthSubCountry && !this.state.birthCity) {
+      // There is a subcountry and no city. So I want the city returned to be limited to
+      // that subcountry.
+      birthPlace = getLocation(
+        this.state.nationality,
+        this.state.birthSubCountry,
+        true
+      );
+    } else if (this.state.nationality && !this.state.birthSubCountry) {
+      birthPlace = getLocation(this.state.nationality, true);
+    } else {
+      birthPlace = getLocation(
+        this.state.nationality,
+        this.state.birthSubCountry,
+        this.state.birthCity
+      );
+    }
+
+    const birthCity = this.state.birthCity || birthPlace.name;
+    const birthSubCountry = this.state.birthSubCountry || birthPlace.subcountry;
+    const nationality = this.state.nationality || birthPlace.country;
+    let residence;
+
+    if (this.state.residentSubcountry && !this.state.residentCity) {
+      // There is a subcountry and no city. So I want the city returned to be limited to
+      // that subcountry.
+      residence = getLocation(
+        this.state.residentCountry,
+        this.state.residentSubcountry,
+        true
+      );
+    } else if (this.state.residentCountry && !this.state.residentSubcountry) {
+      residence = getLocation(this.state.residentCountry, true);
+    } else {
+      residence = getLocation(nationality, birthSubCountry, birthCity);
+    }
+
+    const residentCity = this.state.residentCity || residence.name;
+    const residentSubcountry =
+      this.state.residentSubcountry || residence.subcountry;
+    const residentCountry = this.state.residentCountry || residence.country;
     const occupation =
       this.state.occupation || getJob(education, socialStatus, age);
     const name = this.state.name || getNames(nationality, gender);
@@ -481,12 +517,14 @@ class Character extends React.Component {
       familyEconomicStatus,
       speechPitch,
       accessories,
-      birthPlace,
-      currentLocation,
+      birthCity,
+      birthSubCountry,
+      residentCity,
+      residentSubcountry,
+      residentCountry,
       occupation,
       phobia,
       restingFace,
-      hometown,
       childhood,
       speechStyle,
       speechImpediment,
@@ -583,8 +621,11 @@ class Character extends React.Component {
       age: "",
       gender: "",
       others: "",
-      birthPlace: "",
-      currentLocation: "",
+      birthCity: "",
+      birthSubCountry: "",
+      residentCity: "",
+      residentSubcountry: "",
+      residentCountry: "",
       nationality: "",
       education: "",
       occupation: "",
@@ -673,7 +714,6 @@ class Character extends React.Component {
       boringStuff: "",
       annoyingStuff: "",
       familyEconomicStatus: "",
-      hometown: "",
       childhood: "",
       schoolClub: "",
       favouriteActivity: "",
@@ -734,20 +774,29 @@ class Character extends React.Component {
             changeBirthday={birthday => this.setState({ birthday })}
             changeName={name => this.setState({ name })}
             changeAge={age => this.setState({ age })}
-            changeBirthPlace={birthPlace => this.setState({ birthPlace })}
-            changeCurrentLocation={currentLocation =>
-              this.setState({ currentLocation })
+            changeBirthCity={birthCity => this.setState({ birthCity })}
+            changebirthSubCountry={birthSubCountry =>
+              this.setState({ birthSubCountry })
+            }
+            changeResidentCity={residentCity => this.setState({ residentCity })}
+            changeResidentSubcountry={residentSubcountry =>
+              this.setState({ residentSubcountry })
+            }
+            changeResidentCountry={residentCountry =>
+              this.setState({ residentCountry })
             }
             changeEducation={education => this.setState({ education })}
             changeGender={gender => this.setState({ gender })}
             changeIncome={income => this.setState({ income })}
             changeMoreBiodata={moreBiodata => this.setState({ moreBiodata })}
-            changeNationality={nationality =>
+            changeNationality={nationality => {
+              const birthPlace = getLocation(nationality, true);
               this.setState({
-                nationality,
-                birthPlace: getCity(nationality)
-              })
-            }
+                nationality: birthPlace.country,
+                birthSubCountry: birthPlace.subcountry,
+                birthCity: birthPlace.name
+              });
+            }}
             changeOccupation={occupation => this.setState({ occupation })}
             changeSocialStatus={socialStatus => this.setState({ socialStatus })}
             changeBloodGroup={bloodGroup => this.setState({ bloodGroup })}
@@ -824,7 +873,6 @@ class Character extends React.Component {
             changeFamilyEconomicStatus={familyEconomicStatus =>
               this.setState({ familyEconomicStatus })
             }
-            changeHometown={hometown => this.setState({ hometown })}
             changeChildhood={childhood => this.setState({ childhood })}
             changeEducationHistory={educationHistory =>
               this.setState({ educationHistory })

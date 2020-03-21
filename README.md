@@ -31,3 +31,5 @@ TODO: Consolidate data and modules into one
     weight.js
     height.js
 ```
+
+TODO: Sort country by immigration too. This will be used to determine resident country for those who are not living in their homeland.

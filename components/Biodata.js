@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Card, Colors, Button } from "react-native-paper";
+import { View, Text } from "react-native";
 import MyPicker from "./MyPicker";
 import sortedCountry from "./../data/nationality";
-import  * as income  from "./../data/socialStatus";
+import * as income from "./../data/socialStatus";
 import Input from "./Input";
 import { educationLevel } from "../modules/getEducation";
-
+import MyText from "./MyText/index";
 
 const Biodata = props => {
   const [display, setDisplay] = useState(false);
@@ -15,10 +16,6 @@ const Biodata = props => {
     changeName,
     age,
     changeAge,
-    birthPlace,
-    changeBirthPlace,
-    changeCurrentLocation,
-    currentLocation,
     changeEducation,
     education,
     changeGender,
@@ -34,7 +31,17 @@ const Biodata = props => {
     birthday,
     changeBirthday,
     changeBloodGroup,
-    bloodGroup
+    bloodGroup,
+    birthCity,
+    changeBirthCity,
+    birthSubCountry,
+    changebirthSubCountry,
+    residentCity,
+    changeResidentCity,
+    residentSubcountry,
+    changeResidentSubcountry,
+    residentCountry,
+    changeResidentCountry
   } = props;
 
   const mode = display ? "contained" : "text";
@@ -90,26 +97,70 @@ const Biodata = props => {
             style={{ width: "100%" }}
             help="This includes A, B & O, rhesus positive or negative. It's randomly generated based on the global percentage."
           />
-          <Input
-            label="Place of birth"
-            value={birthPlace}
-            onChangeText={changeBirthPlace}
-            style={{ width: "100%" }}
-            help="When auto-generated, it's limited to the nationality of the person."
-          />
-          <Input
-            label="Current location"
-            value={currentLocation}
-            onChangeText={changeCurrentLocation}
-            help="When auto-generated, there is a high chance that it will be in the same country as the nationality, higher chance that it will be the place of birth."
-          />
-          <MyPicker
-            label="Nationality"
-            data={sortedCountry()}
-            selectedValue={nationality}
-            onValueChange={changeNationality}
-            help="When auto-generated, it takes account the population of the world, hence there is higher chance that it will be China than Senegal."
-          />
+          <View
+            style={{
+              backgroundColor: Colors.grey300,
+              borderBottomColor: Colors.grey500,
+              borderBottomWidth: 1,
+              padding: 4
+            }}
+          >
+            <MyText type="strong">Place of birth</MyText>
+            <MyPicker
+              label="Nationality"
+              data={sortedCountry()}
+              selectedValue={nationality}
+              onValueChange={changeNationality}
+              help="One of the United nations member states and territories with a population of 1 million or more"
+            />
+            <Input
+              label="Subcountry"
+              value={birthSubCountry}
+              onChangeText={changebirthSubCountry}
+              style={{ width: "100%" }}
+              multiline
+              help="These are adminstrative regions or zones in a country like a state, province, governorate, district etc. Different country uses different terms to divide their country. Note, this assumes that the country of birth is the character's nationality."
+            />
+            <Input
+              label="City"
+              value={birthCity}
+              onChangeText={changeBirthCity}
+              style={{ width: "100%" }}
+              help="This is the name of a city or town"
+            />
+          </View>
+          <View
+            style={{
+              backgroundColor: Colors.grey300,
+              borderBottomColor: Colors.grey500,
+              borderBottomWidth: 1,
+              padding: 4
+            }}
+          >
+            <MyText type="strong">Current location</MyText>
+            <MyPicker
+              label="Country"
+              data={sortedCountry()}
+              selectedValue={residentCountry}
+              onValueChange={changeResidentCountry}
+              help="One of the United nations member states and territories with a population of 1 million or more"
+            />
+            <Input
+              label="Subcountry"
+              value={residentSubcountry}
+              onChangeText={changeResidentSubcountry}
+              style={{ width: "100%" }}
+              multiline
+              help="These are adminstrative regions or zones in a country like a state, province, governorate, district etc. Different country uses different terms to divide their country. Note, this assumes that the country of birth is the character's nationality."
+            />
+            <Input
+              label="City"
+              value={residentCity}
+              onChangeText={changeResidentCity}
+              style={{ width: "100%" }}
+              help="This is the name of a city or town"
+            />
+          </View>
           <MyPicker
             label="Education"
             data={educationLevel}

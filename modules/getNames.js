@@ -48,7 +48,6 @@ const getNames = (country, gender) => {
     "Gibraltar",
     "Guernsey",
     "Jersey",
-    "Man (Isle of)",
     // New Zealand Territory
     "Cook Islands"
   ];
