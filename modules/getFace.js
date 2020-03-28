@@ -67,7 +67,7 @@ export default (skinColour, weightType, hairColour, gender, age) => {
     nose: getNose(skinColour),
     lips: oddCalculator(lips.lip, lips.odds),
     forehead: oddCalculator(forehead.size, forehead.odds),
-    face: oddCalculator(face.shape, face.odds),
+    faceShape: oddCalculator(face.shape, face.odds),
     doubleChin: getDoubleChin(weightType),
     dimpledChin: oddCalculator(facialFeatures.dimpledChin, facialFeatures.odds),
     freckles: getFreckles(hairColour)

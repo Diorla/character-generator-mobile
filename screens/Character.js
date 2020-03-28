@@ -20,17 +20,7 @@ import {
 import {
   styles,
   htmlGenerator,
-  getBuild,
-  getEyes,
-  getFace,
-  getHair,
-  getSkinTone,
-  getDistFeat,
-  getEducation,
-  getSocialStatus,
   manageData,
-  getNationality,
-  getPhobia
 } from "./../modules";
 
 import {
@@ -46,36 +36,9 @@ import {
   Trait
 } from "./../components";
 import * as Print from "expo-print";
-import getAccessories from "./../modules/getAccessories";
-import getGrooming from "./../modules/getGrooming";
-import getBirthday from "../modules/getBirthday";
-import getQuirk from "./../modules/getQuirk";
-import getHandwriting from "./../modules/getHandwriting";
-import getGait from "../modules/getGait";
-import getPosture from "../modules/getPosture";
-import getBloodGroup from "../modules/getBloodGroup";
-import getVoice from "./../modules/getVoice";
-import getSpeech from "../modules/getSpeech";
-import getJob from "./../modules/getJob";
-import getGesture from "./../modules/getGesture";
-import getNames from "../modules/getNames";
-import getHealth from "../modules/getHealth";
-import getRestingface from "./../modules/getRestingface";
-import print from "../modules/print";
-import getChildhood from "./../modules/getChildhood";
-import getPastime from "../modules/getPastime";
-import getFolly from "../modules/getFolly";
-import getMouth from "../modules/getMouth";
-import getView from "../modules/getView";
-import getTrait from "../modules/getTrait";
-import getCurseWord from "../modules/getCurseWord";
 import getMorality from "../modules/getMorality";
-import generateGender from "./../modules/generateGender";
-import getGroupDynamic from "./../modules/getGroupDynamic";
-import getDependent from "../modules/getDependent";
-import getClothing from "./../data/clothing";
-import oddCalculator from "./../modules/oddCalculator";
 import getLocation from "../modules/getLocation";
+import updateCharacter from "../updateCharacter";
 
 class Character extends React.Component {
   state = {
@@ -90,6 +53,9 @@ class Character extends React.Component {
     residentCity: "",
     residentSubcountry: "",
     residentCountry: "",
+    hometown: "",
+    hometownCountry: "",
+    hometownSubcountry: "",
     nationality: "",
     education: "",
     occupation: "",
@@ -328,263 +294,13 @@ class Character extends React.Component {
   }
 
   randomise = () => {
-    //const { gender } = this.state;
-    const gender = this.state.gender || generateGender();
-    const ageRange = oddCalculator([15, 65, 100], [26.3, 65.9, 7.9]);
-    let age = this.state.age;
-    if (ageRange === 15) {
-      age = age || Math.floor(Math.random() * 15);
-    } else if (ageRange === 65) {
-      age = age || 15 + Math.floor(Math.random() * 41);
-    } else {
-      age = age || 65 + Math.floor(Math.random() * 60);
-    }
-
-    const {
-      weight,
-      weightType,
-      height,
-      heightType,
-      breastSize,
-      buttock,
-      hips,
-      limbs,
-      neck,
-      shoulderSize,
-      stomach
-    } = getBuild(age, gender);
-
-    const skinTone = this.state.skinTone || getSkinTone();
-    const { eyeColour, eyeDistance, eyeElevation, eyeShape, eyeBrow } = getEyes(
-      skinTone
-    );
-
-    const { hairColour, hairSize, hairType } = getHair(gender, age);
-
-    const {
-      beard,
-      dimpledChin,
-      doubleChin,
-      nose,
-      moustache,
-      lips,
-      freckles,
-      forehead,
-      face,
-      ear
-    } = getFace(skinTone, weightType, hairColour, gender, age);
-
-    const distinguishingFeatures =
-      this.state.distinguishingFeatures || getDistFeat();
-    const education = this.state.education || getEducation(age);
-    const grooming = this.state.grooming || getGrooming();
-    const birthday = this.state.birthday || getBirthday();
-    const tic = this.state.tic || print(getQuirk(), ", ", " and ");
-
-    const handwriting = this.state.handwriting || getHandwriting();
-    const gait = this.state.gait || getGait();
-    const posture = this.state.posture || getPosture();
-    const bloodGroup = this.state.bloodGroup || getBloodGroup();
-    const gesture = this.state.gesture || getGesture();
-    const socialStatus =
-      this.state.socialStatus || getSocialStatus(education, age);
-    const familyEconomicStatus =
-      this.state.familyEconomicStatus || getSocialStatus(socialStatus);
-    const outfit =
-      this.state.outfit || getClothing(age, gender, education, socialStatus);
-    const accessories = this.state.accessories || getAccessories(age);
-    //cities would be in the same country of nationality
-    let birthPlace;
-    if (this.state.birthSubCountry && !this.state.birthCity) {
-      // There is a subcountry and no city. So I want the city returned to be limited to
-      // that subcountry.
-      birthPlace = getLocation(
-        this.state.nationality,
-        this.state.birthSubCountry,
-        true
-      );
-    } else if (this.state.nationality && !this.state.birthSubCountry) {
-      birthPlace = getLocation(this.state.nationality, true);
-    } else {
-      birthPlace = getLocation(
-        this.state.nationality,
-        this.state.birthSubCountry,
-        this.state.birthCity
-      );
-    }
-
-    const birthCity = this.state.birthCity || birthPlace.name;
-    const birthSubCountry = this.state.birthSubCountry || birthPlace.subcountry;
-    const nationality = this.state.nationality || birthPlace.country;
-    let residence;
-
-    if (this.state.residentSubcountry && !this.state.residentCity) {
-      // There is a subcountry and no city. So I want the city returned to be limited to
-      // that subcountry.
-      residence = getLocation(
-        this.state.residentCountry,
-        this.state.residentSubcountry,
-        true
-      );
-    } else if (this.state.residentCountry && !this.state.residentSubcountry) {
-      residence = getLocation(this.state.residentCountry, true);
-    } else {
-      residence = getLocation(nationality, birthSubCountry, birthCity);
-    }
-
-    const residentCity = this.state.residentCity || residence.name;
-    const residentSubcountry =
-      this.state.residentSubcountry || residence.subcountry;
-    const residentCountry = this.state.residentCountry || residence.country;
-    const occupation =
-      this.state.occupation || getJob(education, socialStatus, age);
-    const name = this.state.name || getNames(nationality, gender);
-    const restingFace = this.state.restingFace || getRestingface();
-    const childhood = this.state.childhood || getChildhood();
-    const speech = getSpeech();
-    const speechStyle = this.state.speechStyle || speech.speechStyle;
-    const speechImpediment =
-      this.state.speechImpediment || speech.speechImpediment;
-    const speechTempo = this.state.speechTempo || speech.speechTempo;
-    const speechPitch = this.state.speechPitch || getVoice(gender);
-    const phobia = this.state.phobia || print(getPhobia(), ", ", " and ");
-    const folly = this.state.folly || getFolly();
-    const mouth = getMouth();
-    const smile = this.state.smile || mouth.smile;
-    const laughter = this.state.laughter || mouth.laughter;
-    const view = getView();
-    const annoyingStuff = this.state.annoyingStuff || view.annoyingStuff;
-    const boringStuff = this.state.boringStuff || view.boringStuff;
-    const dislikes = this.state.dislikes || view.dislikes;
-    const cursweWord = this.state.curseWord || getCurseWord();
-    const traitList = getTrait();
-    const health =
-      this.state.health || print(getHealth(Number(age), gender), ", ");
-    const generatedTraits = {};
-
-    const keys = Object.keys(traitList);
-    const values = Object.values(traitList);
-
-    const groupDynamic = this.state.groupDynamic || getGroupDynamic();
-
-    const dependent = this.state.dependent || getDependent();
-
-    for (let i = 0; i < keys.length; i++) {
-      const k = keys[i];
-      const v = this.state[k] || values[i];
-      generatedTraits[k] = v;
-    }
-    generatedTraits["truthfulness"] =
-      this.state.morality || getMorality(generatedTraits["morality"]);
-    const pastime = getPastime(
-      this.state.sociability || generatedTraits.sociability
-    );
-    const hobby = this.state.hobby || print(pastime.hobby, ", ", " and ");
-    const favouriteActivity =
-      this.state.favouriteActivity || print(pastime.activity, ", ", " and ");
-    const weightParams = [
-      weightType,
-      shoulderSize,
-      breastSize,
-      limbs.handFeetSize,
-      limbs.length,
-      limbs.thickness,
-      hips,
-      neck,
-      stomach,
-      buttock
-    ];
-    if (weight) weightParams.push(`weighs about ${weight}kg`);
-    this.setState({
-      gender,
-      skinTone,
-      health,
-      name,
-      tic,
-      distinguishingFeatures,
-      education,
-      nationality,
-      grooming,
-      birthday,
-      handwriting,
-      gait,
-      posture,
-      bloodGroup,
-      speechStyle,
-      speechImpediment,
-      gesture,
-      socialStatus,
-      familyEconomicStatus,
-      speechPitch,
-      accessories,
-      birthCity,
-      birthSubCountry,
-      residentCity,
-      residentSubcountry,
-      residentCountry,
-      occupation,
-      phobia,
-      restingFace,
-      childhood,
-      speechStyle,
-      speechImpediment,
-      speechPitch,
-      speechTempo,
-      hobby,
-      favouriteActivity,
-      folly,
-      smile,
-      laughter,
-      annoyingStuff,
-      boringStuff,
-      cursweWord,
-      dislikes,
-      age: this.state.age || String(age),
-      height:
-        this.state.height ||
-        `${heightType}${height ? `, about ${height}cm` : ""}`,
-      build: this.state.build || print(weightParams, ", ", " and "),
-      eye:
-        this.state.eye ||
-        print(
-          [
-            eyeElevation,
-            eyeDistance,
-            eyeShape,
-            eyeColour,
-            `eyes`,
-            print([eyeBrow.size, eyeBrow.shape])
-          ],
-          ", ",
-          " with "
-        ),
-      hair:
-        this.state.hair || `${print([hairSize, hairType, hairColour])} hair`,
-      face:
-        this.state.face ||
-        print(
-          [
-            freckles,
-            face,
-            forehead,
-            lips,
-            nose.size,
-            nose.shape,
-            beard,
-            moustache,
-            dimpledChin,
-            doubleChin,
-            ear.size,
-            ear.shape
-          ],
-          ", ",
-          " with "
-        ),
-      outfit,
-      groupDynamic,
-      dependent,
-      ...generatedTraits
-    });
+    Promise.resolve(updateCharacter(this.state))
+      .then(value =>
+        this.setState({
+          ...value
+        })
+      )
+      .catch(err => console.log(err));
 
     this.feedback("Certain attributes generated");
   };
@@ -626,6 +342,9 @@ class Character extends React.Component {
       residentCity: "",
       residentSubcountry: "",
       residentCountry: "",
+      hometown: "",
+      hometownCountry: "",
+      hometownSubcountry: "",
       nationality: "",
       education: "",
       occupation: "",
@@ -782,20 +501,61 @@ class Character extends React.Component {
             changeResidentSubcountry={residentSubcountry =>
               this.setState({ residentSubcountry })
             }
-            changeResidentCountry={residentCountry =>
-              this.setState({ residentCountry })
+            changeResidentCountry={residentCountry => {
+              if (residentCountry) {
+                const residency = getLocation("country", residentCountry);
+                this.setState({
+                  residentCountry: residency.country,
+                  changeResidentSubcountry: residency.subcountry,
+                  changeResidentCity: residency.city
+                });
+              } else {
+                this.setState({
+                  residentCountry,
+                  residentCity: "",
+                  residentSubcountry: ""
+                });
+              }
+            }}
+            changeHometown={hometown => this.setState({ hometown })}
+            changeHometownSubcountry={hometownSubcountry =>
+              this.setState({ hometownSubcountry })
             }
+            changeHometownCountry={hometownCountry => {
+              if (hometownCountry) {
+                const home = getLocation("country", hometownCountry);
+                this.setState({
+                  hometownCountry: home.country,
+                  hometownSubcountry: home.subcountry,
+                  hometown: home.city
+                });
+              } else {
+                this.setState({
+                  residentCountry,
+                  residentCity: "",
+                  residentSubcountry: ""
+                });
+              }
+            }}
             changeEducation={education => this.setState({ education })}
             changeGender={gender => this.setState({ gender })}
             changeIncome={income => this.setState({ income })}
             changeMoreBiodata={moreBiodata => this.setState({ moreBiodata })}
             changeNationality={nationality => {
-              const birthPlace = getLocation(nationality, true);
-              this.setState({
-                nationality: birthPlace.country,
-                birthSubCountry: birthPlace.subcountry,
-                birthCity: birthPlace.name
-              });
+              if (nationality) {
+                const birthPlace = getLocation("country", nationality);
+                this.setState({
+                  nationality: birthPlace.country,
+                  birthSubCountry: birthPlace.subcountry,
+                  birthCity: birthPlace.city
+                });
+              } else {
+                this.setState({
+                  nationality,
+                  birthSubCountry: "",
+                  birthCity: ""
+                });
+              }
             }}
             changeOccupation={occupation => this.setState({ occupation })}
             changeSocialStatus={socialStatus => this.setState({ socialStatus })}

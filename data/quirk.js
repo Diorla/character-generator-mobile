@@ -93,7 +93,9 @@ const quirks = {
     "Doesn't like rural life",
     "Has no sense of joke",
     "Has very odd sense of joke",
-    "Very superstitious"
+    "Very superstitious",
+    "Can see patterns",
+    "Has synesthesia"
   ]
 };
 

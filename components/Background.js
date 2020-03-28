@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Text, View } from "react-native";
-import {
-  Card,
-  Colors,
-  Button,
-} from "react-native-paper";
+import { Card, Colors, Button } from "react-native-paper";
 import MyPicker from "./MyPicker";
-import  socialStatus  from "./../data/socialStatus";
+import socialStatus from "./../data/socialStatus";
 import Input from "./Input";
+import MyText from "./MyText";
+import sortedCountry from "./../data/nationality";
 
 const Background = props => {
   const [display, setDisplay] = useState(false);
@@ -17,6 +15,10 @@ const Background = props => {
     changeFamilyEconomicStatus,
     hometown,
     changeHometown,
+    hometownCountry,
+    changeHometownCountry,
+    hometownSubcountry,
+    changeHometownSubcountry,
     childhood,
     changeChildhood,
     educationHistory,
@@ -58,7 +60,7 @@ const Background = props => {
     secret,
     changeSecret,
     phobia,
-    changePhobia,
+    changePhobia
   } = props;
 
   const mode = display ? "contained" : "text";
@@ -81,13 +83,38 @@ const Background = props => {
             onValueChange={changeFamilyEconomicStatus}
             help="When generated, it has high correlation with the character's social status."
           />
-          <Input
-            label="Hometown"
-            value={hometown}
-            onChangeText={changeHometown}
-            style={{ width: "100%" }}
-            help="Where the character grew up. When generated, there is a high chance that it will be in the same city as place of birth."
-          />
+          <View
+            style={{
+              backgroundColor: Colors.grey300,
+              borderBottomColor: Colors.grey500,
+              borderBottomWidth: 1,
+              padding: 4
+            }}
+          >
+            <MyText type="strong">Hometown</MyText>
+            <MyPicker
+              label="Country"
+              data={sortedCountry()}
+              selectedValue={hometownCountry}
+              onValueChange={changeHometownCountry}
+              help="This is where the character grew up or spent most of their childhood. It may have an effect on things like accents, mannerisms, beliefs etc."
+            />
+            <Input
+              label="Subcountry"
+              value={hometownSubcountry}
+              onChangeText={changeHometownSubcountry}
+              style={{ width: "100%" }}
+              multiline
+              help="These are adminstrative regions or zones in a country like a state, province, governorate, district etc. Different country uses different terms to divide their country. Note, this assumes that the country of birth is the character's nationality."
+            />
+            <Input
+              label="City"
+              value={hometown}
+              onChangeText={changeHometown}
+              style={{ width: "100%" }}
+              help="This is the name of a city or town"
+            />
+          </View>
           <Input
             label="Childhood"
             value={childhood}

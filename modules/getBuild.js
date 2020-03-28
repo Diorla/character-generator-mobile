@@ -131,7 +131,7 @@ const getBuild = (age, gender) => {
     weightType,
     heightType,
     weight: age < 13 ? "" : calculateWeight(weightType, mHeight),
-    height: age < 13 ? "" : mHeight,
+    heightCm: age < 13 ? "" : mHeight,
     shoulderSize: getShoulderSize(weightType, gender),
     breastSize: gender=="Female" ? getBreastSize(weightType): "Normal",
     buttock: getButtock(weightType),

@@ -32,4 +32,26 @@ TODO: Consolidate data and modules into one
     height.js
 ```
 
-TODO: Sort country by immigration too. This will be used to determine resident country for those who are not living in their homeland.
+TODO: Place "Name, gender, age" at the top of the app
+TODO: Correct an erro: Mannerism->Likes->Help->spelling error
+TODO: Combine annoying[] and boring[] into likes[]
+```js
+const trimmedAnnoying = annoying.remove(annoyingThings);
+const boringStuff = borring.remove(boringThings)
+
+const likes = [...trimmedAnnoying, ...boringStuff]
+
+const like = oddCalculator(likes);
+```
+TODO: Rewrite annoying and boring
+- I will have three array
+  - boring[]
+  - annoying[]
+  - both[]: something that falls into the two category
+- Now I will use a function that merge and select from them
+```js
+const annoyingList = [...both, ...annoying];
+fetchAnnoy(annoyingList) //annoying1 annoying2
+const boringList = [...both, ...boring]
+// Fetch boring list from it too.
+```

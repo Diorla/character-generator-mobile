@@ -1,12 +1,24 @@
 import * as cities from "./../data/myCity.json";
 import oddCalculator from "./oddCalculator";
-import getNationality from "./getNationality";
+import * as migrateCountry from "./../data/migration.json";
+
+const getACountry = () => {
+  const data = migrateCountry.default;
+  const keys = Object.keys(data);
+  const v = Object.values(data);
+  const values = [];
+  for (i of v) {
+    const ni = i / 10;
+    values.push(2 ** ni);
+  }
+  return oddCalculator(keys, values);
+};
 
 export default (maintain, country, subcountry, city) => {
   let result;
-  if(maintain==="country") result = getLocation(country);
-  else if(maintain==="subcountry") result = getLocation(country, subcountry);
-  else if(maintain==="city") result = getLocation(country, subcountry, city);
+  if (maintain === "country") result = getLocation(country);
+  else if (maintain === "subcountry") result = getLocation(country, subcountry);
+  else if (maintain === "city") result = getLocation(country, subcountry, city);
   else result = getOdds(country, subcountry, city);
   return result;
 };
@@ -63,6 +75,6 @@ const generateSubcountry = country => {
 };
 
 const generateCountry = () => {
-  const country = getNationality();
+  const country = getACountry();
   return generateSubcountry(country);
 };
