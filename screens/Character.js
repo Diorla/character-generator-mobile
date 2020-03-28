@@ -453,6 +453,8 @@ class Character extends React.Component {
       regret: "",
       secret: "",
       irritability: "",
+      skinTone: "",
+      resolution: "",
       relationship: []
     });
   };

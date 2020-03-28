@@ -23,6 +23,7 @@ const getFemaleName = (country, gender) => {
 };
 
 const getNames = (country, gender) => {
+  console.log("getNames", country, gender);
   const anglophone = [
     "Ireland",
     "United Kingdom",
