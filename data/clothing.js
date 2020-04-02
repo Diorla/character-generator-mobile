@@ -32,7 +32,7 @@ const outfit = {
     desc:
       "Ethnic wears e.g. Afghan coats, Japanese Kimonos or West African Buba",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "Male",
       social: "",
       education: "",
@@ -43,7 +43,7 @@ const outfit = {
     desc:
       "Dark coloured suits, Dress pants, Collared shirts, Jackets, Black or brown loafers/oxford and Tie",
     demo: {
-      age: [18, 100],
+      age: [18, 125],
       gender: "Male",
       social: "",
       education: "",
@@ -54,7 +54,7 @@ const outfit = {
     desc:
       "Blouse or Shirt with Pullover sweater or jacket, Dress Skirt or Slacks, Close-toe pumps, Flats, Pantsuit with Stocking or Pantyhose",
     demo: {
-      age: [18, 100],
+      age: [18, 125],
       gender: "Female",
       social: "",
       education: "",
@@ -66,7 +66,7 @@ const outfit = {
     desc:
       "Bright coloured/patterned shirts and ties, sports coats and jackets, dressy slacks with loafers or monk-strapped shoes. Short-sleeved tutton down shirts with sweaters, dress slacks and tie-up or dark letter shoes, or loafers. May wear dark jeans with blazers.",
     demo: {
-      age: [15, 100],
+      age: [15, 125],
       gender: "Male",
       social: "Lower middle class",
       education: "Diploma/Associate degrees",
@@ -77,7 +77,7 @@ const outfit = {
     desc:
       "Blouses, sleeveless shirts, turtle neck or dress with decent neckline. Pencil-cut or knee-length skirts or dress pants. Stilettos, open-toed or closed kitten hills or pumps with fashionable jackets",
     demo: {
-      age: [15, 100],
+      age: [15, 125],
       gender: "Female",
       social: "Lower middle class",
       education: "Diploma/Associate degrees",
@@ -110,7 +110,7 @@ const outfit = {
     desc:
       "Skirts, Dresses, Blouses with Cute details like bows, laces or ruffles with sandals, slippers or comfortable shoes.",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "Female",
       social: "",
       education: "",
@@ -210,7 +210,7 @@ const outfit = {
     desc:
       "Chino or Khaki trousers. Polo shirts or button-down oxfords. Henley shirts paired with sports jackets or crew neck sweaters",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "Male",
       social: "",
       education: "Junior secondary/Middle school",
@@ -221,7 +221,7 @@ const outfit = {
     desc:
       "Chino or Khaki trousers with polo shirts or button-down oxfords. Henley shirts paired with sports jackets, crew neck sweaters and plaid short skirts",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "Female",
       social: "",
       education: "Junior secondary/Middle school",
@@ -231,7 +231,7 @@ const outfit = {
   Cowboy: {
     desc: "Button down shirt, cow boy boots, wide brimmed hats and jeans",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "Male",
       social: "",
       education: "Diploma/Associate degrees",
@@ -242,7 +242,7 @@ const outfit = {
     desc:
       "Button down shirt, cow boy boots, wide brimmed hats and denim skirts",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "Female",
       social: "",
       education: "Diploma/Associate degrees",
@@ -253,7 +253,7 @@ const outfit = {
     desc:
       "Graphic tees, simple sundress, comfortable skirts, shorts or trousers and flat footwear",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "",
       social: "",
       education: "",
@@ -264,7 +264,7 @@ const outfit = {
     desc:
       "Blouse or embellished scoo neck t-shirt with tailored slacks, pair of jeans, leather jackets and ballet flats.",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "Female",
       social: "",
       education: "",
@@ -317,7 +317,7 @@ const outfit = {
     desc:
       "Loose-fit blouse and jeans, leather or tailored jackets with shiny loafers or pumps.",
     demo: {
-      age: [0, 100],
+      age: [0, 125],
       gender: "Female",
       social: "",
       education: "",
@@ -328,7 +328,7 @@ const outfit = {
     desc:
       "Bright and bold coloured clothes with exaggerated print and unusual outline with handcrafted accessories, handmade fabrics and sandals, slippers or flats.",
     demo: {
-      age: [12, 100],
+      age: [12, 125],
       gender: "Female",
       social: "",
       education: "",
