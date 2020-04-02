@@ -519,26 +519,6 @@ class Character extends React.Component {
                 });
               }
             }}
-            changeHometown={hometown => this.setState({ hometown })}
-            changeHometownSubcountry={hometownSubcountry =>
-              this.setState({ hometownSubcountry })
-            }
-            changeHometownCountry={hometownCountry => {
-              if (hometownCountry) {
-                const home = getLocation("country", hometownCountry);
-                this.setState({
-                  hometownCountry: home.country,
-                  hometownSubcountry: home.subcountry,
-                  hometown: home.city
-                });
-              } else {
-                this.setState({
-                  residentCountry,
-                  residentCity: "",
-                  residentSubcountry: ""
-                });
-              }
-            }}
             changeEducation={education => this.setState({ education })}
             changeGender={gender => this.setState({ gender })}
             changeIncome={income => this.setState({ income })}
@@ -671,7 +651,26 @@ class Character extends React.Component {
             changeRoleModel={roleModel => this.setState({ roleModel })}
             changeRegret={regret => this.setState({ regret })}
             changeSecret={secret => this.setState({ secret })}
-            changePhobia={phobia => this.setState({ phobia })}
+            changePhobia={phobia => this.setState({ phobia })}changeHometown={hometown => this.setState({ hometown })}
+            changeHometownSubcountry={hometownSubcountry =>
+              this.setState({ hometownSubcountry })
+            }
+            changeHometownCountry={hometownCountry => {
+              if (hometownCountry) {
+                const home = getLocation("country", hometownCountry);
+                this.setState({
+                  hometownCountry: home.country,
+                  hometownSubcountry: home.subcountry,
+                  hometown: home.city
+                });
+              } else {
+                this.setState({
+                  residentCountry,
+                  residentCity: "",
+                  residentSubcountry: ""
+                });
+              }
+            }}
             {...this.state}
           />
           <Divider
