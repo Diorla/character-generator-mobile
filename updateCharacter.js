@@ -111,7 +111,12 @@ export default async state => {
       childhoodResidence = getResidence("country", state.hometownCountry);
     }
   } else {
-    childhoodResidence = getResidence("none", nationality, birthSubCountry, birthCity);
+    childhoodResidence = getResidence(
+      "none",
+      nationality,
+      birthSubCountry,
+      birthCity
+    );
   }
 
   const hometown = childhoodResidence.city;
@@ -188,6 +193,7 @@ export default async state => {
   const annoyingStuff = state.annoyingStuff || view.annoyingStuff;
   const boringStuff = state.boringStuff || view.boringStuff;
   const dislikes = state.dislikes || view.dislikes;
+  const likes = state.likes || view.likedStuff;
   const cursweWord = state.curseWord || getCurseWord();
   const traitList = getTrait();
   const health = state.health || print(getHealth(Number(age), gender), ", ");
@@ -321,6 +327,7 @@ export default async state => {
     outfit,
     groupDynamic,
     dependent,
+    likes,
     ...generatedTraits
   };
 };
