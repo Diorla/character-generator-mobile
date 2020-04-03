@@ -201,7 +201,7 @@ const Habit = props => {
             onChangeText={changeAnnoyingStuff}
             style={{ width: "100%" }}
             multiline
-            help="This are things that most people wouldn't find annoying or can tolerate."
+            help="These are things that bothers the character a lot especially what most people wouldn't find annoying or can tolerate. This may be a no-no in a relationship."
           />
           <Input
             label="More"
