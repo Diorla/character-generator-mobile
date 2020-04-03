@@ -206,7 +206,7 @@ export default async state => {
     generatedTraits[k] = v;
   }
   generatedTraits["truthfulness"] =
-    state.morality || getMorality(generatedTraits["morality"]);
+    state.truthfulness || getMorality(generatedTraits["morality"]);
   const pastime = getPastime(state.sociability || generatedTraits.sociability);
   const hobby = state.hobby || print(pastime.hobby, ", ", " and ");
   const favouriteActivity =
