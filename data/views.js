@@ -1,7 +1,5 @@
 const view = {
   annoying: [
-    // This includes what others may not consider annoying or may simply ignore
-    // This may be a no-no in relationship or get angry when someone does it.
     "24 hour news",
     "Celebrity gossip",
     "Certain celebrity",
@@ -29,7 +27,6 @@ const view = {
     "Spitting in public",
     "Burping in public",
     "Ads",
-    "Eating with mouth open",
     "False modesty",
     "Losing(sore loser)",
     "Talking with food in ones mouth"
@@ -45,7 +42,30 @@ const view = {
     "Science",
     "Chatting",
     "Politics"
-  ]
+  ],
+  likes: [
+    "Old movies",
+    "Reading",
+    "Social gathering",
+    "Certain movie",
+    "Arts",
+    "Science",
+    "Chatting",
+    "Politics",
+    "24 hour news",
+    "Celebrity gossip",
+    "Certain celebrity",
+    "Children",
+    "Politics",
+    "Certain politician",
+    "Telemarketers",
+    "Movies",
+    "Certain movie",
+    "TV show",
+    "Certain tv show",
+    "Reality tv",
+    "Pets",
+  ],
 };
 
 export default view;
