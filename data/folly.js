@@ -1,5 +1,3 @@
-// These are stuff that are not good for your health(wellbeing, financial, personal success etc)
-// Bad habit
 const folly = {
   main: [
     "Too much coffee.",
@@ -31,7 +29,8 @@ const folly = {
     "Always misses appointment.",
     "Always late.",
     "Gossips a lot.",
-    "Has gambling problem."
+    "Has gambling problem.",
+    "Talks a lot.",
   ]
 };
 
