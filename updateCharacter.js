@@ -43,7 +43,7 @@ import getResidence from "./modules/getResidence";
 
 export default async state => {
   const gender = state.gender || generateGender();
-  const ageRange = oddCalculator([15, 65, 100], [26.3, 65.9, 7.9]);
+  const ageRange = oddCalculator([15, 65, 100], [7.9, 65.9, 26.3]);
   let age = state.age;
   if (ageRange === 15) {
     age = age || String(Math.floor(Math.random() * 15));
