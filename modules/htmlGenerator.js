@@ -1,8 +1,7 @@
-// TODO: Update the printed document
 const line = (title, content) => {
   if (content == "N/A") return "";
   else if (content) {
-    return `<li><b>${title}</b>: ${content}</li>`;
+    return `<li><b>${title}</b>: ${content}.</li>`;
   }
   return "";
 };
@@ -14,9 +13,15 @@ const htmlGenerator = obj => {
   htmlString += `${line("Age", obj.age)}`;
   htmlString += `${line("Gender", obj.gender)}`;
   htmlString += `${line("Blood group", obj.bloodGroup)}`;
-  htmlString += `${line("Place of birth", obj.birthPlace)}`;
-  htmlString += `${line("Current location", obj.currentLocation)}`;
+  htmlString += `${line(
+    "Place of birth",
+    `${obj.birthCity}, ${obj.birthSubCountry}`
+  )}`;
   htmlString += `${line("Nationality", obj.nationality)}`;
+  htmlString += `${line(
+    "Current location",
+    `${obj.residentCity}, ${obj.residentSubcountry}, ${obj.residentCountry}`
+  )}`;
   htmlString += `${line("Education", obj.education)}`;
   htmlString += `${line("Occupation", obj.occupation)}`;
   htmlString += `${line("Income", obj.income)}`;
@@ -31,7 +36,6 @@ const htmlGenerator = obj => {
   htmlString += `${line("Skin tone", obj.skinTone)}`;
   htmlString += `${line("Face", obj.face)}`;
   htmlString += `${line("Hair", obj.hair)}`;
-  //htmlString += `${line("Others", obj.skinTone)}`;
   htmlString += `${line("Eyes", obj.eye)}`;
   htmlString += `${line(
     "Distinguishing features",
@@ -69,7 +73,10 @@ const htmlGenerator = obj => {
   htmlString += "<h2>Background</h2>";
   htmlString += "<div><ul>";
   htmlString += `${line("Family economic status", obj.familyEconomicStatus)}`;
-  htmlString += `${line("Hometown", obj.hometown)}`;
+  htmlString += `${line(
+    "Hometown",
+    `${obj.hometown}, ${obj.hometownSubcountry}, ${obj.hometownCountry}`
+  )}`;
   htmlString += `${line("Childhood", obj.childhood)}`;
   htmlString += `${line("Favourite activity", obj.favouriteActivity)}`;
   htmlString += `${line("Phobias", obj.phobia)}`;
