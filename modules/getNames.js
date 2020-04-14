@@ -20,12 +20,14 @@ const getFullName = (country, gender) => {
     cntryF = "pacificIslands";
   //80% Greek, 20% Turkish
   else if (country === "Cyprus" && gender === "Female") cntryF = "Greece";
-  else if (country === "Nauru") cntryL = "pacificIslands";
+  else if (country === "Nauru" || country === "Marshall Islands")
+    cntryL = "pacificIslands";
   // Portuguese speaking country
   else if (country === "Guinea Bissau" && gender === "Female")
     cntryF = "Brazil";
   else if (country === "Eritrea" && gender === "Female") cntryF = "Ethiopia";
   else if (country === "East Timor") cntryL = "Brazil";
+  else if (country === "Bahamas") cntryF = "United States";
   const firstName =
     oddCalculator(names[cntryF][gender]) ||
     oddCalculator(names.Nigeria[gender]);
@@ -49,22 +51,6 @@ const getFemaleName = (country, gender) => {
 
 const getNames = (country, gender) => {
   console.log("getNames", country, gender);
-  const anglophone = [
-    "Ireland",
-    "United Kingdom",
-    "United States",
-    "Australia",
-    "Canada",
-    "New Zealand",
-    "Antigua and Barbuda",
-    "Bahamas",
-    "Barbados",
-    "Belize",
-    "Grenada",
-    "Guyana",
-    "Malta",
-    "Marshall Islands"
-  ];
   const hispanic = [
     "Chile",
     "Guatemala",
@@ -145,7 +131,6 @@ const getNames = (country, gender) => {
     if (gender == "Male") return getMaleName(country, gender);
     else return getFemaleName(country, gender);
   }
-  if (anglophone.includes(country)) return getFullName("United States", gender);
   if (malay.includes(country)) return getFullName("Malaysia", gender);
   if (german.includes(country)) return getFullName("Germany", gender);
   if (norse.includes(country)) return getFullName("Sweden", gender);
