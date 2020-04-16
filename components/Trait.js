@@ -292,7 +292,7 @@ const Trait = props => {
               padding: 4
             }}
           >
-            <Text>Naivety</Text>
+            <Text>Naiveté</Text>
             <Picker
               selectedValue={naivety}
               style={{ height: 50, width: "100%" }}
