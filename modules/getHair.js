@@ -1,9 +1,6 @@
-import hair from './../data/hair';
-import skinTone from './../data/skinTone';
-//{ hair, skinTone }
-import oddCalculator from './oddCalculator';
-
-// hair type, colour, size, style
+import hair from "./../data/hair";
+import skinTone from "./../data/skinTone";
+import oddCalculator from "./oddCalculator";
 
 const hairType = skinColour => {
   const { type, darkType, lightType } = hair;
@@ -23,9 +20,7 @@ const hairColour = skinColour => {
 
 const hairSize = (gender, age) => {
   const { size, menSize, femaleSize } = hair;
-  if (gender == 'Male') {
-    // I should increase it to like 30
-    // Since the chances of balding is still low at 19 yrs
+  if (gender == "Male") {
     if (age >= 19) return oddCalculator(size, menSize);
   }
   return oddCalculator(size, femaleSize);
@@ -35,6 +30,6 @@ export default (skinColour, gender, age) => {
   return {
     hairColour: hairColour(skinColour),
     hairSize: hairSize(gender, age),
-    hairType: hairType(skinColour),
+    hairType: hairType(skinColour)
   };
 };
