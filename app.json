@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "Character generator",
-    "slug": "characters",
+    "name": "Scribble",
+    "slug": "Scribble",
     "privacy": "unlisted",
-    "sdkVersion": "35.0.0",
     "platforms": [
-      "android"
+      "ios",
+      "android",
+      "web"
     ],
-    "version": "3.0.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -21,8 +22,11 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "ios": {
+      "supportsTablet": true
+    },
     "android": {
-      "package": "com.emboss.character_generator",
+      "package": "com.emboss.scribble",
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-8409252119990664~5105004716"
       }
