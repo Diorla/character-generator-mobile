@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./MyText.styles";
 import { Text, View } from "react-native";
 
-const MyText = props => {
+const MyText = (props) => {
   const { type, children } = props;
   if (type == "h1")
     return (
@@ -44,7 +44,6 @@ const MyText = props => {
         <Text>🔘 {children}</Text>
       </View>
     );
-  else if (type == "icons") return <Text>♦♦🔶🔶🔹🔹🔸🔸⚫🔴🔘◻▪◼🔳🔲⬛</Text>;
   else if (type == "em") return <Text style={styles.em}>{children}</Text>;
   else return <Text>{children}</Text>;
 };
@@ -55,18 +54,17 @@ MyText.propTypes = {
     "h2",
     "h3",
     "h4",
-    "",
+    undefined,
     "strong",
     "ul",
     "li",
-    "icons",
     "em",
-    "quote"
-  ])
+    "quote",
+  ]),
 };
 
 MyText.defaultProps = {
-  type: ""
+  type: "",
 };
 
 export default MyText;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { View, Animated } from "react-native";
-//import { Test } from './UpTick.styles';
 import { Colors } from 'react-native-paper';
 import { IconButton } from 'react-native-paper';
 

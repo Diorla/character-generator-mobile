@@ -2,7 +2,6 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { TextInput, IconButton, Colors } from "react-native-paper";
 import { View, Alert } from "react-native";
-//import { Test } from './Input.styles';
 
 class Input extends PureComponent {
   

@@ -2,7 +2,6 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { IconButton, Colors } from "react-native-paper";
 import { Text, Picker, View, Alert } from "react-native";
-//import { Test } from './Input.styles';
 
 class MyPicker extends PureComponent {
   openHelp = () => {
