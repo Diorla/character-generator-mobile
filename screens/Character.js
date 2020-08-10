@@ -7,7 +7,7 @@ import {
   Alert,
   ToastAndroid,
   AppState,
-  Modal
+  Modal,
 } from "react-native";
 import {
   Divider,
@@ -15,13 +15,9 @@ import {
   Button,
   TouchableRipple,
   IconButton,
-  Chip
+  Chip,
 } from "react-native-paper";
-import {
-  styles,
-  htmlGenerator,
-  manageData,
-} from "./../modules";
+import { styles, htmlGenerator, manageData } from "./../modules";
 
 import {
   Background,
@@ -33,7 +29,7 @@ import {
   Physical,
   Relationship,
   Story,
-  Trait
+  Trait,
 } from "./../components";
 import * as Print from "expo-print";
 import getMorality from "../modules/getMorality";
@@ -166,15 +162,15 @@ class Character extends React.Component {
     relationship: [],
     educationHistory: "",
     modalVisible: false,
-    bloodGroup: ""
+    bloodGroup: "",
   };
 
-  loadCharacter = id => {
+  loadCharacter = (id) => {
     Promise.resolve(manageData.retrieveData("character"))
-      .then(value => {
+      .then((value) => {
         this.setState({
           ...value[id],
-          allData: value
+          allData: value,
         });
       })
       .then(() => this.feedback(`${this.state.name} is loaded`));
@@ -192,9 +188,9 @@ class Character extends React.Component {
       "⚠ Are you sure you want to delete character?",
       () => {
         Promise.resolve(manageData.deleteData("character", allData, id))
-          .then(value => {
+          .then((value) => {
             this.setState({
-              allData: value
+              allData: value,
             });
           })
           .then(() => this.feedback(`${this.state.name} is deleted`))
@@ -202,14 +198,14 @@ class Character extends React.Component {
           .then(() => {
             this.reset(),
               this.setState({
-                name: ""
+                name: "",
               });
           });
       }
     );
   };
 
-  feedback = message => {
+  feedback = (message) => {
     ToastAndroid.showWithGravity(
       message,
       ToastAndroid.SHORT,
@@ -220,7 +216,7 @@ class Character extends React.Component {
   newCharacter = () => {
     this.setState({
       id: "a" + Math.floor(Math.random() * Date.now()) + "#" + Date.now(),
-      name: ""
+      name: "",
     });
     //Ask if user wants to save current data
     //If yes, save, if no, do nothing then
@@ -230,7 +226,7 @@ class Character extends React.Component {
 
   removeFrills = () => {
     const myObj = {
-      ...this.state
+      ...this.state,
     };
     delete myObj.allData;
     delete myObj.modalVisible;
@@ -249,14 +245,14 @@ class Character extends React.Component {
     }
 
     const basic = {
-      ...this.removeFrills()
+      ...this.removeFrills(),
     };
 
     allData[id] = basic;
     Promise.resolve(manageData.addData("character", allData))
-      .then(value => {
+      .then((value) => {
         this.setState({
-          allData: value
+          allData: value,
         });
       })
       .then(() => this.feedback(message));
@@ -269,22 +265,22 @@ class Character extends React.Component {
         source={require("./../assets/icons/basic.png")}
         style={[styles.icon, { tintColor: tintColor }]}
       />
-    )
+    ),
   };
 
   _handleAppStateChange(nextAppState) {
     console.log(AppState.currentState);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     Promise.resolve(manageData.retrieveData("character"))
-      .then(value => {
+      .then((value) => {
         this.setState({
           allData: value,
-          id: "a" + Math.floor(Math.random() * Date.now()) + "#" + Date.now()
+          id: "a" + Math.floor(Math.random() * Date.now()) + "#" + Date.now(),
         });
       })
-      .then(value =>
+      .then((value) =>
         AppState.addEventListener("change", this._handleAppStateChange)
       );
   }
@@ -295,12 +291,12 @@ class Character extends React.Component {
 
   randomise = () => {
     Promise.resolve(updateCharacter(this.state))
-      .then(value =>
+      .then((value) =>
         this.setState({
-          ...value
+          ...value,
         })
       )
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
 
     this.feedback("Certain attributes generated");
   };
@@ -309,7 +305,7 @@ class Character extends React.Component {
     if (!this.state.name) this.feedback("Please enter name");
     else {
       const options = {
-        html: htmlGenerator(this.state)
+        html: htmlGenerator(this.state),
       };
       Print.printAsync(options);
     }
@@ -319,9 +315,9 @@ class Character extends React.Component {
     Alert.alert(header, message, [
       {
         text: "❌ Cancel",
-        style: "cancel"
+        style: "cancel",
       },
-      { text: "✔ OK", onPress: () => fn() }
+      { text: "✔ OK", onPress: () => fn() },
     ]);
   };
 
@@ -455,7 +451,7 @@ class Character extends React.Component {
       irritability: "",
       skinTone: "",
       resolution: "",
-      relationship: []
+      relationship: [],
     });
   };
 
@@ -487,120 +483,126 @@ class Character extends React.Component {
               backgroundColor: "teal",
               height: 0,
               marginBottom: 3,
-              marginTop: 3
+              marginTop: 3,
             }}
           />
           <Biodata
             {...this.state}
-            changeBirthday={birthday => this.setState({ birthday })}
-            changeName={name => this.setState({ name })}
-            changeAge={age => this.setState({ age })}
-            changeBirthCity={birthCity => this.setState({ birthCity })}
-            changebirthSubCountry={birthSubCountry =>
+            changeBirthday={(birthday) => this.setState({ birthday })}
+            changeName={(name) => this.setState({ name })}
+            changeAge={(age) => this.setState({ age })}
+            changeBirthCity={(birthCity) => this.setState({ birthCity })}
+            changebirthSubCountry={(birthSubCountry) =>
               this.setState({ birthSubCountry })
             }
-            changeResidentCity={residentCity => this.setState({ residentCity })}
-            changeResidentSubcountry={residentSubcountry =>
+            changeResidentCity={(residentCity) =>
+              this.setState({ residentCity })
+            }
+            changeResidentSubcountry={(residentSubcountry) =>
               this.setState({ residentSubcountry })
             }
-            changeResidentCountry={residentCountry => {
+            changeResidentCountry={(residentCountry) => {
               if (residentCountry) {
                 const residency = getLocation("country", residentCountry);
                 this.setState({
                   residentCountry: residency.country,
                   changeResidentSubcountry: residency.subcountry,
-                  changeResidentCity: residency.city
+                  changeResidentCity: residency.city,
                 });
               } else {
                 this.setState({
                   residentCountry,
                   residentCity: "",
-                  residentSubcountry: ""
+                  residentSubcountry: "",
                 });
               }
             }}
-            changeEducation={education => this.setState({ education })}
-            changeGender={gender => this.setState({ gender })}
-            changeIncome={income => this.setState({ income })}
-            changeMoreBiodata={moreBiodata => this.setState({ moreBiodata })}
-            changeNationality={nationality => {
+            changeEducation={(education) => this.setState({ education })}
+            changeGender={(gender) => this.setState({ gender })}
+            changeIncome={(income) => this.setState({ income })}
+            changeMoreBiodata={(moreBiodata) => this.setState({ moreBiodata })}
+            changeNationality={(nationality) => {
               if (nationality) {
                 const birthPlace = getLocation("country", nationality);
                 this.setState({
                   nationality: birthPlace.country,
                   birthSubCountry: birthPlace.subcountry,
-                  birthCity: birthPlace.city
+                  birthCity: birthPlace.city,
                 });
               } else {
                 this.setState({
                   nationality,
                   birthSubCountry: "",
-                  birthCity: ""
+                  birthCity: "",
                 });
               }
             }}
-            changeOccupation={occupation => this.setState({ occupation })}
-            changeSocialStatus={socialStatus => this.setState({ socialStatus })}
-            changeBloodGroup={bloodGroup => this.setState({ bloodGroup })}
+            changeOccupation={(occupation) => this.setState({ occupation })}
+            changeSocialStatus={(socialStatus) =>
+              this.setState({ socialStatus })
+            }
+            changeBloodGroup={(bloodGroup) => this.setState({ bloodGroup })}
           />
           <Divider
             style={{
               backgroundColor: "teal",
               height: 0,
               marginBottom: 3,
-              marginTop: 3
+              marginTop: 3,
             }}
           />
           <Physical
             {...this.state}
             distinguishingFeatures={this.state.distinguishingFeatures}
-            changeSkinTone={skinTone => this.setState({ skinTone })}
-            changeHeight={height => this.setState({ height })}
-            changeBuild={build => this.setState({ build })}
-            changeFace={face => this.setState({ face })}
-            changeHair={hair => this.setState({ hair })}
-            changeEye={eye => this.setState({ eye })}
-            changeDistinguishingFeatures={distinguishingFeatures =>
+            changeSkinTone={(skinTone) => this.setState({ skinTone })}
+            changeHeight={(height) => this.setState({ height })}
+            changeBuild={(build) => this.setState({ build })}
+            changeFace={(face) => this.setState({ face })}
+            changeHair={(hair) => this.setState({ hair })}
+            changeEye={(eye) => this.setState({ eye })}
+            changeDistinguishingFeatures={(distinguishingFeatures) =>
               this.setState({ distinguishingFeatures })
             }
-            changeOutfit={outfit => this.setState({ outfit })}
-            changeAccessories={accessories => this.setState({ accessories })}
-            changeGrooming={grooming => this.setState({ grooming })}
-            changeHealth={health => this.setState({ health })}
-            changeHandwriting={handwriting => this.setState({ handwriting })}
-            changeGait={gait => this.setState({ gait })}
-            changePosture={posture => this.setState({ posture })}
-            changeMorePhysical={morePhysical => this.setState({ morePhysical })}
+            changeOutfit={(outfit) => this.setState({ outfit })}
+            changeAccessories={(accessories) => this.setState({ accessories })}
+            changeGrooming={(grooming) => this.setState({ grooming })}
+            changeHealth={(health) => this.setState({ health })}
+            changeHandwriting={(handwriting) => this.setState({ handwriting })}
+            changeGait={(gait) => this.setState({ gait })}
+            changePosture={(posture) => this.setState({ posture })}
+            changeMorePhysical={(morePhysical) =>
+              this.setState({ morePhysical })
+            }
           />
           <Divider
             style={{
               backgroundColor: "teal",
               height: 0,
               marginBottom: 3,
-              marginTop: 3
+              marginTop: 3,
             }}
           />
           <Story
-            changeRole={role => this.setState({ role })}
-            changeGoal={goal => this.setState({ goal })}
-            changeMotivation={motivation => this.setState({ motivation })}
-            changeArc={arc => this.setState({ arc })}
-            changeType={type => this.setState({ type })}
-            changeBackStory={backStory => this.setState({ backStory })}
-            changeThreeDescriptionWords={threeDescriptionWords =>
+            changeRole={(role) => this.setState({ role })}
+            changeGoal={(goal) => this.setState({ goal })}
+            changeMotivation={(motivation) => this.setState({ motivation })}
+            changeArc={(arc) => this.setState({ arc })}
+            changeType={(type) => this.setState({ type })}
+            changeBackStory={(backStory) => this.setState({ backStory })}
+            changeThreeDescriptionWords={(threeDescriptionWords) =>
               this.setState({ threeDescriptionWords })
             }
-            changeLie={lie => this.setState({ lie })}
-            changeTruth={truth => this.setState({ truth })}
-            changeInternalConflict={internalConflict =>
+            changeLie={(lie) => this.setState({ lie })}
+            changeTruth={(truth) => this.setState({ truth })}
+            changeInternalConflict={(internalConflict) =>
               this.setState({ internalConflict })
             }
-            changeExternalConflict={externalConflict =>
+            changeExternalConflict={(externalConflict) =>
               this.setState({ externalConflict })
             }
-            changeStrength={strength => this.setState({ strength })}
-            changeFlaw={flaw => this.setState({ flaw })}
-            changeStory={story => this.setState({ story })}
+            changeStrength={(strength) => this.setState({ strength })}
+            changeFlaw={(flaw) => this.setState({ flaw })}
+            changeStory={(story) => this.setState({ story })}
             {...this.state}
           />
           <Divider
@@ -608,66 +610,71 @@ class Character extends React.Component {
               backgroundColor: "teal",
               height: 0,
               marginBottom: 3,
-              marginTop: 3
+              marginTop: 3,
             }}
           />
           <Background
-            changeFamilyEconomicStatus={familyEconomicStatus =>
+            changeFamilyEconomicStatus={(familyEconomicStatus) =>
               this.setState({ familyEconomicStatus })
             }
-            changeChildhood={childhood => this.setState({ childhood })}
-            changeEducationHistory={educationHistory =>
+            changeChildhood={(childhood) => this.setState({ childhood })}
+            changeEducationHistory={(educationHistory) =>
               this.setState({ educationHistory })
             }
-            changeSchoolClub={schoolClub => this.setState({ schoolClub })}
-            changeFavouriteActivity={favouriteActivity =>
+            changeSchoolClub={(schoolClub) => this.setState({ schoolClub })}
+            changeFavouriteActivity={(favouriteActivity) =>
               this.setState({ favouriteActivity })
             }
-            changeJobHistory={jobHistory => this.setState({ jobHistory })}
-            changeFavouritePlace={favouritePlace =>
+            changeJobHistory={(jobHistory) => this.setState({ jobHistory })}
+            changeFavouritePlace={(favouritePlace) =>
               this.setState({ favouritePlace })
             }
-            changeWhatThing={whatThing => this.setState({ whatThing })}
-            changeWhyThatThing={whyThatThing => this.setState({ whyThatThing })}
-            changeTurningPoint={turningPoint => this.setState({ turningPoint })}
-            changeEarliestMemory={earliestMemory =>
+            changeWhatThing={(whatThing) => this.setState({ whatThing })}
+            changeWhyThatThing={(whyThatThing) =>
+              this.setState({ whyThatThing })
+            }
+            changeTurningPoint={(turningPoint) =>
+              this.setState({ turningPoint })
+            }
+            changeEarliestMemory={(earliestMemory) =>
               this.setState({ earliestMemory })
             }
-            changeSaddestMemory={saddestMemory =>
+            changeSaddestMemory={(saddestMemory) =>
               this.setState({ saddestMemory })
             }
-            changeHappiestMemory={happiestMemory =>
+            changeHappiestMemory={(happiestMemory) =>
               this.setState({ happiestMemory })
             }
-            changeClearestMemory={clearestMemory =>
+            changeClearestMemory={(clearestMemory) =>
               this.setState({ clearestMemory })
             }
-            changeCriminalRecord={criminalRecord =>
+            changeCriminalRecord={(criminalRecord) =>
               this.setState({ criminalRecord })
             }
-            changeBackground={background => this.setState({ background })}
-            changeDreamJob={dreamJob => this.setState({ dreamJob })}
-            changeFavObject={favObject => this.setState({ favObject })}
-            changeRoleModel={roleModel => this.setState({ roleModel })}
-            changeRegret={regret => this.setState({ regret })}
-            changeSecret={secret => this.setState({ secret })}
-            changePhobia={phobia => this.setState({ phobia })}changeHometown={hometown => this.setState({ hometown })}
-            changeHometownSubcountry={hometownSubcountry =>
+            changeBackground={(background) => this.setState({ background })}
+            changeDreamJob={(dreamJob) => this.setState({ dreamJob })}
+            changeFavObject={(favObject) => this.setState({ favObject })}
+            changeRoleModel={(roleModel) => this.setState({ roleModel })}
+            changeRegret={(regret) => this.setState({ regret })}
+            changeSecret={(secret) => this.setState({ secret })}
+            changePhobia={(phobia) => this.setState({ phobia })}
+            changeHometown={(hometown) => this.setState({ hometown })}
+            changeHometownSubcountry={(hometownSubcountry) =>
               this.setState({ hometownSubcountry })
             }
-            changeHometownCountry={hometownCountry => {
+            changeHometownCountry={(hometownCountry) => {
               if (hometownCountry) {
                 const home = getLocation("country", hometownCountry);
                 this.setState({
                   hometownCountry: home.country,
                   hometownSubcountry: home.subcountry,
-                  hometown: home.city
+                  hometown: home.city,
                 });
               } else {
                 this.setState({
                   residentCountry,
                   residentCity: "",
-                  residentSubcountry: ""
+                  residentSubcountry: "",
                 });
               }
             }}
@@ -678,33 +685,35 @@ class Character extends React.Component {
               backgroundColor: "teal",
               height: 0,
               marginBottom: 3,
-              marginTop: 3
+              marginTop: 3,
             }}
           />
           <Habit
-            changeTic={tic => this.setState({ tic })}
-            changeSpeechStyle={speechStyle => this.setState({ speechStyle })}
-            changeSpeechTempo={speechTempo => this.setState({ speechTempo })}
-            changeSpeechAccent={speechAccent => this.setState({ speechAccent })}
-            changeSpeechPitch={speechPitch => this.setState({ speechPitch })}
-            changeGesture={gesture => this.setState({ gesture })}
-            changeSpeechImpediment={speechImpediment =>
+            changeTic={(tic) => this.setState({ tic })}
+            changeSpeechStyle={(speechStyle) => this.setState({ speechStyle })}
+            changeSpeechTempo={(speechTempo) => this.setState({ speechTempo })}
+            changeSpeechAccent={(speechAccent) =>
+              this.setState({ speechAccent })
+            }
+            changeSpeechPitch={(speechPitch) => this.setState({ speechPitch })}
+            changeGesture={(gesture) => this.setState({ gesture })}
+            changeSpeechImpediment={(speechImpediment) =>
               this.setState({ speechImpediment })
             }
-            changeCurseWord={curseWord => this.setState({ curseWord })}
-            changeCatchPhrase={catchPhrase => this.setState({ catchPhrase })}
-            changeLaughter={laughter => this.setState({ laughter })}
-            changeSmile={smile => this.setState({ smile })}
-            changeRestingFace={restingFace => this.setState({ restingFace })}
-            changeLikes={likes => this.setState({ likes })}
-            changeBoringStuff={boringStuff => this.setState({ boringStuff })}
-            changeFolly={folly => this.setState({ folly })}
-            changeAnnoyingStuff={annoyingStuff =>
+            changeCurseWord={(curseWord) => this.setState({ curseWord })}
+            changeCatchPhrase={(catchPhrase) => this.setState({ catchPhrase })}
+            changeLaughter={(laughter) => this.setState({ laughter })}
+            changeSmile={(smile) => this.setState({ smile })}
+            changeRestingFace={(restingFace) => this.setState({ restingFace })}
+            changeLikes={(likes) => this.setState({ likes })}
+            changeBoringStuff={(boringStuff) => this.setState({ boringStuff })}
+            changeFolly={(folly) => this.setState({ folly })}
+            changeAnnoyingStuff={(annoyingStuff) =>
               this.setState({ annoyingStuff })
             }
-            changeDisLikes={dislikes => this.setState({ dislikes })}
-            changeHobby={hobby => this.setState({ hobby })}
-            changeHabit={habit => this.setState({ habit })}
+            changeDisLikes={(dislikes) => this.setState({ dislikes })}
+            changeHobby={(hobby) => this.setState({ hobby })}
+            changeHabit={(habit) => this.setState({ habit })}
             {...this.state}
           />
           <Divider
@@ -712,7 +721,7 @@ class Character extends React.Component {
               backgroundColor: "teal",
               height: 0,
               marginBottom: 3,
-              marginTop: 3
+              marginTop: 3,
             }}
           />
           <Relationship
@@ -725,17 +734,17 @@ class Character extends React.Component {
                     name: "",
                     age: "",
                     type: "",
-                    description: ""
-                  }
-                ]
+                    description: "",
+                  },
+                ],
               })
             }
-            removeRelationship={index => {
+            removeRelationship={(index) => {
               this.setState({
                 relationship: [
                   ...this.state.relationship.slice(0, index),
-                  ...this.state.relationship.slice(index + 1)
-                ]
+                  ...this.state.relationship.slice(index + 1),
+                ],
               });
             }}
             changeName={(val, index) => {
@@ -745,8 +754,8 @@ class Character extends React.Component {
                 relationship: [
                   ...this.state.relationship.slice(0, index),
                   toChange,
-                  ...this.state.relationship.slice(index + 1)
-                ]
+                  ...this.state.relationship.slice(index + 1),
+                ],
               });
             }}
             changeAge={(val, index) => {
@@ -756,8 +765,8 @@ class Character extends React.Component {
                 relationship: [
                   ...this.state.relationship.slice(0, index),
                   toChange,
-                  ...this.state.relationship.slice(index + 1)
-                ]
+                  ...this.state.relationship.slice(index + 1),
+                ],
               });
             }}
             changeType={(val, index) => {
@@ -767,8 +776,8 @@ class Character extends React.Component {
                 relationship: [
                   ...this.state.relationship.slice(0, index),
                   toChange,
-                  ...this.state.relationship.slice(index + 1)
-                ]
+                  ...this.state.relationship.slice(index + 1),
+                ],
               });
             }}
             changeDescription={(val, index) => {
@@ -778,8 +787,8 @@ class Character extends React.Component {
                 relationship: [
                   ...this.state.relationship.slice(0, index),
                   toChange,
-                  ...this.state.relationship.slice(index + 1)
-                ]
+                  ...this.state.relationship.slice(index + 1),
+                ],
               });
             }}
           />
@@ -788,31 +797,35 @@ class Character extends React.Component {
               backgroundColor: "teal",
               height: 0,
               marginBottom: 3,
-              marginTop: 3
+              marginTop: 3,
             }}
           />
           <Perception
-            changeImmediateFamily={immediateFamily =>
+            changeImmediateFamily={(immediateFamily) =>
               this.setState({ immediateFamily })
             }
-            changeExtendedFamily={extendedFamily =>
+            changeExtendedFamily={(extendedFamily) =>
               this.setState({ extendedFamily })
             }
-            changeFriend={friend => this.setState({ friend })}
-            changeSelf={self => this.setState({ self })}
-            changePerception={perception => this.setState({ perception })}
-            changeAcquaintance={acquaintance => this.setState({ acquaintance })}
-            changeColleague={colleague => this.setState({ colleague })}
-            changeSubordinate={subordinate => this.setState({ subordinate })}
-            changeSuperior={superior => this.setState({ superior })}
-            changeAuthorityFigure={authorityFigure =>
+            changeFriend={(friend) => this.setState({ friend })}
+            changeSelf={(self) => this.setState({ self })}
+            changePerception={(perception) => this.setState({ perception })}
+            changeAcquaintance={(acquaintance) =>
+              this.setState({ acquaintance })
+            }
+            changeColleague={(colleague) => this.setState({ colleague })}
+            changeSubordinate={(subordinate) => this.setState({ subordinate })}
+            changeSuperior={(superior) => this.setState({ superior })}
+            changeAuthorityFigure={(authorityFigure) =>
               this.setState({ authorityFigure })
             }
-            changeConfidant={confidant => this.setState({ confidant })}
-            changeOppositeSex={oppositeSex => this.setState({ oppositeSex })}
-            changeGroupDynamic={groupDynamic => this.setState({ groupDynamic })}
-            changeDependent={dependent => this.setState({ dependent })}
-            changeAdversary={adversary => this.setState({ adversary })}
+            changeConfidant={(confidant) => this.setState({ confidant })}
+            changeOppositeSex={(oppositeSex) => this.setState({ oppositeSex })}
+            changeGroupDynamic={(groupDynamic) =>
+              this.setState({ groupDynamic })
+            }
+            changeDependent={(dependent) => this.setState({ dependent })}
+            changeAdversary={(adversary) => this.setState({ adversary })}
             {...this.state}
           />
           <Divider
@@ -820,45 +833,51 @@ class Character extends React.Component {
               backgroundColor: "teal",
               height: 0,
               marginBottom: 3,
-              marginTop: 3
+              marginTop: 3,
             }}
           />
           <Trait
-            changeMorality={morality => {
+            changeMorality={(morality) => {
               this.setState({ morality, truthfulness: getMorality(morality) });
             }}
-            changeTruthfulness={truthfulness => this.setState({ truthfulness })}
-            changeSociability={sociability => this.setState({ sociability })}
-            changeApproachability={approachability =>
+            changeTruthfulness={(truthfulness) =>
+              this.setState({ truthfulness })
+            }
+            changeSociability={(sociability) => this.setState({ sociability })}
+            changeApproachability={(approachability) =>
               this.setState({ approachability })
             }
-            changeZeal={zeal => this.setState({ zeal })}
-            changePride={pride => this.setState({ pride })}
-            changeRiskTaking={riskTaking => this.setState({ riskTaking })}
-            changeNaivety={naivety => this.setState({ naivety })}
-            changeOptimism={optimism => this.setState({ optimism })}
-            changeProblemSolvingMethod={problemSolvingMethod =>
+            changeZeal={(zeal) => this.setState({ zeal })}
+            changePride={(pride) => this.setState({ pride })}
+            changeRiskTaking={(riskTaking) => this.setState({ riskTaking })}
+            changeNaivety={(naivety) => this.setState({ naivety })}
+            changeOptimism={(optimism) => this.setState({ optimism })}
+            changeProblemSolvingMethod={(problemSolvingMethod) =>
               this.setState({ problemSolvingMethod })
             }
-            changeIntelligence={intelligence => this.setState({ intelligence })}
-            changeHumanism={humanism => this.setState({ humanism })}
-            changeSensitivity={sensitivity => this.setState({ sensitivity })}
-            changeSpontaneity={spontaneity => this.setState({ spontaneity })}
-            changeSocialEngagement={socialEngagement =>
+            changeIntelligence={(intelligence) =>
+              this.setState({ intelligence })
+            }
+            changeHumanism={(humanism) => this.setState({ humanism })}
+            changeSensitivity={(sensitivity) => this.setState({ sensitivity })}
+            changeSpontaneity={(spontaneity) => this.setState({ spontaneity })}
+            changeSocialEngagement={(socialEngagement) =>
               this.setState({ socialEngagement })
             }
-            changeDoctrine={doctrine => this.setState({ doctrine })}
-            changePreoccupation={preoccupation =>
+            changeDoctrine={(doctrine) => this.setState({ doctrine })}
+            changePreoccupation={(preoccupation) =>
               this.setState({ preoccupation })
             }
-            changeComplexity={complexity => this.setState({ complexity })}
-            changeSubmissiveness={submissiveness =>
+            changeComplexity={(complexity) => this.setState({ complexity })}
+            changeSubmissiveness={(submissiveness) =>
               this.setState({ submissiveness })
             }
-            changeBravery={bravery => this.setState({ bravery })}
-            changeDevotion={devotion => this.setState({ devotion })}
-            changeIrritability={irritability => this.setState({ irritability })}
-            changeResolution={resolution => this.setState({ resolution })}
+            changeBravery={(bravery) => this.setState({ bravery })}
+            changeDevotion={(devotion) => this.setState({ devotion })}
+            changeIrritability={(irritability) =>
+              this.setState({ irritability })
+            }
+            changeResolution={(resolution) => this.setState({ resolution })}
             {...this.state}
           />
           <Divider
@@ -866,14 +885,14 @@ class Character extends React.Component {
               backgroundColor: "teal",
               height: 0,
               marginBottom: 30,
-              marginTop: 30
+              marginTop: 30,
             }}
           />
-          <Divider style={{ backgroundColor: "teal", height: 1 }} />
           <View
             style={{
               flexDirection: "row",
-              justifyContent: "space-around"
+              justifyContent: "space-around",
+              backgroundColor: "rgba(0, 0, 0, 0.1)",
             }}
           >
             <Button
@@ -901,23 +920,12 @@ class Character extends React.Component {
               Delete
             </Button>
           </View>
-          <Divider style={{ backgroundColor: "teal", height: 1 }} />
-          <View
-            style={{
-              height: 120,
-              width: "100%",
-              backgroundColor: Colors.teal100
-            }}
-          >
-            <Text>Ad space</Text>
-          </View>
-          <Divider style={{ backgroundColor: "teal", height: 1 }} />
           <Modal
             animationType="slide"
             visible={this.state.modalVisible}
             onRequestClose={() =>
               this.setState({
-                modalVisible: false
+                modalVisible: false,
               })
             }
           >
@@ -926,14 +934,14 @@ class Character extends React.Component {
                 justifyContent: "space-around",
                 alignItems: "center",
                 flexDirection: "row",
-                width: "100%"
+                width: "100%",
               }}
             >
               <Text
                 style={{
                   margin: 4,
                   padding: 4,
-                  fontWeight: "bold"
+                  fontWeight: "bold",
                 }}
               >
                 Character list
@@ -948,18 +956,18 @@ class Character extends React.Component {
               New character
             </Button>
             <ScrollView>
-              {Object.values(this.state.allData).map(item => {
+              {Object.values(this.state.allData).map((item) => {
                 return (
                   <TouchableRipple
                     key={item.id}
                     style={{
-                      padding: 8
+                      padding: 8,
                     }}
                     rippleColor={`rgba(255, 0, 0, 0.1)`}
                     onPress={() => {
                       setTimeout(() => {
                         this.setState({
-                          modalVisible: false
+                          modalVisible: false,
                         });
                         this.loadCharacter(item.id);
                       }, 200);
@@ -979,7 +987,7 @@ class Character extends React.Component {
                 justifyContent: "space-around",
                 alignItems: "center",
                 flexDirection: "row",
-                width: "100%"
+                width: "100%",
               }}
             >
               <IconButton
@@ -988,7 +996,7 @@ class Character extends React.Component {
                 size={50}
                 onPress={() =>
                   this.setState({
-                    modalVisible: false
+                    modalVisible: false,
                   })
                 }
               />
@@ -1003,7 +1011,7 @@ class Character extends React.Component {
             justifyContent: "space-around",
             alignItems: "center",
             flexDirection: "row",
-            width: "100%"
+            width: "100%",
           }}
         >
           <IconButton
@@ -1012,7 +1020,7 @@ class Character extends React.Component {
             size={50}
             onPress={() =>
               this.setState({
-                modalVisible: true
+                modalVisible: true,
               })
             }
           />

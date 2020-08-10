@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Card, Colors, Button } from "react-native-paper";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import MyPicker from "./MyPicker";
 import sortedCountry from "./../data/nationality";
 import * as income from "./../data/socialStatus";
 import Input from "./Input";
 import { educationLevel } from "../modules/getEducation";
-import MyText from "./MyText/index";
+import MyText from "./MyText";
 
 const Biodata = props => {
   const [display, setDisplay] = useState(false);

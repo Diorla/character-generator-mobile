@@ -52,11 +52,7 @@ const getFemaleName = (country, gender) => {
 const getNames = (country, gender) => {
   console.log("getNames", country, gender);
   const hispanic = [
-    "Chile",
-    "Guatemala",
-    "Ecuador",
     "Spain",
-    "Colombia",
     "Argentina",
     "Peru",
     "Venezuela",
@@ -101,7 +97,7 @@ const getNames = (country, gender) => {
   ];
   const sinophone = ["Thailand", "Taiwan"];
   const brazil = ["Portugal", "Cape Verde"];
-  const paki = ["Bangladesh", "Sri Lanka"];
+  const pakistani = ["Bangladesh", "Sri Lanka"];
   const korea = ["South Korea", "North Korea"];
   const genderBasedSurnames = [
     "Russia",
@@ -138,7 +134,7 @@ const getNames = (country, gender) => {
   else if (middleEast.includes(country)) return getFullName("Egypt", gender);
   else if (sinophone.includes(country)) return getFullName("China", gender);
   else if (brazil.includes(country)) return getFullName("Brazil", gender);
-  else if (paki.includes(country)) return getFullName("Pakistan", gender);
+  else if (pakistani.includes(country)) return getFullName("Pakistan", gender);
   else if (korea.includes(country)) return getFullName("Korea", gender);
   else if (pacificIslands.includes(country))
     return getFullName("pacificIslands", gender);

@@ -9,7 +9,7 @@ import {
   IconButton
 } from "react-native-paper";
 import Helper from "./Helper";
-import MyText from "./MyText/MyText";
+import MyText from "./MyText";
 
 const Relationship = props => {
   const [display, setDisplay] = useState(false);

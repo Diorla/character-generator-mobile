@@ -1,9 +1,9 @@
-import React from 'react';
-import { View } from 'react-native';
-import { Surface } from 'react-native-paper';
-import TopBar from './TopBar';
+import React from "react";
+import { View } from "react-native";
+import { Surface } from "react-native-paper";
+import TopBar from "./TopBar";
 
-const Layout = props => (
+const Layout = (props) => (
   <Surface>
     <TopBar
       title={props.title}
@@ -11,11 +11,10 @@ const Layout = props => (
       drawMenu={props.drawMenu}
       {...props}
     />
-    <View style={{ minHeight: '100%', backgroundColor: 'cornsilk' }}>
+    <View style={{ minHeight: "100%", backgroundColor: "cornsilk" }}>
       {props.children}
     </View>
   </Surface>
 );
-//transfer-up
 
 export default Layout;
