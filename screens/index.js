@@ -1,16 +1,10 @@
 import Character from "./Character"
-import Story from "./Story"
-import Feedback from './Feedback';
 import Help from './Help';
-import Profile from './Profile';
-import Settings from './Settings';
+import About from './About';
 
 
 export { 
   Character,
-  Story,
-  Feedback,
   Help,
-  Profile,
-  Settings
- };
+  About
+};

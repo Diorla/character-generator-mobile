@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView, View, Text } from "react-native";
 import { SafeAreaView } from "react-navigation";
-import { Colors, Avatar, Divider } from "react-native-paper";
+import { Colors, Divider } from "react-native-paper";
 
 export default (props) => {
   return (
