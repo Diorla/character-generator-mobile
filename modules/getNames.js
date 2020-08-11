@@ -50,7 +50,6 @@ const getFemaleName = (country, gender) => {
 };
 
 const getNames = (country, gender) => {
-  console.log("getNames", country, gender);
   const hispanic = [
     "Spain",
     "Argentina",

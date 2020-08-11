@@ -157,7 +157,7 @@ class Character extends React.Component {
           ...value,
         })
       )
-      .catch((err) => console.log(err));
+      .catch((err) => console.log("Error updating character:", err));
 
     this.feedback("Certain attributes generated");
   };

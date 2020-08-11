@@ -4,8 +4,7 @@ const initData = async () => {
   try {
     await AsyncStorage.setItem("mydata", JSON.stringify({}));
   } catch (error) {
-    console.log("INITIALIZATION ERROR");
-    console.log(error);
+    console.log("Error initiating data:", error);
   }
 };
 
@@ -29,7 +28,7 @@ const retrieveData = async (container, key) => {
     // either mydata or container is empty
     return {};
   } catch (error) {
-    console.log("error");
+    console.log("Error retrieving data:", error);
   }
 };
 
@@ -46,7 +45,7 @@ const addData = async (container, data) => {
     await AsyncStorage.mergeItem("mydata", JSON.stringify(allData));
     return retrieveData(container);
   } catch (error) {
-    console.log(error);
+    console.log("Error updating data:", error);
   }
 };
 
@@ -63,7 +62,7 @@ const deleteData = async (container, data, id) => {
     await AsyncStorage.setItem("mydata", JSON.stringify(allData));
     return retrieveData(container);
   } catch (error) {
-    console.log(error);
+    console.log("Error deleting data:", error);
   }
 };
 

@@ -11,7 +11,6 @@ const getTrait = () => {
     const v = oddCalculator(values[i], true);
     obj[k] = v;
   }
-  //console.log(obj["submissiveness"])
   return obj;
 };
 
