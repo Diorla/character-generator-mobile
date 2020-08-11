@@ -896,6 +896,34 @@ class Character extends React.Component {
             }}
           >
             <Button
+              icon="plus"
+              mode="text"
+              color="teal"
+              onPress={this.newCharacter}
+            >
+              New character
+            </Button>
+            <Button
+              icon="chevron-double-up"
+              mode="text"
+              color="teal"
+              onPress={() =>
+                this.setState({
+                  modalVisible: true,
+                })
+              }
+            >
+              Character list
+            </Button>
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-around",
+              backgroundColor: "rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            <Button
               icon="upload"
               mode="text"
               color="green"
@@ -947,14 +975,6 @@ class Character extends React.Component {
                 Character list
               </Text>
             </View>
-            <Button
-              icon="plus"
-              mode="text"
-              color="green"
-              onPress={this.newCharacter}
-            >
-              New character
-            </Button>
             <ScrollView>
               {Object.values(this.state.allData).map((item) => {
                 return (
@@ -1003,31 +1023,6 @@ class Character extends React.Component {
             </View>
           </Modal>
         </ScrollView>
-        <View
-          style={{
-            zIndex: 1000000,
-            position: "absolute",
-            bottom: 150,
-            justifyContent: "space-around",
-            alignItems: "center",
-            flexDirection: "row",
-            width: "100%",
-          }}
-        >
-          <IconButton
-            icon="chevron-double-up"
-            color={Colors.black500}
-            size={50}
-            onPress={() =>
-              this.setState({
-                modalVisible: true,
-              })
-            }
-          />
-          {/*<UpTick onUppity={()=>this.setState({
-            modalVisible: true
-          })}/>*/}
-        </View>
       </Layout>
     );
   }
