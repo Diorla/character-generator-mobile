@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, Colors, Button } from "react-native-paper";
 import Input from "./Input";
 
-const Habit = props => {
+const Habit = (props) => {
   const [display, setDisplay] = useState(false);
 
   const {
@@ -16,10 +16,6 @@ const Habit = props => {
     changeGesture,
     speechImpediment,
     changeSpeechImpediment,
-    curseWord,
-    changeCurseWord,
-    catchPhrase,
-    changeCatchPhrase,
     laughter,
     changeLaughter,
     smile,
@@ -40,8 +36,10 @@ const Habit = props => {
     changeHobby,
     tic,
     changeTic,
-    habit,
-    changeHabit
+    groupDynamic,
+    changeGroupDynamic,
+    dependent,
+    changeDependent,
   } = props;
 
   const mode = display ? "contained" : "text";
@@ -100,23 +98,6 @@ const Habit = props => {
             multiline
             placeholder="stuttering, mute, lisping, speech tic"
             help="This are usually congenital. It may also be regional, for example when someone migrates to another region, he or she may be find it difficult to use some phonemes that doesn't exist in his/her mother tongue."
-          />
-          <Input
-            label="Catch phrase"
-            value={catchPhrase}
-            onChangeText={changeCatchPhrase}
-            style={{ width: "100%" }}
-            multiline
-            help="A word, phrase or sentence that the character usually utters, perhaps during certain emotion or in certain situation."
-          />
-          <Input
-            label="Curse word"
-            value={curseWord}
-            onChangeText={changeCurseWord}
-            style={{ width: "100%" }}
-            placeholder="damn, shit, jeez, omg, whatdafuck, oh wow etc."
-            multiline
-            help="Favourite go to curse word. This is usually spontaneous and usually in response to strong emotions."
           />
           <Input
             label="Laughter"
@@ -204,12 +185,22 @@ const Habit = props => {
             help="These are things that bothers the character a lot especially what most people wouldn't find annoying or can tolerate. This may be a no-no in a relationship."
           />
           <Input
-            label="More"
-            value={habit}
-            onChangeText={changeHabit}
+            label="Group dynamic"
+            value={groupDynamic}
+            onChangeText={changeGroupDynamic}
             style={{ width: "100%" }}
             multiline
-            help="Any additional information, regarding habits and mannerisms"
+            placeholder="The joker, the leader, the moocher, the smart one etc."
+            help="If the character belongs to or find themselves in a group, what type of role do they play."
+          />
+          <Input
+            label="Dependable"
+            value={dependent}
+            onChangeText={changeDependent}
+            style={{ width: "100%" }}
+            multiline
+            placeholder="Advice, crying shoulder, wingman, fun time"
+            help="What is one thing, you can always count on the character to deliver."
           />
         </Card>
       ) : null}

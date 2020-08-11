@@ -20,8 +20,6 @@ const Biodata = props => {
     education,
     changeGender,
     gender,
-    changeMoreBiodata,
-    moreBiodata,
     changeNationality,
     nationality,
     changeOccupation,
@@ -181,15 +179,6 @@ const Biodata = props => {
             selectedValue={socialStatus}
             onValueChange={changeSocialStatus}
             help="When randomly generated, it's influenced by education. Doesn't apply to character under 18. Underclass refers to people like beggars or hobos, who have no interest in climbing the financial ladder. Working poor refers to those who don't have a stable source of income and lives below poverty line. Working class and lower middle class earns around the same, but working class are usually blue collared while lower middle class tends to work in offices. Upper middle class are rich while Upper class are the super rich."
-          />
-          <Input
-            label="More"
-            placeholder="Additional information"
-            value={moreBiodata}
-            onChangeText={changeMoreBiodata}
-            style={{ width: "100%" }}
-            multiline
-            help="If you have extra information e.g. John Doe was born in Canada by a Nigerian mother to a German father. His Paternal grandfather is half Chinese"
           />
         </Card>
       ) : null}

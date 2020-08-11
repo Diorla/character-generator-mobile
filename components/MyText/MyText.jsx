@@ -54,7 +54,7 @@ MyText.propTypes = {
     "h2",
     "h3",
     "h4",
-    undefined,
+    "",
     "strong",
     "ul",
     "li",

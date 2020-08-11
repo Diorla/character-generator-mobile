@@ -3,7 +3,7 @@ import { Text, Picker, View } from "react-native";
 import { Card, Colors, Button } from "react-native-paper";
 import Helper from "./Helper";
 import MyText from "./MyText";
-
+//TODO: Replace picker with MyPicker
 const Trait = props => {
   const [display, setDisplay] = useState(false);
   const [modalVisible, displayModal] = useState(false);

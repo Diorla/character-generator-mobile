@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, Colors, Button } from "react-native-paper";
 import Input from "./Input";
 
-const Physical = props => {
+const Physical = (props) => {
   const [display, setDisplay] = useState(false);
 
   const {
@@ -32,14 +32,10 @@ const Physical = props => {
     changeGait,
     posture,
     changePosture,
-    morePhysical,
-    changeMorePhysical,
     skinTone,
-    changeSkinTone
+    changeSkinTone,
   } = props;
-  const icon = display
-    ? "chevron-left-circle-outline"
-    : "chevron-down-circle-outline";
+
   const mode = display ? "contained" : "text";
   return (
     <>
@@ -168,13 +164,6 @@ const Physical = props => {
             onChangeText={changePosture}
             style={{ width: "100%" }}
             help="The way in which somebody holds his or her body, especially when standing. It may be affected by medical conditions."
-          />
-          <Input
-            label="More"
-            value={morePhysical}
-            onChangeText={changeMorePhysical}
-            style={{ width: "100%" }}
-            multiline
           />
         </Card>
       ) : null}
