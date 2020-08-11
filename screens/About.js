@@ -1,8 +1,22 @@
 import React from "react";
-import { Image, Text } from "react-native";
+import { Image, View, Text, ScrollView } from "react-native";
 import styles from "../modules/styles";
 import Layout from "../components/Layout";
+import Link from "../components/Link";
+import MyText from "../components/MyText";
 
+const Line = ({ children }) => (
+  <View
+    style={{
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      margin: 8,
+    }}
+  >
+    {children}
+  </View>
+);
 class About extends React.Component {
   static navigationOptions = {
     drawerLabel: "About",
@@ -17,12 +31,37 @@ class About extends React.Component {
   render() {
     const { openDrawer } = this.props.navigation;
     return (
-      <Layout
-        drawMenu={() => openDrawer()}
-        title="About"
-        subtitle="Meet the developer"
-      >
-        <Text>About is under construction.</Text>
+      <Layout drawMenu={() => openDrawer()} title="About" subtitle="Credits...">
+        <ScrollView style={{ padding: 8 }}>
+          <Line>
+            <MyText type="h2">Credits</MyText>
+          </Line>
+          <Line>
+            <Text>This app is made with ❤ and </Text>
+            <Link href="https://expo.io/" title="React + Expo" />
+            <Text> by </Text>
+            <Link href="https://github.com/Diorla" title="Ade Adeola" />
+          </Line>
+          <Line>
+            <Text>You can check out the </Text>
+            <Link
+              href="https://github.com/Diorla/character-generator"
+              title="repository"
+            />
+            <Text style={{ flexWrap: "wrap" }}>
+              {" "}
+              in case you are interested in the project
+            </Text>
+          </Line>
+          <Line>
+            <Text>Icon and images are sourced from here: </Text>
+            <Link href="http://www.ohmyicons.com/" title="app logo" />
+            <Text>, </Text>
+            <Link href="http://handdrawngoods.com/" title="splash icon" />
+            <Text> and </Text>
+            <Link href="http://icons8.com/" title="app icon" />
+          </Line>
+        </ScrollView>
       </Layout>
     );
   }
