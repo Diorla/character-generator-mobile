@@ -34,7 +34,7 @@ class About extends React.Component {
       try {
         await Share.share({
           message:
-            "I love this app, it allows me to generate random data for a fictional character. Click here to download https://www.example.com",
+            "I love this app, it allows me to generate random data for a fictional character. Click here to download https://drive.google.com/file/d/1O_F9xEqDOe3QAX_NepnxXZyUs2DwdNt4/view?usp=sharing",
         });
       } catch (err) {
         console.log("Error sharing data:", err);
