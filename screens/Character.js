@@ -271,6 +271,10 @@ class Character extends React.Component {
 
   render() {
     const { openDrawer } = this.props.navigation;
+    let header = "";
+    if (this.state.name) header += this.state.name + " ";
+    if (this.state.gender && header) header += this.state.gender + " ";
+    if (this.state.age && header) header += this.state.age + " ";
     return (
       <Layout
         drawMenu={() => openDrawer()}
@@ -289,7 +293,7 @@ class Character extends React.Component {
       >
         <FAButton refresh={this.randomise} />
         <View>
-          <Chip>{this.state.name || ""}</Chip>
+          <Chip>{header || ""}</Chip>
         </View>
         <ScrollView style={{ marginBottom: 180 }}>
           <Divider
