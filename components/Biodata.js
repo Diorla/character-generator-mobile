@@ -8,7 +8,7 @@ import Input from "./Input";
 import { educationLevel } from "../modules/getEducation";
 import MyText from "./MyText";
 
-const Biodata = props => {
+const Biodata = (props) => {
   const [display, setDisplay] = useState(false);
 
   const {
@@ -39,7 +39,7 @@ const Biodata = props => {
     residentSubcountry,
     changeResidentSubcountry,
     residentCountry,
-    changeResidentCountry
+    changeResidentCountry,
   } = props;
 
   const mode = display ? "contained" : "text";
@@ -62,7 +62,7 @@ const Biodata = props => {
             value={name}
             onChangeText={changeName}
             style={{ width: "100%" }}
-            help="It is usually generated based on the character's nationality"
+            help="It is usually based on the character's nationality"
           />
           <Input
             label="Age"
@@ -70,7 +70,7 @@ const Biodata = props => {
             onChangeText={changeAge}
             style={{ width: "100%" }}
             keyboardType="numeric"
-            help="Randomly generated"
+            help="Any number between 0 to 125(inclusive)"
           />
           <Input
             label="Birthday"
@@ -78,7 +78,7 @@ const Biodata = props => {
             onChangeText={changeBirthday}
             style={{ width: "100%" }}
             placeholder="Sept 23, at 5 o'clock in the evening"
-            help="The month, day and time may be randomly generated."
+            help="The time, day and month is generated. The year is excluded"
           />
           <MyPicker
             label="Gender"
@@ -86,7 +86,7 @@ const Biodata = props => {
             onValueChange={changeGender}
             data={["Male", "Female"]}
             nullValue="Non binary"
-            help="Randomly generated. Influences certain bodily features like breast."
+            help="Male, female or non binary."
           />
           <Input
             label="Blood group"
@@ -100,7 +100,7 @@ const Biodata = props => {
               backgroundColor: Colors.grey300,
               borderBottomColor: Colors.grey500,
               borderBottomWidth: 1,
-              padding: 4
+              padding: 4,
             }}
           >
             <MyText type="strong">Place of birth</MyText>
@@ -109,7 +109,7 @@ const Biodata = props => {
               data={sortedCountry()}
               selectedValue={nationality}
               onValueChange={changeNationality}
-              help="One of the United nations member states and territories with a population of 1 million or more"
+              help="One of the United nations member states and territories."
             />
             <Input
               label="Subcountry"
@@ -124,7 +124,7 @@ const Biodata = props => {
               value={birthCity}
               onChangeText={changeBirthCity}
               style={{ width: "100%" }}
-              help="This is the name of a city or town"
+              help="This is the name of a city or town in which the character is born."
             />
           </View>
           <View
@@ -132,7 +132,7 @@ const Biodata = props => {
               backgroundColor: Colors.grey300,
               borderBottomColor: Colors.grey500,
               borderBottomWidth: 1,
-              padding: 4
+              padding: 4,
             }}
           >
             <MyText type="strong">Current location</MyText>
@@ -141,7 +141,7 @@ const Biodata = props => {
               data={sortedCountry()}
               selectedValue={residentCountry}
               onValueChange={changeResidentCountry}
-              help="One of the United nations member states and territories with a population of 1 million or more"
+              help="One of the United nations member states and territories"
             />
             <Input
               label="Subcountry"
@@ -156,7 +156,7 @@ const Biodata = props => {
               value={residentCity}
               onChangeText={changeResidentCity}
               style={{ width: "100%" }}
-              help="This is the name of a city or town"
+              help="This is the name of a city or town where the character currently resides"
             />
           </View>
           <MyPicker
@@ -171,14 +171,14 @@ const Biodata = props => {
             value={occupation}
             onChangeText={changeOccupation}
             style={{ width: "100%" }}
-            help="When auto-generated, it will be influenced by education and social status. Doesn't apply to character under 18"
+            help="It will be influenced by education and social status. Doesn't apply to character under 18"
           />
           <MyPicker
             label="Social status"
             data={income["default"]["main"]}
             selectedValue={socialStatus}
             onValueChange={changeSocialStatus}
-            help="When randomly generated, it's influenced by education. Doesn't apply to character under 18. Underclass refers to people like beggars or hobos, who have no interest in climbing the financial ladder. Working poor refers to those who don't have a stable source of income and lives below poverty line. Working class and lower middle class earns around the same, but working class are usually blue collared while lower middle class tends to work in offices. Upper middle class are rich while Upper class are the super rich."
+            help="This includes underclass, working poor, working class, lower middle class, upper middle class and upper class. Underclass refers to people like beggars or hobos, who have no interest in climbing the financial ladder. Working poor refers to those who don't have a stable source of income and lives below poverty line. Working class and lower middle class earns around the same, but working class are usually blue collared and physically demanding while lower middle class tends to work in offices. Upper middle class are rich while Upper class are the super rich."
           />
         </Card>
       ) : null}

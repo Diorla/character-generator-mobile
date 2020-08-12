@@ -69,7 +69,7 @@ const Habit = (props) => {
             value={speechTempo}
             onChangeText={changeSpeechTempo}
             style={{ width: "100%" }}
-            placeholder="rapid, slow, measured, drawled"
+            placeholder="rapid, measured, slow, drawled"
             help="The speed or rate at which someone speaks. It's usually congenital"
           />
           <Input
@@ -88,7 +88,7 @@ const Habit = (props) => {
             style={{ width: "100%" }}
             multiline
             placeholder="Gestures, eye contact etc."
-            help="The gestures the character makes during conversation"
+            help="The gestures the character makes during conversation e.g. compulsive hand talker"
           />
           <Input
             label="Speech impediments"
@@ -130,7 +130,7 @@ const Habit = (props) => {
             style={{ width: "100%" }}
             multiline
             placeholder="e.g. chocolate, old movies, sleeping"
-            help="What are the things the characters likes"
+            help="What are the things the character likes"
           />
           <Input
             label="Dislikes"
@@ -139,7 +139,7 @@ const Habit = (props) => {
             style={{ width: "100%" }}
             multiline
             placeholder="e.g. chocolate, old movies, sleeping"
-            help="What are the things the cahracters dislikes"
+            help="What are the things the character dislikes"
           />
           <Input
             label="Hobbies"
@@ -182,7 +182,7 @@ const Habit = (props) => {
             onChangeText={changeAnnoyingStuff}
             style={{ width: "100%" }}
             multiline
-            help="These are things that bothers the character a lot especially what most people wouldn't find annoying or can tolerate. This may be a no-no in a relationship."
+            help="These are things that bothers the character a lot, especially what most people wouldn't find annoying or can tolerate. This may be a no-no in a relationship."
           />
           <Input
             label="Group dynamic"
@@ -194,7 +194,7 @@ const Habit = (props) => {
             help="If the character belongs to or find themselves in a group, what type of role do they play."
           />
           <Input
-            label="Dependable"
+            label="Dependable for"
             value={dependent}
             onChangeText={changeDependent}
             style={{ width: "100%" }}

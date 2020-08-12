@@ -38,7 +38,7 @@ class About extends React.Component {
           </Line>
           <Line>
             <Text>This app is made with ❤ and </Text>
-            <Link href="https://expo.io/" title="React + Expo" />
+            <Link href="https://expo.io/" title="React-native + Expo" />
             <Text> by </Text>
             <Link href="https://github.com/Diorla" title="Ade Adeola" />
           </Line>

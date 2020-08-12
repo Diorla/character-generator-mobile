@@ -64,7 +64,7 @@ const Physical = (props) => {
             onChangeText={changeBuild}
             style={{ width: "100%" }}
             multiline
-            help="Body shape and size. Features like chest(breast) are influenced by gender."
+            help="Body shape, size and body features"
           />
           <Input
             label="Skin tone"
@@ -72,7 +72,7 @@ const Physical = (props) => {
             onChangeText={changeSkinTone}
             style={{ width: "100%" }}
             placeholder="e.g. dark olive skin, porcelain white, latino"
-            help="Complexion, note features like eye and hair type, colour and eye colour is influenced by skin colour"
+            help="Complexion, note features like eye colour and hair type are influenced by skin colour"
           />
           <Input
             label="Face"
@@ -99,7 +99,7 @@ const Physical = (props) => {
             onChangeText={changeEye}
             style={{ width: "100%" }}
             multiline
-            help="Eye colour is influenced by skin colour. It's also includes shape, size of the eye, the distance between the eyes and shape & thickness of the eyebrows."
+            help="This includes colour, shape and size of the eye as well as the distance between the eyes, the shape and thickness of the eyebrows."
           />
           <Input
             label="Distinguishing features"
@@ -141,7 +141,7 @@ const Physical = (props) => {
             value={health}
             onChangeText={changeHealth}
             style={{ width: "100%" }}
-            help="Only chronic conditions are auto-generated and it's influenced by age and gender"
+            help="Referrs to chronic conditions; it's influenced by age and gender"
           />
           <Input
             label="Handwriting"
@@ -156,7 +156,7 @@ const Physical = (props) => {
             value={gait}
             onChangeText={changeGait}
             style={{ width: "100%" }}
-            help="A way of walking, running, or moving along on foot. It may be affected by posture or medical conditions."
+            help="The manner of walking, running, or moving along on foot. It may be affected by posture or medical conditions."
           />
           <Input
             label="Posture"
