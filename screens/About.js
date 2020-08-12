@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, View, Text, ScrollView } from "react-native";
+import { Image, View, Text, ScrollView, Share, Button } from "react-native";
 import styles from "../modules/styles";
 import Layout from "../components/Layout";
 import Link from "../components/Link";
@@ -30,8 +30,22 @@ class About extends React.Component {
 
   render() {
     const { openDrawer } = this.props.navigation;
+    const onShare = async () => {
+      try {
+        await Share.share({
+          message:
+            "I love this app, it allows me to generate random data for a fictional character. Click here to download https://www.example.com",
+        });
+      } catch (err) {
+        console.log("Error sharing data:", err);
+      }
+    };
     return (
-      <Layout drawMenu={() => openDrawer()} title="About" subtitle="Credits...">
+      <Layout
+        drawMenu={() => openDrawer()}
+        title="About"
+        subtitle="Learn more about the app"
+      >
         <ScrollView style={{ padding: 8 }}>
           <Line>
             <MyText type="h2">Credits</MyText>
@@ -61,6 +75,7 @@ class About extends React.Component {
             <Text> and </Text>
             <Link href="http://icons8.com/" title="app icon" />
           </Line>
+          <Button title="Share App" onPress={onShare} />
         </ScrollView>
       </Layout>
     );
