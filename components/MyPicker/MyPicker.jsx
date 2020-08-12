@@ -7,14 +7,14 @@ class MyPicker extends PureComponent {
   openHelp = () => {
     Alert.alert(this.props.label, this.props.help, [
       {
-        text: "OK"
-      }
+        text: "OK",
+      },
     ]);
   };
 
   render() {
     const width = this.props.help ? "91%" : "100%";
-    const nullValue = this.props.nullValue || "N/A"
+    const nullLabel = this.props.nullLabel || "N/A";
     return (
       <View
         style={{
@@ -22,18 +22,18 @@ class MyPicker extends PureComponent {
           borderBottomColor: Colors.grey500,
           borderBottomWidth: 1,
           padding: 4,
-          flexDirection: "row"
+          flexDirection: "row",
         }}
       >
         <View
           style={{
             width,
-            height: 70
+            height: 70,
           }}
         >
           <Text>{this.props.label}</Text>
           <Picker {...this.props}>
-            <Picker.Item label={nullValue} value="" />
+            <Picker.Item label={nullLabel} value="" />
             {this.props.data.map((item, index) => (
               <Picker.Item label={item} value={item} key={index} />
             ))}
@@ -46,7 +46,7 @@ class MyPicker extends PureComponent {
             size={18}
             onPress={this.openHelp}
             style={{
-              alignSelf: "center"
+              alignSelf: "center",
             }}
           />
         ) : null}
@@ -59,14 +59,14 @@ MyPicker.propTypes = {
   data: PropTypes.array,
   help: PropTypes.string,
   label: PropTypes.string,
-  nullValue: PropTypes.string
+  nullValue: PropTypes.string,
 };
 
 MyPicker.defaultProps = {
   data: [],
   label: "label",
   help: "",
-  nullValue: ""
+  nullValue: "",
 };
 
 export default MyPicker;

@@ -84,8 +84,7 @@ const Biodata = (props) => {
             label="Gender"
             selectedValue={gender}
             onValueChange={changeGender}
-            data={["Male", "Female"]}
-            nullValue="Non binary"
+            data={["Male", "Non binary", "Female"]}
             help="Male, female or non binary."
           />
           <Input
