@@ -11,7 +11,7 @@ const Layout = (props) => (
       drawMenu={props.drawMenu}
       {...props}
     />
-    <View style={{ minHeight: "100%", backgroundColor: "cornsilk" }}>
+    <View style={{ minHeight: "100%", backgroundColor: "cornsilk", overflow: "scroll" }}>
       {props.children}
     </View>
   </Surface>

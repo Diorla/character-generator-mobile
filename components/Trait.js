@@ -71,35 +71,6 @@ const Trait = (props) => {
       </Button>
       {display ? (
         <Card style={{ elevation: 2, margin: 2 }}>
-          <Helper
-            visible={modalVisible}
-            onRequestClose={() => displayModal(false)}
-            helpHeader="Trait"
-            closeModal={() => displayModal(false)}
-            openModal={() => displayModal(true)}
-            information="Attributes and personality"
-            quote="A long list of human tendencies and characteristics"
-          >
-            <View>
-              <MyText type="h3">Related/contradicting traits</MyText>
-              <MyText>
-                Some traits, tends to correlate with each other e.g. timid
-                person(sociability) is less likely to be talkative. But then,
-                s/he may be timid and taciturn in front of strangers but
-                absolutely chatty among friends and close acqaintances.
-              </MyText>
-              <MyText></MyText>
-              <MyText>
-                Of course, there are some traits that may be seems contradictory
-                but in the context of your story, perfectly logically. For
-                example, someone who is decadent and candid will aptly desribe
-                someone who partakes in a lot of immoral act but not ashamed to
-                talk about it. It could also refer to a criminal who doesn't
-                mince word and says what's on their mind as long as it's not the
-                police.
-              </MyText>
-            </View>
-          </Helper>
           <MyPicker
             label="Morality"
             data={[
