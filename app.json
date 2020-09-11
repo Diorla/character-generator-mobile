@@ -10,7 +10,7 @@
       "web"
     ],
     "githubUrl": "https://github.com/Diorla/character-generator",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -28,10 +28,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.emboss.scribble",
-      "config": {
-        "googleMobileAdsAppId": "ca-app-pub-8409252119990664~5105004716"
-      }
+      "package": "com.emboss.scribble"
     }
   }
 }
