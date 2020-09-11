@@ -1,13 +1,12 @@
-# Author
+# Introduction
+I was writing trying to write some fiction and it seems like the toughest part was creating characters. Names, what they look like etc. Most times, this stuff are not important to the storyline or plot but are required so I ended up creating an app instead to help me out.
 
-- Ade Adeola
-
-# Contact
-
-[Github]()
+It is still far from done but I think it is a good beginning. 
 
 # Attribution
 
-> Icons used by this apps were sourced from
+> Icons and images used by this apps were sourced from here
 
-Attribution is made [Double-J Design](http://www.doublejdesign.co.uk) for icons sourced from [here](http://www.iconarchive.com/show/origami-colored-pencil-icons-by-double-j-design.4.html)
+- [App logo]("http://www.ohmyicons.com/")
+- [Splash icon]("http://handdrawngoods.com/")
+- [App icon]("http://icons8.com/")
